@@ -1,0 +1,182 @@
+   
+<!-- BEGIN BODY -->
+<body class=" bg">
+    <div class="login-wrapper">
+
+
+        <div class="header col-lg-12 col-xs-12 ">
+
+            <div class="col-lg-4 col-xs-12 logo">
+                <p id="headerImp">
+                    <img id="headerImg" src="<?php echo base_url(); ?>assets/images/fake_logo.jpg" alt="logo"/>
+                </p>
+            </div>
+            <div class="topnav col-lg-8 col-xs-12" id="myTopnav">
+                <a id="logo-res" >                   
+                    <img id="headerImg" src="<?php echo base_url(); ?>assets/images/fake_logo.jpg" alt="logo"/>
+                </a>
+                <a href = "#"class="active">Inscription</a>
+                <a href = "<?php echo base_url() ?>user/Login_controller">Connexion</a>
+
+                <a href = "<?php echo base_url() ?>welcome">Accueil</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class=" clearfix"></div>
+        <br>
+        <br>
+
+
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8 col-xs-12 regForm login">
+            <br>
+            <h2 class="title">Inscription: </h2>
+            <br>
+            <?php
+            if ($this->session->flashdata('err')) {
+                ?>
+
+                <div class = "display_error">
+                    <?php echo $this->session->flashdata('err'); ?>
+                </div>
+
+
+            <?php } ?>
+            <form action="<?php echo base_url(); ?>user/Inscription_controller/formPost" method="POST" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col-25">
+                        <label for="genre"></label>
+                    </div>
+                    <div class="col-75">
+                        <input type="radio"  name="genre" value="Femme" checked>
+                        <label for="fname">Femme</label>
+
+                        <input type="radio"  name="genre" value="homme">
+                        <label for="fname">Homme</label>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="fname">Nom</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="fname" name="nom" placeholder="Votre Nom.." required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="lname">Prénom</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="lname" name="prenom" placeholder="Votre Prénom.." required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="dateNaiss">Né(e) le</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="date"  name="dateNaiss" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="email">E-mail</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="email" id="lname" name="email" placeholder="Votre email..." required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="country">Mot de passe</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="password" id="pass" name="pass" placeholder="*****" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="country">Confirmez le mot dde passe:</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="password" id="confPass" placeholder="*****" onchange="checkPasswordMatch()"required>
+                    </div>
+                </div>
+                <div class="registrationFormAlert" id="divCheckPasswordMatch">
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="subject"></label>
+                    </div>
+                    <div class="col-75">
+                        <div class="g-recaptcha" data-sitekey="<?php echo $this->config->item('google_key') ?>"></div> 
+                        <br/>
+                        <button type="submit" id="search_btn" class="btn btn-round btn-orange"><i class="">Valider</i></button>
+                    </div>
+            </form>
+        </div>
+        <div class="col-lg-2"></div>
+
+    </div>
+    <script>
+        //affichage du flashdata s'il y en a un.
+        $(".display_error").delay(4000).slideUp(200, function () {
+            $(this).alert('close');
+        });
+
+
+        // Vérification du mot de passe et de la confirmation du mot de passe.
+        function checkPasswordMatch() {
+            var password = $("#pass").val();
+            var confirmPassword = $("#confPass").val();
+
+            if (password != confirmPassword) {
+                $("#divCheckPasswordMatch").html("Les mots de passe ne correspondent pas.").css("color", "red").css("background-color", "rgba(255,255,255,0.5)");
+
+            } else {
+
+                //Vérification ensuite de la taille du mot de passe.
+                if (password.length < 8) {
+                    $("#divCheckPasswordMatch").html("Le mot de passe doit contenir au moins 8 caractères.").css("color", "red").css("background-color", "rgba(255,255,255,0.5)");
+
+                } else {
+                    $("#divCheckPasswordMatch").html("Mots de Passe identiques").css("color", "green").css("background-color", "rgba(255,255,255,0.5)");
+
+                }
+            }
+
+        }
+
+        $(document).ready(function () {
+            $("#pass, #confPass").keyup(checkPasswordMatch);
+        });
+
+
+    </script>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</body>
+
+
+</html>
+
+
+
+
+
+
+
+
