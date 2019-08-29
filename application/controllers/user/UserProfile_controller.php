@@ -48,7 +48,7 @@ class UserProfile_controller extends CI_Controller {
 
             $this->load->view('user/userProfile_view', $datas);
         } else {
-            $this->load->view('user/accueil_view');
+            $this->load->view('accueil_view');
         }
     }
 
