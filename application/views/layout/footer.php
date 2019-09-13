@@ -14,8 +14,8 @@
     <div class="footer col-4">   
         <ul>        
             <li class="menu"><a href="<?php echo base_url() ?>user/connexion_controller">À propos</a></li>
+            <li class="menu"><a href="mailto:un.email@gmail.com">Nous contacter</a></li>
         </ul>
     </div>
 </footer>
-</body>
-</html>
+</div>

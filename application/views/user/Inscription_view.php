@@ -80,7 +80,8 @@
                         <label for="dateNaiss">Né(e) le</label>
                     </div>
                     <div class="col-75">
-                        <input type="date"  name="dateNaiss" required>
+                        <input type="text" name="dateNaiss" class="datepick" value=""  data-format="YYYY-MM-DD" required>
+
                     </div>
                 </div>
                 <div class="row">
@@ -88,7 +89,19 @@
                         <label for="email">E-mail</label>
                     </div>
                     <div class="col-75">
-                        <input type="email" id="lname" name="email" placeholder="Votre email..." required>
+                        <input type="email" id="email" name="email" placeholder="Votre email..." required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="tel">Tel</label>
+                        <button class="btn btn-round btn-orange" id="btnInfo">
+                            <i class="fa fa-question"></i>
+                        </button>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="tel" name="tel" id="phone" name="phone"
+                               pattern="([0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2})|([0-9]{10})" placeholder="Votre tel..." >
                     </div>
                 </div>
                 <div class="row">
@@ -167,6 +180,22 @@
                 x.className = "topnav";
             }
         }
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.datepick').datepicker({dateFormat: "dd-mm-yy",
+                showButtonPanel: true,
+                changeMonth: true,
+                changeYear: true,
+                showOtherMonths: true,
+                selectOtherMonths: true,
+                yearRange: "1930:2010"
+            });
+            
+            $('#btnInfo').click(function(){
+                alert("Les formats requis sont: "+'\n'+'00-00-00-00-00 ou '+'\n'+'0000000000');
+            })
+        });
     </script>
 </body>
 

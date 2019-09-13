@@ -97,6 +97,24 @@ class UserProfile_controller extends CI_Controller {
         
         
     }
+    public function changeTel() {
+        $tel = $this->input->post('tel');
+        
+         $userModel = new Users_model();
+         $res = $userModel->changeTelFromUser($this->session->userId, $tel);
+         if($res){
+              $this->session->set_flashdata('success', 'Votre N° tde téléphone à été changé avec succès.');
+                redirect('user/UserProfile_controller');
+           
+         }else{
+              $this->session->set_flashdata('err', 'Votre Numéro de téléphone n\'a pu êre mis à jour.');
+                redirect('user/UserProfile_controller');
+           
+         }
+        
+        
+        
+    }
     public function resetPassword() {
 
         $oldPassword = $this->input->post('old_pass');

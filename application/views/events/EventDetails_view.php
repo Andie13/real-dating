@@ -116,6 +116,23 @@ $eventModel = new Events_model();
                     <br>
 
                 </div>
+                
+                <?php if($presta != ''){
+                    
+                    echo ' <div class="col-12 regForm event" style="margin-top: 1em;">';
+                    echo $presta->nom_presta;
+                    echo '<br> ';
+                    if($mediasPresta != ''){
+                        foreach($mediasPresta as $mp){?>
+                <img src="<?php echo $mp->path_media.'/'.$mp->nom_media?>" alt="images prestataire" style="max-height: 8em;margin: 1em;"/>
+                       <?php }
+                 }
+                    echo ' ';
+                    echo '</div>';
+                    
+                }
+?>
+                
                 <div class="col-1"></div>
 
             </div>

@@ -77,7 +77,7 @@ $eventModel = new Events_model();
                     echo '<h2 class"title">Oups! Il n\'y a pas de soirée prévu dans cette ville pour le moment :-(</h2>';
                     echo '<br>';
                     echo '<br>';
-                    echo '<a  id="retour" href="'. base_url().'welcome"><< Retour</a>';
+                    echo '<a  id="retour" href="' . base_url() . 'welcome"><< Retour</a>';
                     echo '</div>';
                 } else {
                     foreach ($events as $event) {
@@ -87,9 +87,11 @@ $eventModel = new Events_model();
                         $nomVille = $villeModel->getNomVilleFromId($event->id_ville);
 
                         $nbResaByEvent = $eventModel->getNbResaByEventId($event->id_event);
-
+                        
 
                         $nombrePlacesRestante = $event->nb_places_event - $nbResaByEvent;
+                        if($nombrePlacesRestante>0){
+                       
 
                         echo '<div class=" col-lg-4 col-xs-12 ">';
                         echo '<div class=" col-12">';
@@ -130,6 +132,8 @@ $eventModel = new Events_model();
                         echo '<div class="col-1"></div>';
                         echo '</div>';
                         echo '</div>';
+                        
+                    }
                     }
                 }
                 ?>

@@ -19,8 +19,9 @@ class Users_model extends CI_Model {
     const ANNIV_USER = 'anniv_user';
     const CREATED_USER = 'created_user';
     const MODIFIED_USER = 'modified_user';
+    const TEL_USER = 'tel_user';
 
-    public function registerUser($genre, $nom, $prenom, $email, $pass, $anniv) {
+    public function registerUser($genre, $nom, $prenom, $email,$tel, $pass, $anniv) {
 
         //récupération et chiffrement du mot de passe préalablement hashé.
         $hash = password_hash($pass, PASSWORD_BCRYPT, array('const' => 11));
@@ -29,13 +30,14 @@ class Users_model extends CI_Model {
             self::NOM_USER => $nom,
             self::PRENOM_USER => $prenom,
             self::EMAIL_USER => $email,
+            self::TEL_USER => $tel,
             self::PASSWORD_USER => $hash,
             self::ANNIV_USER => $anniv,
             self::CREATED_USER => date('Y-m-d H:i:s')];
 
         $this->db->insert(self::TABLE_USERS, $data);
         if ($this->db->affected_rows() > 0) {
-            return $this->db->insert_id;
+            return $this->db->insert_id();
         } else {
             false;
         }
@@ -118,6 +120,19 @@ class Users_model extends CI_Model {
             $this->db->error_message();
         }
     }
+    public function changeTelFromUser($id, $tel) {
+
+        $this->db->set(self::TEL_USER, $tel)
+                ->where(self::ID_USER, $id)
+                ->update(self::TABLE_USERS);
+        if ($this->db->affected_rows() > 0) {
+            return TRUE;
+        } else {
+            $this->db->error_message();
+        }
+    }
+    
+    
 
     public function getGenreNameById($id) {
 

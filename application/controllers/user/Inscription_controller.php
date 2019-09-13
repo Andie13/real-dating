@@ -40,58 +40,61 @@ class Inscription_controller extends CI_Controller {
             } else {
                 $genre = 2;
             }
-            
+
             $nom = $this->input->post('nom');
             $prenom = $this->input->post('prenom');
             $anniv = $this->input->post('dateNaiss');
             $email = $this->input->post('email');
+            $tel = $this->input->post('tel');
             $pass = $this->input->post('pass');
 
-        
+            $anniv = date_format(new DateTime($anniv), "Y-m-d");
+
+           
             //On vérifie que l'utilisateur n'existe pas avec son email.
             $userModel = new Users_model();
             $isuserExist = $userModel->checkIfUserEvists($email);
-            
+
             //isUserExist renvoit TRUE si l'utilisateur existe déjà.
             if ($isuserExist) {
-                
+
                 $this->session->set_flashdata('err', 'Vous semblez déjà posséder un compte.');
                 $this->load->view('layout/header');
                 $this->load->view('user/Inscription_view');
-                
             } else {
 
                 //On vérifie si l'utilisateur est majeur/
                 //renvoit false si l'utilisateur est mineur
                 $isOldEnoought = $this->validateAge($anniv);
-                
+
                 if (!$isOldEnoought) {
-                    
+
                     $this->session->set_flashdata('err', 'Vous devez être majeur pour pouvoir vous inscrire.');
                     $this->load->view('layout/header');
                     $this->load->view('user/Inscription_view');
-                    
-                } else{
-                    
-                    
-                //on hash le mot de passe
-                $hash = md5($pass);
+                } else {
 
-                //envoi de la requête
-                $res = $userModel->registerUser($genre, $nom, $prenom, $email, $hash, $anniv);
-                if (!$res ===false) {
-                    
-                    $this->session->set_userdata('logged_in', true);
-                    $this->session->set_userdata('user_id', $res);
-                    redirect('welcome');
-                }
-                }
-                       
 
+                    //on hash le mot de passe
+                    $hash = md5($pass);
+
+                    //envoi de la requête
+                    $res = $userModel->registerUser($genre, $nom, $prenom, $email,$tel, $hash, $anniv);
+                    if ($res != false) {
+
+                        $this->session->set_userdata('connected', true);
+                        $this->session->set_userdata('userId', $res);
+
+                        redirect('Welcome');
+                    }else{
+                        redirect('Welcome');
+                    }
+                    
+                }
             }
         } else {
             $this->session->set_flashdata('flashError', 'Sorry Google Recaptcha Unsuccessful!!');
-        }
+       }
     }
 
     // validate birthday

@@ -99,11 +99,34 @@ class Events_Controller extends CI_Controller {
 
         $idEvent = $this->input->get('id_event');
         $event = $this->getEventDetails($idEvent);
+        
         $villeModel = new Villes_model();
         $eventModel = new Events_model();
+        $mediasModel = new Medias_model();
+        
+        
+        if($event->id_presta_event != NULL){
+            
+            $mediasPresta = $mediasModel->getAllMediaFromPresta($event->id_presta_event);
+            
+            if($mediasPresta != FALSE){
+                $datas['mediasPresta'] = $mediasPresta;
+            }else{
+                $datas['mediasPresta'] = '';
+            }
+            
+            $presta = $eventModel->getPrestaFromEvent($event->id_presta_event);
+        }else{
+            $presta = 'Le lieux ne sera dévoilé que dans quelques jours....';
+        }
+        
+        
+        
+        
         $nomVille = $villeModel->getNomVilleFromId($event->id_ville);
         $datas['event'] = $event;
         $datas['ville'] = $nomVille;
+        $datas['presta'] = $presta;
 
         $nbResaByEvent = $eventModel->getNbResaByEventId($event->id_event);
         $datas['nombrePlacesRestante'] = $event->nb_places_event - $nbResaByEvent;

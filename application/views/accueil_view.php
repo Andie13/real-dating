@@ -16,7 +16,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <a id="logo-res" >                   
                     <img id="headerImg" src="<?php echo base_url(); ?>assets/images/fake_logo.jpg" alt="logo"/>
                 </a>
-                <a href = "#"class="active">Accueil</a>
+                <a href = "#" class="active">Accueil</a>
 
 
                 <?php
@@ -37,8 +37,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
         </div>
 
+        <div class=" col-lg-12 col-xs-12 contain-wrap ">
 
-
+            ·
 
             <div class="clearfix"></div>
 
@@ -64,48 +65,49 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
 
         </div>
-    
-        <script>
-            var BASE_URL = "<?php echo base_url(); ?>";
+  
 
-            $(document).ready(function () {
-                $("#search").autocomplete({
+    <script>
+        var BASE_URL = "<?php echo base_url(); ?>";
 
-                    source: function (request, response) {
-                        $.ajax({
-                            url: BASE_URL + "ajax/Ajax_controller/search",
+        $(document).ready(function () {
+            $("#search").autocomplete({
 
-                            data: {
-                                term: request.term
-                            },
-                            dataType: "json",
-                            success: function (data) {
+                source: function (request, response) {
+                    $.ajax({
+                        url: BASE_URL + "ajax/Ajax_controller/search",
 
-                                var resp = $.map(data, function (obj) {
-                                    return obj.nom_commune;
-                                });
+                        data: {
+                            term: request.term
+                        },
+                        dataType: "json",
+                        success: function (data) {
 
-                                response(resp);
-                            }
-                        });
-                    },
-                    minLength: 3,
+                            var resp = $.map(data, function (obj) {
+                                return obj.nom_commune;
+                            });
 
-                });
-
-
+                            response(resp);
+                        }
+                    });
+                },
+                minLength: 3,
 
             });
 
 
-        </script>   
-        <script>
-            function myFunction() {
-                var x = document.getElementById("myTopnav");
-                if (x.className === "topnav") {
-                    x.className += " responsive";
-                } else {
-                    x.className = "topnav";
-                }
+
+        });
+
+
+    </script>   
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
             }
-        </script>
+        }
+    </script>

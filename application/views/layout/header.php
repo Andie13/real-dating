@@ -11,7 +11,7 @@
 
 
         <!--*** JS ***-->
-
+        <script src="modernizr.js"></script>
 
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -47,17 +47,27 @@
 
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/style.css">
 
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />
         <script src='https://www.google.com/recaptcha/api.js'></script>
 
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        
+
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  
+
+        <script src="<?php echo base_url() ?>assets/tools/plugins/timepicker/js/bootstrap-timepicker.min.js" type="text/javascript"></script> 
+        <script src="<?php echo base_url() ?>assets/tools/plugins/datetimepicker/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script> 
+        <script src="<?php echo base_url() ?>assets/tools/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.fr.js" type="text/javascript"></script>
+
+        <link href="<?php echo base_url() ?>assets/tools/plugins/datepicker/css/datepicker.css" rel="stylesheet" type="text/css" media="screen"/>
+        <link href="<?php echo base_url() ?>assets/tools/plugins/daterangepicker/css/daterangepicker-bs3.css" rel="stylesheet" type="text/css" media="screen"/>
+        <link href="<?php echo base_url() ?>assets/tools/plugins/timepicker/css/bootstrap-timepicker.css" rel="stylesheet" type="text/css" media="screen"/>
+        <link href="<?php echo base_url() ?>assets/tools/plugins/datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" media="screen"/>
+        <link href="<?php echo base_url() ?>assets/tools/plugins/jquery-ui/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" media="screen"/>
+
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/style.css">
 
 
-
+    </head>
