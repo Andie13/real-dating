@@ -62,6 +62,21 @@ body{
     padding: 0;
 }
 /**************************************
+              ABOUT
+**************************************/
+img#about{
+    width: 15em;
+    border: 1px wheat solid;
+    border-radius: 60%
+    
+}
+.about{
+    margin:auto;
+    margin-top: 2em;
+}
+
+
+/**************************************
                ERROR MESSAGE
 **************************************/
 
