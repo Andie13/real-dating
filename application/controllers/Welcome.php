@@ -32,6 +32,7 @@ class Welcome extends CI_Controller {
         $villesModel = new Villes_model();
         $villesModel->getVilles('Marseille');
     }
+    
     public function gotoAbout() {
         
         $this->load->view('layout/header');

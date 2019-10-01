@@ -100,7 +100,7 @@
                         </button>
                     </div>
                     <div class="col-75">
-                        <input type="text" id="tel" name="tel" id="phone" name="phone"
+                        <input type="text" id="tel" name="tel" id="phone"
                                pattern="([0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2})|([0-9]{10})" placeholder="Votre tel..." >
                     </div>
                 </div>

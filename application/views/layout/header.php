@@ -19,11 +19,11 @@
 
         <!--*** Style CSS sheets ***-->
 
-        <link rel="shortcut icon" href="<?php echo base_url() . "public/images/favicon.png"; ?>" type="image/x-icon" />    <!-- Favicon -->
-        <link rel="apple-touch-icon-precomposed" href="public/images/apple-touch-icon-57-precomposed.png">	<!-- For iPhone -->
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo base_url(); ?>assets/tools/images/apple-touch-icon-114-precomposed.png">    <!-- For iPhone 4 Retina display -->
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo base_url(); ?>assets/tools/images/apple-touch-icon-72-precomposed.png">    <!-- For iPad -->
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo base_url(); ?>assets/tools/images/apple-touch-icon-144-precomposed.png">    <!-- For iPad Retina display -->
+        <link rel="shortcut icon" href="<?php echo base_url() . "assets/tools/images/favicon.png"; ?>" type="image/x-icon" />    <!-- Favicon -->
+        <link rel="apple-touch-icon-precomposed" href="<?php echo base_url() ."assets/tools/images/favicon.png";?>"/>	<!-- For iPhone -->
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo base_url(); ?>assets/tools/images/favicon.png">    <!-- For iPhone 4 Retina display -->
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo base_url(); ?>assets/tools/images/favicon.png">    <!-- For iPad -->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo base_url(); ?>assets/tools/images/favicon.png">    <!-- For iPad Retina display -->
         <!-- CORE CSS FRAMEWORK - START -->
 
 
