@@ -1,30 +1,22 @@
 <?php
-$this->load->library('session');
-$eventModel = new Events_model();
+defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
-<!-- BEGIN BODY -->
-<body class="bg">
-    <div class="login-wrapper">
-        <?php
-        if ($this->session->flashdata('err')) {
-            ?>
-            <div class = "alert alert-error">
-                <?php echo $this->session->flashdata('err'); ?>
-            </div>
-        <?php } ?>
 
+<body class="bg welcome">
+
+    <div class="container-fluid login-wrapper">
         <div class="header col-lg-12 col-xs-12 ">
 
             <div class="col-lg-4 col-xs-12 logo">
-                <p id="headerImp">
-                    <img id="headerImg" src="<?php echo base_url(); ?>assets/images/fake_logo.jpg" alt="logo"/>
+                <p id="plogo">
+                    <img id="headerImg" src="<?php echo base_url(); ?>assets/images/logo/loog-carre1000x1000.png" alt="logo"/>
                 </p>
             </div>
             <div class="topnav col-lg-8 col-xs-12" id="myTopnav">
                 <a id="logo-res" >                   
-                    <img id="headerImg" src="<?php echo base_url(); ?>assets/images/fake_logo.jpg" alt="logo"/>
+                    <img id="headerImg" src="<?php echo base_url(); ?>assets/images/logo/logo-favicon-carre-1000.png" alt="logo"/>
                 </a>
-                <a href = "#" class="active">Détails Événement</a>
+                <a href = "#" class="active">Accueil</a>
 
 
                 <?php
@@ -39,41 +31,26 @@ $eventModel = new Events_model();
                 ?>
 
 
-                <a href = "<?php echo base_url() ?>welcome">Accueil</a>
-
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                     <i class="fa fa-bars"></i>
                 </a>
             </div>
         </div>
-        <div class=" clearfix"></div>
-        <br>
-        <br>
 
+        <div class=" col-lg-12 col-xs-12 contain-wrap ">
+            <div class="row">
+                <div class="col-lg-12">
 
+                </div>
 
-        <div class="col-1"></div>
-        <div class="col-10  login">
-            <div class="col-12">
-                <br>
-                <h2 class="title"><?php echo $event->nom_event ?></h2>
-                <?php
-                if (isset($connected)) {
-                    
-                } else {
-                    ?>
-                    <h3 class="accroche">Afin de réserver, veuillez vous <a href = "<?php echo base_url() ?>user/Inscription_controller">inscrire</a> ou vous <a href = "<?php echo base_url() ?>user/login_controller">connecter.</a></h3>
-
-                <?php }
-                ?>
-
-
-                <br>
-                <div class="col-lg-12 col-xs-12 event">
-                    <div class="col-lg-6 col-xs-12 containerImage">
+            </div>
+            <div class="row">
+                <div class="col-lg-10 col-xs-10 event eventDetails">
+                    <div class="col-lg-6 col-xs-10 containerImage" >
+                        <img id="imageEvent" src="<?php echo $media->path_media . '/' . $media->nom_media ?>" alt="image event"/>
                     </div>
 
-                    <div class="col-lg-6 col-xs-12 " id="desc">
+                    <div class="col-lg-6 col-xs-10 " id="desc">
                         <h2 class="title">Quand? le <?php echo date_format(new DateTime($event->date_event), "d m Y") ?></h2>
                         <h2 class="title">À <?php
                             echo date_format(new DateTime($event->heure_event), "H")
@@ -94,10 +71,9 @@ $eventModel = new Events_model();
                         ?>
                     </div>
                 </div>
-                <br>
-                <br>
-                <br>
-                <div class="col-12 regForm event" style="margin-top: 1em;">
+            </div>
+            <div class="row">
+                <div class="col-lg-10 col-xs-10 event eventDetails">
                     <h2>Déroulement de la soirée:</h2>
                     <h4 style="text-align: justify">
                         Quam quidem partem accusationis admiratus sum et moleste tuli potissimum esse Atratino datam. Neque enim decebat neque aetas illa postulabat neque, id quod animadvertere poteratis, pudor patiebatur optimi adulescentis in tali illum oratione versari. Vellem aliquis ex vobis robustioribus hunc male dicendi locum suscepisset; aliquanto liberius et fortius et magis more nostro refutaremus istam male dicendi licentiam. Tecum, Atratine, agam lenius, quod et pudor tuus moderatur orationi meae et meum erga te parentemque tuum beneficium tueri debeo.
@@ -112,53 +88,39 @@ $eventModel = new Events_model();
                     <h3>Réservations sécurisées par PayPal</h3>
                     <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_150x38.png" alt="PayPal Logo">
                     <br>
-                    <br>
-                    <br>
-
                 </div>
 
+            </div>
+            <div class="row">
                 <?php
                 if ($presta != '') {
 
-                    echo ' <div class="col-12 regForm event" style="margin-top: 1em;">';
+                    echo ' <div class="col-lg-10 col-xs-10 event eventDetails">';
                     echo $presta->nom_presta;
                     echo '<br> ';
                     if ($mediasPresta != '') {
                         foreach ($mediasPresta as $mp) {
                             ?>
                             <img src="<?php echo $mp->path_media . '/' . $mp->nom_media ?>" alt="images prestataire" style="max-height: 8em;margin: 1em;"/>
-                        <?php
+                            <?php
                         }
                     }
                     echo ' ';
                     echo '</div>';
                 }
                 ?>
-
-                <div class="col-1"></div>
-
             </div>
-
-
-
-
-
-
         </div>
-        <div class="col-1"></div>
-    </div>
+       
 
 
-
-</body>
-
-</html>
-
-
-
-
-
-
-
-
-
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>

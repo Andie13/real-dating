@@ -1,37 +1,43 @@
    
 <!-- BEGIN BODY -->
-<body class=" bg">
-    <div class="login-wrapper">
+<body class=" bg welcome">
+    <div class="container-fluid login-wrapper">
 
 
         <div class="header col-lg-12 col-xs-12 ">
 
             <div class="col-lg-4 col-xs-12 logo">
-                <p id="headerImp">
-                    <img id="headerImg" src="<?php echo base_url(); ?>assets/images/fake_logo.jpg" alt="logo"/>
+                <p id="plogo">
+                    <img id="headerImg" src="<?php echo base_url(); ?>assets/images/logo/loog-carre1000x1000.png" alt="logo"/>
                 </p>
             </div>
             <div class="topnav col-lg-8 col-xs-12" id="myTopnav">
                 <a id="logo-res" >                   
-                    <img id="headerImg" src="<?php echo base_url(); ?>assets/images/fake_logo.jpg" alt="logo"/>
+                    <img id="headerImg" src="<?php echo base_url(); ?>assets/images/logo/logo-favicon-carre-1000.png" alt="logo"/>
                 </a>
-                <a href = "#"class="active">Inscription</a>
-                <a href = "<?php echo base_url() ?>user/Login_controller">Connexion</a>
+                <a href = "#" class="active">Inscription</a>
 
-                <a href = "<?php echo base_url() ?>welcome">Accueil</a>
+
+                <?php
+                if (isset($connected)) {
+
+                    echo '<a href = "' . base_url() . 'user/UserProfile_controller">Mon Profile</a>';
+                    echo '<a href = "' . base_url() . 'user/login_controller/logout">Déconnexion</a>';
+                } else {
+                   
+                    echo '<a href = "' . base_url() . 'user/Login_controller">Connexion</a>';
+                     echo '<a href = "' . base_url() . 'welcome">Accueil</a>';
+                }
+                ?>
+
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                     <i class="fa fa-bars"></i>
                 </a>
             </div>
         </div>
-
         <div class=" clearfix"></div>
-        <br>
-        <br>
-
-
-        <div class="col-lg-2"></div>
-        <div class="col-lg-8 col-xs-12 regForm login">
+   
+        <div class="col-lg-8 col-xs-12 eventDetails regForm event login">
             <br>
             <h2 class="title">Inscription: </h2>
             <br>
@@ -47,93 +53,124 @@
             <?php } ?>
             <form action="<?php echo base_url(); ?>user/Inscription_controller/formPost" method="POST" enctype="multipart/form-data">
                 <div class="row">
-                    <div class="col-25">
-                        <label for="genre"></label>
-                    </div>
-                    <div class="col-75">
-                        <input type="radio"  name="genre" value="Femme" checked>
-                        <label for="fname">Femme</label>
+                    <div class="col-lg-12 ">
+                        <div class="col-lg-4">
+                            <label for="genre"> Vous êtes:</label>
+                        </div>
+                        <div class="col-lg-8">
+                            <input  tabindex="5" type="radio" id="minimal-radio-4" class="icheck-minimal-blue" name="genre" value="Femme" checked>
+                            <label for="fname">Femme</label>
 
-                        <input type="radio"  name="genre" value="homme">
-                        <label for="fname">Homme</label>
+                            <input type="radio"  name="genre" value="homme">
+                            <label for="fname">Homme</label>
 
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-25">
-                        <label for="fname">Nom</label>
-                    </div>
-                    <div class="col-75">
-                        <input type="text" id="fname" name="nom" placeholder="Votre Nom.." required>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-25">
-                        <label for="lname">Prénom</label>
-                    </div>
-                    <div class="col-75">
-                        <input type="text" id="lname" name="prenom" placeholder="Votre Prénom.." required>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-25">
-                        <label for="dateNaiss">Né(e) le</label>
-                    </div>
-                    <div class="col-75">
-                        <input type="text" name="dateNaiss" class="datepick" value=""  data-format="YYYY-MM-DD" required>
 
-                    </div>
+
                 </div>
                 <div class="row">
-                    <div class="col-25">
-                        <label for="email">E-mail</label>
-                    </div>
-                    <div class="col-75">
-                        <input type="email" id="email" name="email" placeholder="Votre email..." required>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-25">
-                        <label for="tel">Tel</label>
-                        <button class="btn btn-round btn-orange" id="btnInfo">
-                            <i class="fa fa-question"></i>
-                        </button>
-                    </div>
-                    <div class="col-75">
-                        <input type="text" id="tel" name="tel" id="phone"
-                               pattern="([0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2})|([0-9]{10})" placeholder="Votre tel..." >
+                    <div class="col-lg-12 ">
+                        <div class="col-lg-4">
+                            <label for="fname">Nom</label>
+                        </div>
+                        <div class="col-lg-8">
+                            <input type="text" id="fname" name="nom" placeholder="Votre Nom.." required>
+                        </div>
                     </div>
                 </div>
+
                 <div class="row">
-                    <div class="col-25">
-                        <label for="country">Mot de passe</label>
+                    <div class="col-lg-12 ">
+
+                        <div class="col-lg-4">
+                            <label for="lname">Prénom</label>
+                        </div>
+                        <div class="col-lg-8">
+                            <input type="text" id="lname" name="prenom" placeholder="Votre Prénom.." required>
+                        </div>
                     </div>
-                    <div class="col-75">
-                        <input type="password" id="pass" name="pass" placeholder="*****" required>
-                    </div>
+
                 </div>
                 <div class="row">
-                    <div class="col-25">
-                        <label for="country">Confirmez le mot dde passe:</label>
+                    <div class="col-lg-12 ">
+                        <div class="col-lg-4">
+                            <label for="dateNaiss">Né(e) le</label>
+                        </div>
+                        <div class="col-lg-8">
+                            <input type="text" name="dateNaiss" class="datepick" value=""  data-format="YYYY-MM-DD" required>
+
+                        </div>
                     </div>
-                    <div class="col-75">
-                        <input type="password" id="confPass" placeholder="*****" onchange="checkPasswordMatch()"required>
+
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 ">
+                        <div class="col-lg-4">
+                            <label for="email">E-mail</label>
+                        </div>
+                        <div class="col-lg-8">
+                            <input type="email" id="email" name="email" placeholder="Votre email..." required>
+                        </div>
                     </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 ">
+                        <div class="col-lg-4">
+                            <label for="tel">Tel</label>
+                            <button class="btn btn-round btn-colors" id="btnInfo">
+                                <i class="fa fa-question"></i>
+                            </button>
+
+                        </div>
+                        <div class="col-lg-8">
+                            <input type="text" id="tel" name="tel" id="phone"
+                                   pattern="([0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2})|([0-9]{10})" placeholder="Votre tel..." >
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 ">
+                        <div class="col-lg-4">
+                            <label for="country">Mot de passe</label>
+                        </div>
+                        <div class="col-lg-8">
+                            <input type="password" id="pass" name="pass" placeholder="*****" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12 ">
+                        <div class="col-lg-4">
+                            <label for="country">Confirmez le mot dde passe:</label>
+                        </div>
+                        <div class="col-lg-8">
+                            <input type="password" id="confPass" placeholder="*****" onchange="checkPasswordMatch()"required>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="registrationFormAlert" id="divCheckPasswordMatch">
                 </div>
                 <div class="row">
-                    <div class="col-25">
-                        <label for="subject"></label>
+                    <div class="col-lg-12 ">
+                         <div class="col-lg-4">
+                        <label for="subject">Anti-bot</label>
                     </div>
-                    <div class="col-75">
+                        <div class="col-lg-6">
                         <div class="g-recaptcha" data-sitekey="<?php echo $this->config->item('google_key') ?>"></div> 
                         <br/>
                         <button type="submit" id="search_btn" class="btn btn-round btn-orange"><i class="">Valider</i></button>
                     </div>
+                    </div>
+                   
+                    
             </form>
         </div>
-        <div class="col-lg-2"></div>
+  
 
     </div>
     <script>
@@ -191,9 +228,9 @@
                 selectOtherMonths: true,
                 yearRange: "1930:2010"
             });
-            
-            $('#btnInfo').click(function(){
-                alert("Les formats requis sont: "+'\n'+'00-00-00-00-00 ou '+'\n'+'0000000000');
+
+            $('#btnInfo').click(function () {
+                alert("Les formats requis sont: " + '\n' + '00-00-00-00-00 ou ' + '\n' + '0000000000');
             })
         });
     </script>

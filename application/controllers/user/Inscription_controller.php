@@ -13,6 +13,7 @@ class Inscription_controller extends CI_Controller {
     public function index() {
         $this->load->view('layout/header');
         $this->load->view('user/Inscription_view');
+        $this->load->view('layout/footer');
     }
 
     public function formPost() {
@@ -50,7 +51,7 @@ class Inscription_controller extends CI_Controller {
 
             $anniv = date_format(new DateTime($anniv), "Y-m-d");
 
-           
+
             //On vérifie que l'utilisateur n'existe pas avec son email.
             $userModel = new Users_model();
             $isuserExist = $userModel->checkIfUserEvists($email);
@@ -79,22 +80,21 @@ class Inscription_controller extends CI_Controller {
                     $hash = md5($pass);
 
                     //envoi de la requête
-                    $res = $userModel->registerUser($genre, $nom, $prenom, $email,$tel, $hash, $anniv);
+                    $res = $userModel->registerUser($genre, $nom, $prenom, $email, $tel, $hash, $anniv);
                     if ($res != false) {
 
                         $this->session->set_userdata('connected', true);
                         $this->session->set_userdata('userId', $res);
 
                         redirect('Welcome');
-                    }else{
+                    } else {
                         redirect('Welcome');
                     }
-                    
                 }
             }
         } else {
             $this->session->set_flashdata('flashError', 'Sorry Google Recaptcha Unsuccessful!!');
-       }
+        }
     }
 
     // validate birthday

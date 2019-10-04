@@ -2,6 +2,10 @@ F/**************************************
                WHOLE DOC
 **************************************/
 
+html{
+    position: relative;
+    min-height: 100%
+}
 *{
     padding: 0;
     margin: 0;
@@ -71,10 +75,12 @@ img#about{
 
 }
 .about{
-    margin:auto;
-    margin-top: 2em;
-}
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+    margin-top: 1%;
 
+}
 
 /**************************************
                ERROR MESSAGE
@@ -96,14 +102,12 @@ img#about{
     height: auto
 }
 #headerImg{
-    width: 5em;
-
+    width: 7em;
     margin-left: auto;
     margin-right: auto; 
 }
 .logo{
     display: inline-block;
-
 
 }
 #plogo{
@@ -172,7 +176,7 @@ img#about{
     margin: auto;
     height: auto;
     float: none;
-    margin-top: 10%;
+    margin-top: 5%;
 
 
 }
@@ -199,7 +203,7 @@ img#about{
 .search-form{
     margin: auto;
     max-width: 600px;
-    
+
 }
 
 #search{
@@ -208,16 +212,16 @@ img#about{
     line-height: 1em;
     float: left;
     width: 80%;
-   
- 
+
+
 
 }
 
 .inputForm{
     background-color: rgba(255,255,255,0.7);
     color: darkblue;
-   
-  
+
+
 }
 .ui-autocomplete {
     max-height: 200px;
@@ -241,28 +245,28 @@ contain-wrap{
     padding-bottom: 4em;
 }
 
-#footer {
+.footer {
     position: absolute;
     bottom:0;
     width: 100%;
-    height: 8em;
+    height: auto;
 
 }
-footer ul li p{
-    
+.footer-a ul li p{
+
     text-align: center;
 }
-.footer ul li p a{
-    
+.footer-a ul li p a{
+
     color: darkblue;
     text-decoration: underline;
     font-size: 1vw;
 
 } 
-.footer ul {
+.footer-a ul {
 
     list-style-type: none;
-   
+
 }
 
 /**************************************
@@ -283,16 +287,17 @@ input[type=text],[type=date],[type=email],[type=password], select, textarea {
     border-bottom: 2px solid #fff;
     border-radius: 4px;
     resize: vertical;
-    background-color: rgba(255,208,184,0.4);
+    background-color: rgba(241,218,95,0.4);
 }
 
 label {
     padding: 12px 12px 12px 0;
     display: inline-block;
+    font-size: 1.5em;
 }
 
 input[type=submit] {
-    background-color: #4CAF50;
+    background-color: #f1da5f;
     color: white;
     padding: 12px 20px;
     border: none;
@@ -353,14 +358,14 @@ input[type=submit]:hover {
 **************************************/
 
 .event{
-    background-color: rgba(255,208,184,0.7);
-    color: black;
+    background-color: rgba(255,255,255,0.7);
+    color: darkblue;
     width: 90%;
 
 }
 .event h3{
-    color: brown;
-    font-size: 1em;
+    color: darkblue;
+    font-size: 2em;
     font-weight: bold;
     text-align: center;
     margin-top: 1em;
@@ -370,16 +375,14 @@ input[type=submit]:hover {
     margin: 0;
 }
 .event p #link{
-    color: brown;
+    color: darkblue;
     font-weight: bold;
     font-size: 1em;
 }
 
 .containerImage{
     position: relative;
-
-
-    background-image: url('../images/event.jpg');
+    text-align: center;
     background-size: cover;
     height: 20em;
 }
@@ -419,8 +422,25 @@ p {
 
 }
 #desc h2{
-    color: brown;
+    color: darkbluen;
     text-align: left;
+    font-weight: bold;
+    
+  
+}
+
+#imageEvent{
+    height: 100%;
+  
+}
+.eventDetails{
+   float: none;
+   margin-left: auto;
+   margin-right: auto;
+   padding-bottom: 10px;
+   height: auto;
+   padding: 1em;
+   margin-top: 1em;
 }
 
 
@@ -515,21 +535,16 @@ p {
 }
 
 
-@media screen and (max-width: 500px) {
 
-    .logo-res{
-        width:30%
-    }
-
-
-}
 @viewport{
     zoom: 1.0;
     width: extend-to-zoom;
 }
 
-
-@media screen and (max-width: 768px) {
+@media only screen 
+and (device-width : 414px) 
+and (device-height : 736px) 
+and (-webkit-device-pixel-ratio : 3) { 
     .topnav a:not(:first-child) {display: none;}
     .topnav a.icon {
         float: right;
@@ -540,7 +555,7 @@ p {
 
     }
     .logo{
-        display: none
+        display: none;
     }
     logo #headerImp{
         text-align: center;  }
@@ -554,7 +569,8 @@ p {
         display: block;
         float: left;
         background-image: url('../images/Logo/logo-favicon-carre-1000.png');
-        background-size: 7em;
+        background-size: 15%;
+        background-repeat: no-repeat;
     }
     .topnav a:first-child, .topnav a:last-child{
         background-color: darkblue;
@@ -565,8 +581,51 @@ p {
         background-color: transparent;
     }
     .topnav a#logo-res img#headerImg{
-        height: 2em;
-        width:auto;
+
+    }
+    .logo p#headerImp{
+        display: none;
+    }
+
+}
+@media screen and (max-width: 768px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+        float: right;
+        display: block;
+
+        border: 1px darkblue solid;
+        color: darkblue;
+
+    }
+    .logo{
+        display: none;
+    }
+    logo #headerImp{
+        text-align: center;  }
+    #headerImp{
+        float: none;
+    }
+    a.active{
+        display: none;
+    }
+    .topnav a#logo-res{
+        display: block;
+        float: left;
+        background-image: url('../images/Logo/logo-favicon-carre-1000.png');
+        background-size: 15%;
+        background-repeat: no-repeat;
+    }
+    .topnav a:first-child, .topnav a:last-child{
+        background-color: darkblue;
+        color: white;
+    }
+
+    #myTopnav{
+        background-color: transparent;
+    }
+    .topnav a#logo-res img#headerImg{
+
     }
     .logo p#headerImp{
         display: none;

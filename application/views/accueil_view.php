@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <body class="bg welcome">
 
-    <div class="container-fluid">
+    <div class="container-fluid login-wrapper">
         <div class="header col-lg-12 col-xs-12 ">
 
             <div class="col-lg-4 col-xs-12 logo">
@@ -68,8 +68,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                     </div>
                 </div>
-
-
             </div>
             <div class="col-3"></div>
         </div>

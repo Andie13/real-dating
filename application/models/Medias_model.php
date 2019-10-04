@@ -32,4 +32,14 @@ class Medias_model extends CI_Model {
         
     }
     
+    public function getMediaFromEventImageId($idMedia) {
+        
+        $this->db->where(self::ID_MEDIA, $idMedia)
+                ->select()
+                ->from(self::TABLE_MEDIAS);
+        
+        return $this->db->get()->row();
+        
+    }
+    
 }

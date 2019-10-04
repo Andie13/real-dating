@@ -11,7 +11,7 @@
 
 
         <!--*** JS ***-->
-        <script src="modernizr.js"></script>
+
 
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -20,7 +20,7 @@
         <!--*** Style CSS sheets ***-->
 
         <link rel="shortcut icon" href="<?php echo base_url() . "assets/tools/images/favicon.png"; ?>" type="image/x-icon" />    <!-- Favicon -->
-        <link rel="apple-touch-icon-precomposed" href="<?php echo base_url() ."assets/tools/images/favicon.png";?>"/>	<!-- For iPhone -->
+        <link rel="apple-touch-icon-precomposed" href="<?php echo base_url() . "assets/tools/images/favicon.png"; ?>"/>	<!-- For iPhone -->
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo base_url(); ?>assets/tools/images/favicon.png">    <!-- For iPhone 4 Retina display -->
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo base_url(); ?>assets/tools/images/favicon.png">    <!-- For iPad -->
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo base_url(); ?>assets/tools/images/favicon.png">    <!-- For iPad Retina display -->
@@ -67,6 +67,7 @@
         <link href="<?php echo base_url() ?>assets/tools/plugins/datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" media="screen"/>
         <link href="<?php echo base_url() ?>assets/tools/plugins/jquery-ui/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" media="screen"/>
 
+        <link href="<?php echo base_url() ?>assets/tools/plugins/icheck/skins/all.css" rel="stylesheet" type="text/css" media="screen"/> 
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/style.css">
 
 

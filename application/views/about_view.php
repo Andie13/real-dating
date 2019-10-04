@@ -4,17 +4,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <body class="bg">
 
-    <div class="container-fluid">
+    <div class="login-wrapper">
         <div class="header col-lg-12 col-xs-12 ">
 
             <div class="col-lg-4 col-xs-12 logo">
-                <p id="headerImp">
-                    <img id="headerImg" src="<?php echo base_url(); ?>assets/images/fake_logo.jpg" alt="logo"/>
+                <p id="plogo">
+                    <img id="headerImg" src="<?php echo base_url(); ?>assets/images/logo/loog-carre1000x1000.png" alt="logo"/>
                 </p>
             </div>
             <div class="topnav col-lg-8 col-xs-12" id="myTopnav">
                 <a id="logo-res" >                   
-                    <img id="headerImg" src="<?php echo base_url(); ?>assets/images/fake_logo.jpg" alt="logo"/>
+                    <img id="headerImg" src="<?php echo base_url(); ?>assets/images/logo/logo-favicon-carre-1000.png" alt="logo"/>
                 </a>
                 <a href = "#" class="active">Accueil</a>
 
@@ -39,110 +39,105 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <div class=" col-lg-12 col-xs-12 contain-wrap ">
 
-
-
-            <div class="clearfix"></div>
-
             <div class="row">
                 <div class=" col-12 accroche">
                     <img id="about" src="<?php echo base_url() ?>assets/images/img_about.jpg">
-                    <p><i>"Qui sommes nous?"</i></p>
-                    <p><i></i></p>
+                    <p><i>"Qui sommes nous?"</i></p>                
                 </div>
             </div>
-            <br>
-            <div class="col-12 event about">
+           
+            <div class="col-10 event about">
                 <h3>En couple depuis trois ans Christophe et Awa se sont rencontrés grâce à un speed dating.<br>
 
-Tous les 3 bercés dans les relations humaines, Alex, Christophe et Awa ont eu envie de développer le speed-dating et la mise en relation dans ce monde ou le virtuel prend le dessus sur le réel.<br>
+                    Tous les 3 bercés dans les relations humaines, Alex, Christophe et Awa ont eu envie de développer le speed-dating et la mise en relation dans ce monde ou le virtuel prend le dessus sur le réel.<br>
 
-Notre objectif est de favoriser ‘’la vraie rencontre’’ et de mettre en avant ‘’l’humain’’
+                    Notre objectif est de favoriser ‘’la vraie rencontre’’ et de mettre en avant ‘’l’humain’’
 
-</h3>
+                </h3>
             </div>
-            <br>
-            <br>
-            <br>
-            <br>
+
 
             <div class="row">   
-                
-                    <div class="about col-lg-3 event">
-                        <h2>Alex</h2>
-                        <h3>
-                            Ami depuis l’enfance avec Christophe<br>
-                            Directeur de projet au sein d’une entreprise.<br>
-                            Co-fondateur de Real Date.<br>
-                        </h3>
-                    </div>
-                    <div class="about col-lg-3 event">
-                        <h2>Christophe</h2>
-                        <h3>
-                            Ami d’enfance d’Alex et compagnon de Awa.<br>
-                            Créateur et dirigeant d’entreprise.<br>
-                            Co-fondateur de Real Date.<br>
+
+                <div class="about col-lg-3 col-xs-10 event">
+                    <h2>Alex</h2>
+                    <h3>
+                        Ami depuis l’enfance avec Christophe<br>
+                        Directeur de projet au sein d’une entreprise.<br>
+                        Co-fondateur de Real Date.<br>
+                    </h3>
+                </div>
+                <div class="about col-lg-3 col-xs-10  event">
+                    <h2>Christophe</h2>
+                    <h3>
+                        Ami d’enfance d’Alex et compagnon de Awa.<br>
+                        Créateur et dirigeant d’entreprise.<br>
+                        Co-fondateur de Real Date.<br>
 
 
-                        </h3>
-                    </div>
-                    <div class="about col-lg-3 event">
-                        <h2>Awa</h2>
-                        <h3>
-                            Compagne de Christophe<br>
-                            Sophrologue diplômée et psychanalyse<br>
-                            Co-fondatrice de Real Date.<br>
+                    </h3>
+                </div>
+                <div class="about col-lg-3 col-xs-10 event">
+                    <h2>Awa</h2>
+                    <h3>
+                        Compagne de Christophe<br>
+                        Sophrologue diplômée et psychanalyse<br>
+                        Co-fondatrice de Real Date.<br>
 
 
-                        </h3>
-                    </div>
-
+                    </h3>
+                </div>
             </div>
 
+
         </div>
+        
+
+  
 
 
-        <script>
-            var BASE_URL = "<?php echo base_url(); ?>";
+    <script>
+        var BASE_URL = "<?php echo base_url(); ?>";
 
-            $(document).ready(function () {
-                $("#search").autocomplete({
+        $(document).ready(function () {
+            $("#search").autocomplete({
 
-                    source: function (request, response) {
-                        $.ajax({
-                            url: BASE_URL + "ajax/Ajax_controller/search",
+                source: function (request, response) {
+                    $.ajax({
+                        url: BASE_URL + "ajax/Ajax_controller/search",
 
-                            data: {
-                                term: request.term
-                            },
-                            dataType: "json",
-                            success: function (data) {
+                        data: {
+                            term: request.term
+                        },
+                        dataType: "json",
+                        success: function (data) {
 
-                                var resp = $.map(data, function (obj) {
-                                    return obj.nom_commune;
-                                });
+                            var resp = $.map(data, function (obj) {
+                                return obj.nom_commune;
+                            });
 
-                                response(resp);
-                            }
-                        });
-                    },
-                    minLength: 3,
-
-                });
-
-
+                            response(resp);
+                        }
+                    });
+                },
+                minLength: 3,
 
             });
 
 
-        </script>   
-        <script>
-            function myFunction() {
-                var x = document.getElementById("myTopnav");
-                if (x.className === "topnav") {
-                    x.className += " responsive";
-                } else {
-                    x.className = "topnav";
-                }
+
+        });
+
+
+    </script>   
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
             }
-        </script>
+        }
+    </script>
 
