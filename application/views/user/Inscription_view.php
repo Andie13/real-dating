@@ -24,9 +24,9 @@
                     echo '<a href = "' . base_url() . 'user/UserProfile_controller">Mon Profile</a>';
                     echo '<a href = "' . base_url() . 'user/login_controller/logout">Déconnexion</a>';
                 } else {
-                   
+
                     echo '<a href = "' . base_url() . 'user/Login_controller">Connexion</a>';
-                     echo '<a href = "' . base_url() . 'welcome">Accueil</a>';
+                    echo '<a href = "' . base_url() . 'welcome">Accueil</a>';
                 }
                 ?>
 
@@ -36,7 +36,7 @@
             </div>
         </div>
         <div class=" clearfix"></div>
-   
+
         <div class="col-lg-8 col-xs-12 eventDetails regForm event login">
             <br>
             <h2 class="title">Inscription: </h2>
@@ -157,20 +157,20 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12 ">
-                         <div class="col-lg-4">
-                        <label for="subject">Anti-bot</label>
-                    </div>
+                        <div class="col-lg-4">
+                            <label for="subject">Anti-bot</label>
+                        </div>
                         <div class="col-lg-6">
-                        <div class="g-recaptcha" data-sitekey="<?php echo $this->config->item('google_key') ?>"></div> 
-                        <br/>
-                        <button type="submit" id="search_btn" class="btn btn-round btn-orange"><i class="">Valider</i></button>
+                            <div class="g-recaptcha" data-sitekey="<?php echo $this->config->item('google_key') ?>"></div> 
+                            <br/>
+                            <button type="submit" id="search_btn" class="btn btn-round btn-orange"><i class="">Valider</i></button>
+                        </div>
                     </div>
-                    </div>
-                   
-                    
+
+                </div>
             </form>
-        </div>
-  
+      
+
 
     </div>
     <script>

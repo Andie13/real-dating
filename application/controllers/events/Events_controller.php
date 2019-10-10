@@ -128,6 +128,8 @@ class Events_Controller extends CI_Controller {
 
 
             $datas['media'] = $media;
+        }else{
+            $datas['media'] = '';
         }
 
 
