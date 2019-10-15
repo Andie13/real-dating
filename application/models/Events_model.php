@@ -9,6 +9,7 @@ class Events_model extends CI_Model {
     const TABLE_EVENT = 'events';
     const TABLE_PAYMENT = 'payments';
     const TABLE_RESA = 'resa';
+    const TABLE_PRESTA = 'prestataires';
     const ID_USER = 'id_user';
     const REF_RESA = 'ref_resa';
     const STATUS_RESA = 'status_resa';
@@ -26,6 +27,7 @@ class Events_model extends CI_Model {
     public function getEvents($idVille) {
         $this->db->where(self::ID_VILLE, $idVille)
                 ->where('date_event >= CURRENT_DATE()')
+                ->where('id_statut_event NOT LIKE 2')
                 ->select()
                 ->from(self::TABLE_EVENT);
 
@@ -82,15 +84,32 @@ class Events_model extends CI_Model {
     }
 
     public function getNbResaByEventId($eventId) {
-        
-        $query = $this->db->query("SELECT COUNT(*) AS numrows FROM ".self::TABLE_RESA."
-               WHERE ".self::ID_EVENT."='$eventId'");
-        
+
+        $query = $this->db->query("SELECT COUNT(*) AS numrows FROM " . self::TABLE_RESA . "
+               WHERE " . self::ID_EVENT . "='$eventId'");
+
         if ($query->num_rows() == 0)
             return '0';
 
         $row = $query->row();
         return $row->numrows;
+    }
+
+    public function getPrestaFromEvent($idPresta) {
+
+        $query = $this->db->select()
+                ->from(self::TABLE_EVENT)
+                ->join('prestataires','prestataires.id_presta = events.id_presta_event');
+
+        $row = $query->get()->row();
+        
+        if ($row != null) {
+            
+            return $row;
+            
+        }else{
+            return false;
+        }
     }
 
 }

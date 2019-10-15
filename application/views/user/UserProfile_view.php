@@ -8,30 +8,40 @@ if (isset($userId)) {
 }
 ?>
 
-<body class="login_page">
+<body class="bg">
     <div class="login-wrapper">
         <div class="container-fluid">
-            <div class="header col-12">
+            <div class="header col-lg-12 col-xs-12 ">
 
-                <div class="col-4 logo">
-                    <img id="headerImg" src="<?php echo base_url(); ?>assets/images/fake_logo.jpg" alt="logo"/>
+                <div class="col-lg-4 col-xs-12 logo">
+                    <p id="headerImp">
+                        <img id="headerImg" src="<?php echo base_url(); ?>assets/images/fake_logo.jpg" alt="logo"/>
+                    </p>
                 </div>
-                <div class="col-6  menu">
-                    <ul>
-                        <?php
-                        if (isset($connected)) {
+                <div class="topnav col-lg-8 col-xs-12" id="myTopnav">
+                    <a id="logo-res" >                   
+                        <img id="headerImg" src="<?php echo base_url(); ?>assets/images/fake_logo.jpg" alt="logo"/>
+                    </a>
+                    <a href class="active">Mon Profile</a>
 
-                            echo '<li class = "menu"><a href = "' . base_url() . 'user/UserProfile_controller">Mon Profil </a></li>';
-                            echo '<li class = "menu"><a href = "' . base_url() . 'user/login_controller/logout"> Déconnexion</a></li>';
-                        } else {
-                            echo '<li class = "menu"><a href = "' . base_url() . 'user/Login_controller">Connexion</a></li>';
-                            echo '<li class = "menu"><a href = "' . base_url() . 'user/inscription_controller"> Inscription</a></li>';
-                        }
-                        ?>
 
-                    </ul>
+                    <?php
+                    if (isset($connected)) {
+
+
+                        echo '<a href = "' . base_url() . 'user/login_controller/logout">Déconnexion</a>';
+                        echo '<a href = "' . base_url() . 'welcome">Accueil</a>';
+                    } else {
+                        echo '<a href = "' . base_url() . 'user/Login_controller">Connexion</a>';
+                        echo '<a href = "' . base_url() . 'user/inscription_controller"> Inscription</a>';
+                    }
+                    ?>
+
+
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>
                 </div>
-
             </div>
             <div class="clearfix"></div>
 
@@ -56,7 +66,7 @@ if (isset($userId)) {
                             <div class="center">
 
                                 <?php
-                                echo '<h2> ' .$genre.' '. $user->nom_user . ' ' . $user->prenom_user . '</h2>';
+                                echo '<h2> ' . $genre . ' ' . $user->nom_user . ' ' . $user->prenom_user . '</h2>';
                                 echo '<br>';
                                 echo $age . ' ans';
                                 ?>
@@ -100,6 +110,27 @@ if (isset($userId)) {
                             </form>
                             <br>
                             <div class="clearfix"></div>
+                            <form method="POST" action="<?php echo base_url() ?>user/UserProfile_controller/changeTel">
+                                <fieldset>
+                                    <legend class="userForm">Mettre à jour votre numéro de téléphone :</legend>
+                                    <div class="col-4">
+                                        <label>N° de téléphone : </label>                           
+                                    </div>
+                                    <button class="btn btn-round btn-orange" id="btnInfo">
+                                        <i class="fa fa-question"></i>
+                                    </button>
+
+                                    <div class="col-7">
+                                        <input type="text" id="tel" name="tel" id="phone" name="phone"
+                                               pattern="([0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2})|([0-9]{10})" placeholder="Votre tel..." >
+                                    </div>
+                                    <div class="col-1">
+                                        <button type="submit" id="search_btn" class="btn btn-round btn-orange"><i class="">Mettre à jour</i></button>
+                                    </div>
+                                </fieldset>
+                            </form>
+                            <br>
+                            <div class="clearfix"></div>
                             <form method="POST" action="<?php echo base_url() ?>user/UserProfile_controller/resetPassword">
                                 <fieldset>
                                     <legend class="userForm">Mettre à jour Votre mot de Passe:</legend>
@@ -124,15 +155,15 @@ if (isset($userId)) {
 
 
                     </div>
-<!--                    <div id="tabs-2">
-                        <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
-                    </div>-->
+                    <!--                    <div id="tabs-2">
+                                            <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+                                        </div>-->
                     <div id="tabs-3">
 
                         <?php
                         if (isset($events)) {
                             echo '<h2>Vous êtes inscrit à des événements:</h2>';
-                            echo '<table>';
+                            echo '<table class="table stripped">';
                             echo '<thead>
                                 
                             <tr role="row">
@@ -145,7 +176,7 @@ if (isset($userId)) {
                         <br>
                         <tbody>';
                             foreach ($events as $event) {
-                               
+
                                 $eventModel = new Events_model();
                                 $eventDetail = $eventModel->getEventDetailsById($event->id_event);
                                 echo' <tr>
@@ -158,7 +189,8 @@ if (isset($userId)) {
                             }
                             echo '</tbody';
                             echo '</table>';
-                           
+                        } else {
+                            echo '<h2>Vous n\'avez pas encore réservé de soirée...</h2>';
                         }
                         ?>
                     </div>
@@ -174,11 +206,7 @@ if (isset($userId)) {
             $("#tabs").tabs();
         });
 
-        if (datefield.type != "date") { // if browser doesn't support input type="date", initialize date picker widget:
-            jQuery(function ($) { // on document.ready
-                $('#birthday').datepicker();
-            });
-        }
+
         //affichage du flashdata s'il y en a un.
         $(".display_error").delay(4000).slideUp(200, function () {
             $(this).alert('close');
@@ -211,4 +239,20 @@ if (isset($userId)) {
             $("#pass, #confPass").keyup(checkPasswordMatch);
         });
 
+    </script>
+        <script type="text/javascript">
+        $(document).ready(function () {
+            $('.datepick').datepicker({dateFormat: "dd-mm-yy",
+                showButtonPanel: true,
+                changeMonth: true,
+                changeYear: true,
+                showOtherMonths: true,
+                selectOtherMonths: true,
+                yearRange: "1930:2010"
+            });
+            
+            $('#btnInfo').click(function(){
+                alert("Les formats requis sont: "+'\n'+'00-00-00-00-00 ou '+'\n'+'0000000000');
+            })
+        });
     </script>

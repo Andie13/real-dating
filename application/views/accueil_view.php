@@ -2,21 +2,21 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 
-<body class="bg">
+<body class="bg welcome">
 
-    <div class="container-fluid">
+    <div class="container-fluid login-wrapper">
         <div class="header col-lg-12 col-xs-12 ">
 
             <div class="col-lg-4 col-xs-12 logo">
-                <p id="headerImp">
-                    <img id="headerImg" src="<?php echo base_url(); ?>assets/images/fake_logo.jpg" alt="logo"/>
+                <p id="plogo">
+                    <img id="headerImg" src="<?php echo base_url(); ?>assets/images/logo/loog-carre1000x1000.png" alt="logo"/>
                 </p>
             </div>
             <div class="topnav col-lg-8 col-xs-12" id="myTopnav">
                 <a id="logo-res" >                   
-                    <img id="headerImg" src="<?php echo base_url(); ?>assets/images/fake_logo.jpg" alt="logo"/>
+                    <img id="headerImg" src="<?php echo base_url(); ?>assets/images/logo/logo-favicon-carre-1000.png" alt="logo"/>
                 </a>
-                <a href = "#"class="active">Accueil</a>
+                <a href = "#" class="active">Accueil</a>
 
 
                 <?php
@@ -37,34 +37,44 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
         </div>
 
+        <div class=" col-lg-12 col-xs-12 contain-wrap ">
 
 
+            <div class="row">     
+                <div class="col-lg-12">
+
+
+                    <div class="col-lg-6 divSearch col-xs-9">
+                        <form method="POST" class="search-form" action="<?php echo base_url(); ?>Events/events_controller">
+                            <div id="custom-search-input">
+                                <div class="input-group">
+                                    <input id="search" name="search" type="text" class="autocomplete_input form-control" placeholder="ville/cp" />
+                                    <button type="submit" id="search_btn" class="btn btn-round btn-orange"><i class="">Go!</i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+
+                </div>
+            </div>
 
             <div class="clearfix"></div>
 
             <div class="row">
-                <div class=" col-12 accroche">
-                    <p><i>"Fini le virtuel, passons au réel..."</i></p>
-                    <p><i></i></p>
-                </div>
-            </div>
-            <div class="row">     
-                <div class="col-3"></div>
-                <div class="col-lg-6  col-xs-12">
-                    <form method="POST" class="search-form" action="<?php echo base_url(); ?>Events/events_controller">
-                        <div id="custom-search-input">
-                            <div class="input-group">
-                                <input id="search" name="search" type="text" class="autocomplete_input form-control" placeholder="ville/cp" />
-                                <button type="submit" id="search_btn" class="btn btn-round btn-orange"><i class="">Go!</i></button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-3"></div>
-            </div>
+                <div class=" col-12 ">
+                    <div class="col-lg-3 col-xs-10 wellogo">
+                        <img   src="<?php echo base_url(); ?>assets/images/logo/logo-baseline--carre-1000.png" alt="logo"/>
 
+                    </div>
+                </div>
+            </div>
+            <div class="col-3"></div>
         </div>
-    
+
+
+
+
         <script>
             var BASE_URL = "<?php echo base_url(); ?>";
 

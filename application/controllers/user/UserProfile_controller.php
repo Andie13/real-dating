@@ -48,7 +48,7 @@ class UserProfile_controller extends CI_Controller {
 
             $this->load->view('user/userProfile_view', $datas);
         } else {
-            $this->load->view('user/accueil_view');
+            $this->load->view('accueil_view');
         }
     }
 
@@ -90,6 +90,24 @@ class UserProfile_controller extends CI_Controller {
            
          }else{
               $this->session->set_flashdata('err', 'adresse email n\'a pu être changé');
+                redirect('user/UserProfile_controller');
+           
+         }
+        
+        
+        
+    }
+    public function changeTel() {
+        $tel = $this->input->post('tel');
+        
+         $userModel = new Users_model();
+         $res = $userModel->changeTelFromUser($this->session->userId, $tel);
+         if($res){
+              $this->session->set_flashdata('success', 'Votre N° tde téléphone à été changé avec succès.');
+                redirect('user/UserProfile_controller');
+           
+         }else{
+              $this->session->set_flashdata('err', 'Votre Numéro de téléphone n\'a pu êre mis à jour.');
                 redirect('user/UserProfile_controller');
            
          }

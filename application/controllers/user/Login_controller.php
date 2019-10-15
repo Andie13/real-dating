@@ -7,13 +7,14 @@ class Login_controller extends CI_Controller {
     public function __construct() {
 
         parent::__construct();
-        $this->load->library('email','session');
+        $this->load->library('email', 'session');
     }
 
     public function index() {
 
         $this->load->view('layout/header');
         $this->load->view('user/Login_view');
+         $this->load->view('layout/footer');
     }
 
     public function login() {
@@ -44,14 +45,15 @@ class Login_controller extends CI_Controller {
 //            $sessionData = $this->session->set_userdata('id_admin', $res);
 //            
             $this->session->set_userdata($sessionDatas);
-           
-            
-            redirect('welcome');    
+
+
+            redirect('welcome');
         } else {
 
             $this->session->set_flashdata('err', "identifiant ou mot de passe erroné.");
             $this->load->view('layout/header');
             $this->load->view('user/Login_view');
+            $this->load->view('layout/footer');
         }
     }
 
@@ -87,7 +89,7 @@ class Login_controller extends CI_Controller {
             } else {
 
                 $this->load->library('email');
-               
+
                 $this->email->from('andie.p@hotmail.fr', 'Site name');
                 $this->email->to('fody.fady@gmail.com');
                 $this->email->subject('Notification Mail');
@@ -119,6 +121,7 @@ class Login_controller extends CI_Controller {
 
         return $password;       // Returns the generated Pass
     }
+
     public function logout() {
         $this->session->unset_userdata('connected');
         redirect('welcome');
