@@ -1,164 +1,161 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-
-if (isset($userId)) {
-    
-} else {
-    echo 'non connecté';
-}
-?>
-
-<body class="bg">
-    <div class="login-wrapper">
-        <div class="container-fluid">
-            <div class="header col-lg-12 col-xs-12 ">
-
-                <div class="col-lg-4 col-xs-12 logo">
-                    <p id="headerImp">
-                        <img id="headerImg" src="<?php echo base_url(); ?>assets/images/fake_logo.jpg" alt="logo"/>
-                    </p>
-                </div>
-                <div class="topnav col-lg-8 col-xs-12" id="myTopnav">
-                    <a id="logo-res" >                   
-                        <img id="headerImg" src="<?php echo base_url(); ?>assets/images/fake_logo.jpg" alt="logo"/>
-                    </a>
-                    <a href class="active">Mon Profile</a>
+<body class=" bg welcome">
+    <div class="container-fluid login-wrapper">
 
 
+        <div class="header col-lg-12 col-xs-12 ">
+            -     <div class="col-lg-4 col-xs-12 logo">
+                <p id="plogo">
+                    <img id="headerImg" src="<?php echo base_url(); ?>assets/images/logo/loog-carre1000x1000.png" alt="logo"/>
+                </p>
+            </div>
+            <div class="topnav col-lg-8 col-xs-12" id="myTopnav">
+                <a id="logo-res" >                   
+                    <img id="headerImg" src="<?php echo base_url(); ?>assets/images/logo/logo-favicon-carre-1000.png" alt="logo"/>
+                </a>
+                <a href class="active">Mon Profile</a>
+
+
+                <?php
+                if (isset($connected)) {
+
+
+                    echo '<a href = "' . base_url() . 'user/login_controller/logout">Déconnexion</a>';
+                    echo '<a href = "' . base_url() . 'welcome">Accueil</a>';
+                } else {
+                    echo '<a href = "' . base_url() . 'user/Login_controller">Connexion</a>';
+                    echo '<a href = "' . base_url() . 'user/inscription_controller"> Inscription</a>';
+                }
+                ?>
+
+
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+
+        <div class="row">
+            <div class=" col-12 accroche">
+                <p><i>"Gestion de votre profile:"</i> </p>
+                <p><i>Bonjour <?php echo $user->nom_user . ' ' . $user->prenom_user ?></i> </p>
+                <p><i></i></p>
+            </div>
+        </div>
+        <div id="tabs" class="col-lg-10 col-xs-12 eventDetails   ">
+            <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+                <ul class="nav nav-tabs  ">
+                    <li class="active">
+                        <a href="#id" data-toggle="tab">
+                            <i class="fa fa-user"></i>Identification
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#resas" data-toggle="tab">
+                            <i class="fa fa-calendar"> Mes Soirées</i>
+                        </a>
+                    </li>
+
+
+
+
+                </ul>
+            </div>
+            <div class="tab-content ">
+                <div class="tab-pane fade in active event login" id="id" >
+
+                    <div class="center">
+
+                        <?php
+                        echo '<h2> ' . $genre . ' ' . $user->nom_user . ' ' . $user->prenom_user . '</h2>';
+                        echo '<br>';
+                        echo $age . ' ans';
+                        ?>
+                    </div>
                     <?php
-                    if (isset($connected)) {
+                    if ($this->session->flashdata('err')) {
+                        ?>
+
+                        <div class = "display_error">
+                            <?php echo $this->session->flashdata('err'); ?>
+                        </div>
 
 
-                        echo '<a href = "' . base_url() . 'user/login_controller/logout">Déconnexion</a>';
-                        echo '<a href = "' . base_url() . 'welcome">Accueil</a>';
-                    } else {
-                        echo '<a href = "' . base_url() . 'user/Login_controller">Connexion</a>';
-                        echo '<a href = "' . base_url() . 'user/inscription_controller"> Inscription</a>';
-                    }
+                        <?php
+                    } else if ($this->session->flashdata('success')) {
+                        ?>
+
+                        <div class = "display_error">
+                            <?php echo $this->session->flashdata('success'); ?>
+                        </div>
+
+
+                    <?php }
                     ?>
 
 
-                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                        <i class="fa fa-bars"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="clearfix"></div>
-
-            <div class="row">
-                <div class=" col-12 accroche">
-                    <p><i>"Gestion de votre profile:"</i> </p>
-                    <p><i>Bonjour <?php echo $user->nom_user . ' ' . $user->prenom_user ?></i> </p>
-                    <p><i></i></p>
-                </div>
-            </div>
-            <div class="row">  
-                <div class="col-1"></div>
-                <div id="tabs" class="col-10 event">
-                    <ul>
-                        <li class=""><a href="#tabs-1">Identification</a></li>
-                        <!--<li><a href="#tabs-2">Mes endroits favoris</a></li>-->
-                        <li><a href="#tabs-3">Mes Soirées</a></li>
-                    </ul>
-                    <div id="tabs-1" class="event">
-
-                        <div class="col-12 tab-content">
-                            <div class="center">
-
-                                <?php
-                                echo '<h2> ' . $genre . ' ' . $user->nom_user . ' ' . $user->prenom_user . '</h2>';
-                                echo '<br>';
-                                echo $age . ' ans';
-                                ?>
+                    <div class="clearfix"></div>
+                    <form method="POST" action="<?php echo base_url() ?>user/UserProfile_controller/changeEmail">
+                        <fieldset>
+                            <legend class="userForm">Mettre à jour Votre adresse de messagerie :</legend>
+                            <div class="col-4">
+                                <label>E-mail</label>                           
                             </div>
-                            <?php
-                            if ($this->session->flashdata('err')) {
-                                ?>
+                            <div class="col-7">
+                                <input type="email" name="email" value="<?php echo $user->email_user ?>"/><br>
+                            </div>
+                            <div class="col-1">
+                                <button type="submit" id="search_btn" class="btn btn-round btn-orange"><i class="">Mettre à jour</i></button>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <br>
+                    <div class="clearfix"></div>
+                    <form method="POST" action="<?php echo base_url() ?>user/UserProfile_controller/changeTel">
+                        <fieldset>
+                            <legend class="userForm">Mettre à jour votre numéro de téléphone :</legend>
+                            <div class="col-4">
+                                <label>N° de téléphone : </label>                           
+                            </div>
+                            <button class="btn btn-round btn-orange" id="btnInfo">
+                                <i class="fa fa-question"></i>
+                            </button>
 
-                                <div class = "display_error">
-                                    <?php echo $this->session->flashdata('err'); ?>
-                                </div>
+                            <div class="col-7">
+                                <input type="text" id="tel" name="tel" id="phone" name="phone"
+                                       pattern="([0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2})|([0-9]{10})" placeholder="Votre tel..." >
+                            </div>
+                            <div class="col-1">
+                                <button type="submit" id="search_btn" class="btn btn-round btn-orange"><i class="">Mettre à jour</i></button>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <br>
+                    <div class="clearfix"></div>
+                    <form method="POST" action="<?php echo base_url() ?>user/UserProfile_controller/resetPassword">
+                        <fieldset>
+                            <legend class="userForm">Mettre à jour Votre mot de Passe:</legend>
+                            <div class="col-4">
+                                <label>Changer de Mot de passe</label>
+                            </div>
+                            <div class="col-7">
+                                <input  type="password" name="old_pass" placeholder="ancien mot de passe"/><br>
+                                <br>
+                                <input type="password" id="pass" name="new_pass" placeholder="nouveau mot de passe"/><br>
+                                <br>
+                                <input type="password" id="confPass"  placeholder="confirler nouveau mot de passe"onchange="checkPasswordMatch()"/><br> 
+                                <div class="registrationFormAlert" id="divCheckPasswordMatch"></div>
+                            </div>
+                            <div class="col-1">
+                                <button type="submit" id="search_btn" class="btn btn-round btn-orange"><i class="">Mettre à jour</i></button>
+                            </div>
+                        </fieldset>
+                    </form>
 
+                </div>    
 
-                                <?php
-                            } else if ($this->session->flashdata('success')) {
-                                ?>
-
-                                <div class = "display_error">
-                                    <?php echo $this->session->flashdata('success'); ?>
-                                </div>
-
-
-                            <?php }
-                            ?>
-
-
-                            <div class="clearfix"></div>
-                            <form method="POST" action="<?php echo base_url() ?>user/UserProfile_controller/changeEmail">
-                                <fieldset>
-                                    <legend class="userForm">Mettre à jour Votre adresse de messagerie :</legend>
-                                    <div class="col-4">
-                                        <label>E-mail</label>                           
-                                    </div>
-                                    <div class="col-7">
-                                        <input type="email" name="email" value="<?php echo $user->email_user ?>"/><br>
-                                    </div>
-                                    <div class="col-1">
-                                        <button type="submit" id="search_btn" class="btn btn-round btn-orange"><i class="">Mettre à jour</i></button>
-                                    </div>
-                                </fieldset>
-                            </form>
-                            <br>
-                            <div class="clearfix"></div>
-                            <form method="POST" action="<?php echo base_url() ?>user/UserProfile_controller/changeTel">
-                                <fieldset>
-                                    <legend class="userForm">Mettre à jour votre numéro de téléphone :</legend>
-                                    <div class="col-4">
-                                        <label>N° de téléphone : </label>                           
-                                    </div>
-                                    <button class="btn btn-round btn-orange" id="btnInfo">
-                                        <i class="fa fa-question"></i>
-                                    </button>
-
-                                    <div class="col-7">
-                                        <input type="text" id="tel" name="tel" id="phone" name="phone"
-                                               pattern="([0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2})|([0-9]{10})" placeholder="Votre tel..." >
-                                    </div>
-                                    <div class="col-1">
-                                        <button type="submit" id="search_btn" class="btn btn-round btn-orange"><i class="">Mettre à jour</i></button>
-                                    </div>
-                                </fieldset>
-                            </form>
-                            <br>
-                            <div class="clearfix"></div>
-                            <form method="POST" action="<?php echo base_url() ?>user/UserProfile_controller/resetPassword">
-                                <fieldset>
-                                    <legend class="userForm">Mettre à jour Votre mot de Passe:</legend>
-                                    <div class="col-4">
-                                        <label>Changer de Mot de passe</label>
-                                    </div>
-                                    <div class="col-7">
-                                        <input  type="password" name="old_pass" placeholder="ancien mot de passe"/><br>
-                                        <br>
-                                        <input type="password" id="pass" name="new_pass" placeholder="nouveau mot de passe"/><br>
-                                        <br>
-                                        <input type="password" id="confPass"  placeholder="confirler nouveau mot de passe"onchange="checkPasswordMatch()"/><br> 
-                                        <div class="registrationFormAlert" id="divCheckPasswordMatch"></div>
-                                    </div>
-                                    <div class="col-1">
-                                        <button type="submit" id="search_btn" class="btn btn-round btn-orange"><i class="">Mettre à jour</i></button>
-                                    </div>
-                                </fieldset>
-                            </form>
-
-                        </div>                   
-
-
-                    </div>
-                    <!--                    <div id="tabs-2">
-                                            <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
-                                        </div>-->
-                    <div id="tabs-3">
+                <div class="tab-pane fade in  event" id="resas">
+                
 
                         <?php
                         if (isset($events)) {
@@ -195,13 +192,13 @@ if (isset($userId)) {
                         ?>
                     </div>
                 </div>
-                <div class="colF-1"></div>
-
             </div>
 
         </div>
-    </div>
-    <script>
+
+
+
+     <script>
         $(function () {
             $("#tabs").tabs();
         });

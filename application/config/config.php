@@ -525,3 +525,9 @@ $config['proxy_ips'] = '';
 
 $config['google_key'] = '6LceGbIUAAAAAGj45y5DwLEsOZntFg1yRoKgmaBZ';
 $config['google_secret'] = '6LceGbIUAAAAALcqj3r7WqfIayOUKItJD3O8geva';
+
+
+$config['stripe_key'] = 'pk_test_k3jnN2qt8fmFRU2kB2k6QxWT00SjBgDMpK';
+$config['stripe_secret'] = 'sk_test_bpM6MCpKCujys4h0s9uhsStK00TOMAFPfS';
+
+

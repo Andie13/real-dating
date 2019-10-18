@@ -72,8 +72,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <?php
                             if (isset($connected) && $nombrePlacesRestante > 0) {
                                 echo '<a id="link" href="' . base_url() . 'events/events_controller/toEventReservation?id=' . $event->id_event . '">';
+                               
                                 echo ' <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/pp-acceptance-small.png" alt="Buy now with PayPal" /> Réserver</a>';
-                            } else {
+                                echo '<br>';
+                            echo '<a id="link" href="' . base_url().'Stripe_controller">PAY</a>';
+                                } else {
                                 
                             }
                             ?>
