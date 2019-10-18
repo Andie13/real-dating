@@ -61,6 +61,7 @@
         <script src="<?php echo base_url() ?>assets/tools/plugins/datetimepicker/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script> 
         <script src="<?php echo base_url() ?>assets/tools/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.fr.js" type="text/javascript"></script>
 
+         
         <link href="<?php echo base_url() ?>assets/tools/plugins/datepicker/css/datepicker.css" rel="stylesheet" type="text/css" media="screen"/>
         <link href="<?php echo base_url() ?>assets/tools/plugins/daterangepicker/css/daterangepicker-bs3.css" rel="stylesheet" type="text/css" media="screen"/>
         <link href="<?php echo base_url() ?>assets/tools/plugins/timepicker/css/bootstrap-timepicker.css" rel="stylesheet" type="text/css" media="screen"/>
@@ -68,6 +69,9 @@
         <link href="<?php echo base_url() ?>assets/tools/plugins/jquery-ui/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" media="screen"/>
 
         <link href="<?php echo base_url() ?>assets/tools/plugins/icheck/skins/all.css" rel="stylesheet" type="text/css" media="screen"/> 
+        
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/style.css">
 
 

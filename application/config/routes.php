@@ -54,3 +54,6 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['form'] = "FormController";
 $route['formPost']['post'] = "FormController/formPost";
+
+$route['my-stripe'] = "StripeController";
+$route['stripePost']['post'] = "StripeController/stripePost";

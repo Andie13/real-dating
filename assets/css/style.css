@@ -649,6 +649,20 @@ and (-webkit-device-pixel-ratio : 3) {
 }
 
 
-
+ .panel-title {
+        display: inline;
+        font-weight: bold;
+        }
+        .display-table {
+            display: table;
+        }
+        .display-tr {
+            display: table-row;
+        }
+        .display-td {
+            display: table-cell;
+            vertical-align: middle;
+            width: 61%;
+        }
 
 
