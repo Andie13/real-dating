@@ -75,9 +75,9 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => 'root',
+	'hostname' => 'http://realdate.amaris.ovh',
+	'username' => 'realdate',
+	'password' => 'realdate',
 	'database' => 'realdating_db',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
