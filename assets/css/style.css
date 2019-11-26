@@ -1,4 +1,5 @@
-F/**************************************
+
+/**************************************
                WHOLE DOC
 **************************************/
 
@@ -102,7 +103,7 @@ img#about{
     height: auto
 }
 #headerImg{
-    width: 7em;
+    width: 3em;
     margin-left: auto;
     margin-right: auto; 
 }
@@ -176,7 +177,7 @@ img#about{
     margin: auto;
     height: auto;
     float: none;
-    margin-top: 5%;
+
 
 
 }
@@ -212,9 +213,6 @@ img#about{
     line-height: 1em;
     float: left;
     width: 80%;
-
-
-
 }
 
 .inputForm{
@@ -267,6 +265,9 @@ contain-wrap{
 
     list-style-type: none;
 
+}
+.row-footer{
+    height: 0;
 }
 
 /**************************************
@@ -425,22 +426,22 @@ p {
     color: darkbluen;
     text-align: left;
     font-weight: bold;
-    
-  
+
+
 }
 
 #imageEvent{
     height: 100%;
-  
+
 }
 .eventDetails{
-   float: none;
-   margin-left: auto;
-   margin-right: auto;
-   padding-bottom: 10px;
-   height: auto;
-   padding: 1em;
-   margin-top: 1em;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10px;
+    height: auto;
+    padding: 1em;
+    margin-top: 1em;
 }
 
 
@@ -487,26 +488,6 @@ p {
 /**************************************
               RESPONSIVE DESIGN
 **************************************/
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-    .col-25, .col-75, input[type=submit] {
-        width: 100%;
-        margin-top: 0;
-    }
-}
-
-
-
-@media only screen and (max-width: 768px) {
-    /* For mobile phones: */
-    [class*="col-"] {
-        width: 100%;
-    }
-
-}
-.toggler{
-    margin-right: 1em;
-}
 
 @media only screen and (min-width: 768px) {
     /* For desktop: */
@@ -534,21 +515,51 @@ p {
 
 }
 
+.toggler{
+    margin-right: 1em;
+}
+
+.panel-title {
+    display: inline;
+    Ffont-weight: bold;
+}
+.display-table {
+    F      display: table;
+}
+.display-tr {
+    display: table-row;
+}
+.display-td {
+    display: table-cell;
+    vertical-align: middle;
+    width: 61%;
+}
 
 
 @viewport{
     zoom: 1.0;
     width: extend-to-zoom;
 }
+/*****************************************************************************/
+/**************************    MOBILE FRIST    *******************************/
+/*****************************************************************************/
 
-@media only screen 
-and (device-width : 414px) 
-and (device-height : 736px) 
-and (-webkit-device-pixel-ratio : 3) { 
+
+/*****************************************************************************/
+/**************************    STANDARD DEVICES    *******************************/
+/*****************************************************************************/
+
+@media only screen and (max-width: 768px) {
+
+        /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+     /**************************    NAV    *******************************/
     .topnav a:not(:first-child) {display: none;}
     .topnav a.icon {
         float: right;
-        display: block;
+        display: block !important;
 
         border: 1px darkblue solid;
         color: darkblue;
@@ -557,11 +568,18 @@ and (-webkit-device-pixel-ratio : 3) {
     .logo{
         display: none;
     }
-    logo #headerImp{
+    logo #headerImg{
         text-align: center;  }
-    #headerImp{
+    #headerImg{
         float: none;
     }
+    
+    .wellogo img{
+        width: 75%;
+        display: block;
+        margin: auto;
+    }
+    
     a.active{
         display: none;
     }
@@ -580,60 +598,11 @@ and (-webkit-device-pixel-ratio : 3) {
     #myTopnav{
         background-color: transparent;
     }
-    .topnav a#logo-res img#headerImg{
-
-    }
-    .logo p#headerImp{
+ 
+    .logo p#headerImg{
         display: none;
     }
-
-}
-@media screen and (max-width: 768px) {
-    .topnav a:not(:first-child) {display: none;}
-    .topnav a.icon {
-        float: right;
-        display: block;
-
-        border: 1px darkblue solid;
-        color: darkblue;
-
-    }
-    .logo{
-        display: none;
-    }
-    logo #headerImp{
-        text-align: center;  }
-    #headerImp{
-        float: none;
-    }
-    a.active{
-        display: none;
-    }
-    .topnav a#logo-res{
-        display: block;
-        float: left;
-        background-image: url('../images/Logo/logo-favicon-carre-1000.png');
-        background-size: 15%;
-        background-repeat: no-repeat;
-    }
-    .topnav a:first-child, .topnav a:last-child{
-        background-color: darkblue;
-        color: white;
-    }
-
-    #myTopnav{
-        background-color: transparent;
-    }
-    .topnav a#logo-res img#headerImg{
-
-    }
-    .logo p#headerImp{
-        display: none;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .topnav.responsive {position: relative; width: 100%}
+  .topnav.responsive {position: relative; width: 100%}
     .topnav.responsive .icon {
         position: absolute;
         right: 0;
@@ -648,21 +617,9 @@ and (-webkit-device-pixel-ratio : 3) {
     }
 }
 
-
- .panel-title {
-        display: inline;
-        font-weight: bold;
-        }
-        .display-table {
-            display: table;
-        }
-        .display-tr {
-            display: table-row;
-        }
-        .display-td {
-            display: table-cell;
-            vertical-align: middle;
-            width: 61%;
-        }
-
-
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
