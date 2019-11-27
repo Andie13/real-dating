@@ -45,7 +45,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
                     <div class="col-lg-6 divSearch col-xs-9">
-                        <form method="POST" class="search-form" action="<?php echo base_url(); ?>Events/events_controller">
+                        <form method="POST" class="search-form" action="<?php echo base_url(); ?>events/events_controller">
                             <div id="custom-search-input">
                                 <div class="input-group">
                                     <input id="search" name="search" type="text" class="autocomplete_input form-control" placeholder="ville/cp" />
