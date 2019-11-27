@@ -88,15 +88,14 @@ class Login_controller extends CI_Controller {
                 $this->load->view('welcome');
             } else {
 
-                $this->load->library('email');
+               
+$to      = $email;
+$subject = 'Changement de mot de passet';
+$message = 'Bonjour, voici votre nouveau mot de passe';
+$headers = 'From: anne.perrault@amaris.com' . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
 
-                $this->email->from('andie.p@hotmail.fr', 'Site name');
-                $this->email->to('fody.fady@gmail.com');
-                $this->email->subject('Notification Mail');
-                $this->email->message('Your message');
-                $this->email->send();
-
-                echo $this->email->print_debugger();
+mail($to, $subject, $message, $headers);
 //                $this->session->set_flashdata('err', 'Votre mot de passe à été envoyé avec succès. ');
 //                $this->load->view('layout/header');
 //                $this->load->view('user/Login_view');
