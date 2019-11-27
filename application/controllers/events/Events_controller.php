@@ -25,7 +25,7 @@ class Events_Controller extends CI_Controller {
         }
 
         $this->load->view('layout/header');
-        $this->load->view('events/events_view', $datas);
+        $this->load->view('events/Events_view', $datas);
         $this->load->view('layout/footer');
     }
 
