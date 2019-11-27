@@ -46,7 +46,7 @@ class UserProfile_controller extends CI_Controller {
             $datas['connected'] = $this->session->connected;
             $datas['age'] = $age;
 
-            $this->load->view('user/userProfile_view', $datas);
+            $this->load->view('user/UserProfile_view', $datas);
         } else {
             $this->load->view('accueil_view');
         }
