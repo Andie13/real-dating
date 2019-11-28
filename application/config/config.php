@@ -525,9 +525,13 @@ $config['rewrite_short_tags'] = FALSE;
 */
 $config['proxy_ips'] = '';
 
-$config['google_key'] = 'AIzaSyDKjDUzhTsS31Y9ph5aPjfzGGQBEqlETeU';
+
+//Clés reCaptcha
+$config['google_key'] = '6LehHsUUAAAAANLUnMbnZGOfA_gFacSleBNyFN_a';
 $config['google_secret'] = '6LehHsUUAAAAAMiM6SKuAi0TLBrH4IvF3bLJKtXJ';
 
+
+//Clés Map
 $config['google_api_key']= 'AIzaSyDKjDUzhTsS31Y9ph5aPjfzGGQBEqlETeU';
 
 
