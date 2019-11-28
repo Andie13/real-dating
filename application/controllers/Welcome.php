@@ -40,5 +40,12 @@ class Welcome extends CI_Controller {
         $this->load->view('layout/footer');
         
     }
+	public function goToLegel() {
+        
+        $this->load->view('layout/header');
+        $this->load->view('legal_view');
+        $this->load->view('layout/footer');
+        
+    }
 
 }
