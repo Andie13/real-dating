@@ -89,20 +89,33 @@ class Login_controller extends CI_Controller {
             } else {
 
                
-				$this->load->library('email');
+		 //send email
+            $this->email->from('realdate.aix@gmail.com', 'Realdate.fr');
+            $this->email->to($email);
 
-                $this->email->from('realdate.aix@gmail.com', 'Site name');
-                $this->email->to($email);
-                $this->email->subject('Votre nouveau mot de passe...');
-                $this->email->message('Bonjour, \r\n Veuillez trouver ci-dessous votre nouveau mot de passe. \r\n
-				 '.$newPass.'\r\n Nous vous recommandons de le modifier via la page \'https://realdate.fr\' . 
-				 \r\n L\'équipe Realdate.');
-                $this->email->send();
+            $this->email->subject('Réinitialisation de mot de passe');
+            $this->email->message("Bonjour,"
+                    . "\n"
+                    . "\n"
+                    . "Veuillez trouver ci-dessous votre nouveau mot de passe" . "\n"
+                    . "\n"
+                    . "\n"
+                    . $newPass
+                    . "\n"
+                    . "\n"
+                    . 'Codrialement,'
+                    . "\n"
+                    . "\n"
+                    . 'l\'équipe Admin');
 
-                echo $this->email->print_debugger();
-//                $this->session->set_flashdata('err', 'Votre mot de passe à été envoyé avec succès. ');
-//                $this->load->view('layout/header');
-//                $this->load->view('user/Login_view');
+            $this->email->send();
+
+		
+
+              
+                $this->session->set_flashdata('err', 'Votre mot de passe à été envoyé avec succès. ');
+               $this->load->view('layout/header');
+		    $this->load->view('user/Login_view');
             }
         }
     }
