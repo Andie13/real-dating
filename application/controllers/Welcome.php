@@ -40,7 +40,7 @@ class Welcome extends CI_Controller {
         $this->load->view('layout/footer');
         
     }
-	public function goToLegel() {
+	public function gotoLegel() {
         
         $this->load->view('layout/header');
         $this->load->view('legal_view');
