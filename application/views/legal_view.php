@@ -55,34 +55,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
             <div class="row">   
 
-                <div class="about col-lg-3 col-xs-10 event">
-                    <h2>Alex</h2>
-                    <h3>
-                        Ami depuis l’enfance avec Christophe<br>
-                        Directeur de projet au sein d’une entreprise.<br>
-                        Co-fondateur de Real Date.<br>
-                    </h3>
-                </div>
-                <div class="about col-lg-3 col-xs-10  event">
-                    <h2>Christophe</h2>
-                    <h3>
-                        Ami d’enfance d’Alex et compagnon de Awa.<br>
-                        Créateur et dirigeant d’entreprise.<br>
-                        Co-fondateur de Real Date.<br>
-
-
-                    </h3>
-                </div>
-                <div class="about col-lg-3 col-xs-10 event">
-                    <h2>Awa</h2>
-                    <h3>
-                        Compagne de Christophe<br>
-                        Sophrologue diplômée et psychanalyse<br>
-                        Co-fondatrice de Real Date.<br>
-
-
-                    </h3>
-                </div>
+               
+               
             </div>
 
 
@@ -92,40 +66,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   
 
 
-    <script>
-        var BASE_URL = "<?php echo base_url(); ?>";
-
-        $(document).ready(function () {
-            $("#search").autocomplete({
-
-                source: function (request, response) {
-                    $.ajax({
-                        url: BASE_URL + "ajax/Ajax_controller/search",
-
-                        data: {
-                            term: request.term
-                        },
-                        dataType: "json",
-                        success: function (data) {
-
-                            var resp = $.map(data, function (obj) {
-                                return obj.nom_commune;
-                            });
-
-                            response(resp);
-                        }
-                    });
-                },
-                minLength: 3,
-
-            });
-
-
-
-        });
-
-
-    </script>   
+  
     <script>
         function myFunction() {
             var x = document.getElementById("myTopnav");
