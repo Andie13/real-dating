@@ -42,18 +42,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="row">
                 <div class=" col-12 accroche">
                     <img id="about" src="<?php echo base_url() ?>assets/images/img_about.jpg">
-                    <p><i>"Qui sommes nous?"</i></p>                
+                    <p><i>"Mentions Légales : Realdate"</i></p>                
                 </div>
             </div>
            
             <div class="col-10 event about">
-                <h3>En couple depuis trois ans Christophe et Awa se sont rencontrés grâce à un speed dating.<br>
-
-                    Tous les 3 bercés dans les relations humaines, Alex, Christophe et Awa ont eu envie de développer le speed-dating et la mise en relation dans ce monde ou le virtuel prend le dessus sur le réel.<br>
-
-                    Notre objectif est de favoriser ‘’la vraie rencontre’’ et de mettre en avant ‘’l’humain’’
-
-                </h3>
+                <p>
+					text coming soon ....
+                </p>
             </div>
 
 
