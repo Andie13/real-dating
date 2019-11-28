@@ -89,12 +89,14 @@ class Login_controller extends CI_Controller {
             } else {
 
                
- $this->load->library('email');
+				$this->load->library('email');
 
-                $this->email->from('andie.p@hotmail.fr', 'Site name');
-                $this->email->to('fody.fady@gmail.com');
-                $this->email->subject('Notification Mail');
-                $this->email->message('Your message');
+                $this->email->from('realdate.aix@gmail.com', 'Site name');
+                $this->email->to($email);
+                $this->email->subject('Votre nouveau mot de passe...');
+                $this->email->message('Bonjour, \r\n Veuillez trouver ci-dessous votre nouveau mot de passe. \r\n
+				 '.$newPass.'\r\n Nous vous recommandons de le modifier via la page \'https://realdate.fr\' . 
+				 \r\n L\'équipe Realdate.');
                 $this->email->send();
 
                 echo $this->email->print_debugger();
