@@ -47,5 +47,13 @@ class Welcome extends CI_Controller {
         $this->load->view('layout/footer');
         
     }
+	public function gotoCGU() {
+        
+        $this->load->view('layout/header');
+        $this->load->view('cgu_view');
+        $this->load->view('layout/footer');
+        
+    }
+	
 
 }
