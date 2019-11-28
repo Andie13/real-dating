@@ -2,7 +2,7 @@
     <footer class="footer-a col-lg-12 ">
         <div class="col-4">   
             <ul>        
-                <li class="menu"><p><a href="<?php echo base_url() ?>user/connexion_controller">Mentions legales</a></p></li>
+                <li class="menu"><p><a href="<?php echo base_url() ?>welcome/gotoLegal">Mentions legales</a></p></li>
             </ul>
         </div>
         <div class=" col-4">   
