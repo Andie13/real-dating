@@ -107,7 +107,7 @@ Toute commande passée sur le Site constitue la formation d'un contrat conclu à
 L’inscription n’est définitivement confirmée et n’engage le Prestataire qu’à l’envoi du courrier électronique confirmant que l’inscription à l’évènement a bien été validée. En conséquence, le Prestataire invite le Client à consulter sa messagerie électronique ou, le cas échéant, à téléphoner au Prestataire au numéro indiqué à l’article 16 des Présentes.
 Le Prestataire se réserve le droit d'annuler ou de refuser toute commande d'un Client avec lequel il existerait un litige relatif au paiement d'une commande antérieure. Le Prestataire se réserve le droit de refuser l’entrée à un participant dont l’attitude ou la tenue vestimentaire serait incorrecte.
 </p>
-            </div>
+          
             <h2>Article 3 - Tarifs</h2>
             <p>Les Billets de participation proposés par le Prestataire sont fournis aux tarifs en vigueur sur le Site, au jour de l’enregistrement de l’inscription du Client aux évènements. Les prix sont exprimés sur le Site en Euros, HT et TTC ; le cas échéant, le risque de change étant à la charge du Client. Le Prestataire est assujetti à la TVA
 Les tarifs tiennent compte d'éventuelles réductions qui seraient consenties par le Prestataire à certains groupes de clients ou dans certaines villes, dans les conditions précisées sur le Site. Le Prestataire se réserve le droit de modifier les prix des Services à tout moment mais les Services seront facturés sur la base des tarifs en vigueur au moment de l’inscription. Le paiement demandé au Client correspond au montant total de l'achat. Une facture est établie par le Prestataire et remise au Client lors de la confirmation d’inscription.
@@ -209,6 +209,7 @@ RealDate SAS au capital de 100 euros, dont le siège social est situé à 1192 c
 
 
 </p>
+		      </div>
    <div class="row">   
 
                
