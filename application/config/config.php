@@ -525,8 +525,8 @@ $config['rewrite_short_tags'] = FALSE;
 */
 $config['proxy_ips'] = '';
 
-$config['google_key'] = '6LceGbIUAAAAAGj45y5DwLEsOZntFg1yRoKgmaBZ';
-$config['google_secret'] = '6LceGbIUAAAAALcqj3r7WqfIayOUKItJD3O8geva';
+$config['google_key'] = 'AIzaSyDKjDUzhTsS31Y9ph5aPjfzGGQBEqlETeU';
+$config['google_secret'] = '6LehHsUUAAAAAMiM6SKuAi0TLBrH4IvF3bLJKtXJ';
 
 $config['google_api_key']= 'AIzaSyDKjDUzhTsS31Y9ph5aPjfzGGQBEqlETeU';
 
