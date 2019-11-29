@@ -31,7 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 }
                 ?>
 
-		    <a href = "#"">Le concept</a>
+		    <a href = "<?php echo base_url()?>welcome/gotoConcept"">Le concept</a>
 
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                     <i class="fa fa-bars"></i>
