@@ -143,7 +143,7 @@
                                 <br>
                                 <input type="password" id="pass" name="new_pass" placeholder="nouveau mot de passe"/><br>
                                 <br>
-                                <input type="password" id="confPass"  placeholder="confirler nouveau mot de passe"onchange="checkPasswordMatch()"/><br> 
+                                <input type="password" id="confPass"  placeholder="confirmer nouveau mot de passe"onchange="checkPasswordMatch()"/><br> 
                                 <div class="registrationFormAlert" id="divCheckPasswordMatch"></div>
                             </div>
                             <div class="col-1">
