@@ -72,7 +72,7 @@ Réservez le plus rapidement possible votre inscription avant que l'on soit comp
 Les places sont à réserver sur le site web www.realdate.com
 Un numéro vous sera transmis et vous sera demandé lors de votre arrivée, ceci pour vérifier votre inscription.
 </p>
-            <h2>Quelle tenue vestimentaire à adopter ?/h2>
+            <h2>Quelle tenue vestimentaire à adopter ?</h2>
             <p>Soignez votre apparence car la première impression est importante mais nous vous conseillons de porter une tenue dans laquelle vous vous sentez à l'aise.
 Règles à respecter :
 1 - Les participants peuvent évoquer tous les sujets qu'ils souhaitent à une condition : aucune information ne sera divulguée concernant le nom, l'adresse e-mail, le numéro de téléphone, etc.
