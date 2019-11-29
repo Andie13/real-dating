@@ -16,6 +16,7 @@
                     <img id="headerImg" src="<?php echo base_url(); ?>assets/images/logo/logo-favicon-carre-1000.png" alt="logo"/>
                 </a>
                 <a href = "#" class="active">Inscription</a>
+					<a href = "<?php echo base_url()?>welcome/gotoconcept_view" class="">Le concept</a>
 
 
                 <?php
@@ -29,6 +30,7 @@
                     echo '<a href = "' . base_url() . 'welcome">Accueil</a>';
                 }
                 ?>
+					
 
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                     <i class="fa fa-bars"></i>
