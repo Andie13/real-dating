@@ -75,7 +75,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                
                                 echo ' <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/pp-acceptance-small.png" alt="Buy now with PayPal" /> Réserver</a>';
                                 echo '<br>';
-                            echo '<a id="link" href="' . base_url().'Stripe_controller">PAY</a>';
+                         
                                 } else {
                                 
                             }
