@@ -269,6 +269,14 @@ contain-wrap{
 .row-footer{
     height: 0;
 }
+.footer-medias{
+	height:5em;
+	display:block;
+	margin:auto;
+}
+.footer-medias a img{
+	padding:0.5em;
+}
 
 /**************************************
               INSCRIPTION
