@@ -88,9 +88,9 @@ class Login_controller extends CI_Controller {
                 $this->load->view('welcome');
             } else {
 
-               
+               var_dump($email);
 		 //send email
-            $this->email->from('realdate.aix@gmail.com', 'Realdate.fr');
+            /**$this->email->from('realdate.aix@gmail.com', 'Realdate.fr');
             $this->email->to($email);
 
             $this->email->subject('Réinitialisation de mot de passe');
@@ -108,7 +108,7 @@ class Login_controller extends CI_Controller {
                     . "\n"
                     . 'l\'équipe Admin');
 
-            $this->email->send();
+            $this->email->send();**/
 
 		
 
