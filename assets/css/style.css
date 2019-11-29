@@ -273,10 +273,11 @@ contain-wrap{
 	height:5em;
 	display:block;
 	margin:auto;
+	text-align:center;
 }
 .footer-medias a img{
-	padding:0.5em;
-	max-width:10rem;
+	padding:2.5em;
+	max-width:5rem;
 	height:auto;
 }
 
