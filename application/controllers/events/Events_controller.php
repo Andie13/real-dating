@@ -148,7 +148,7 @@ class Events_Controller extends CI_Controller {
             $datas['connected'] = $this->session->connected;
         }
         $this->load->view('layout/header');
-        $this->load->view('events/eventDetails_view', $datas);
+        $this->load->view('events/EventDetails_view', $datas);
         $this->load->view('layout/footer');
     }
 
