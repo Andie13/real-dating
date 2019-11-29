@@ -339,7 +339,9 @@ input[type=submit]:hover {
     display: table;
     clear: both;
 }
-
+#ui-datepicker-div{
+	min-width:20%:
+}
 
 
 
