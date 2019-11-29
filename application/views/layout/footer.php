@@ -20,7 +20,7 @@
             </ul>
         </div>
 	    <div class="col-12 ">
-		    <div class="col-6 footer-medias">
+		    <div class="footer-medias">
 			    <a href="https://www.facebook.com/RealDate.fr/"> <img src="<?php echo base_url() ?>assets/images/rd-fb.png" alt="logo instagram"/> </a>
 		     <a href="">  <img src="<?php echo base_url() ?>assets/images/rd-insta.png" alt="logo instagram"/></a>
 		      <a href=""> <img src="<?php echo base_url() ?>assets/images/rd-twitter.png" alt="logo facebook"/></a>
