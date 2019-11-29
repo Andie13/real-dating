@@ -16,7 +16,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <a id="logo-res" >                   
                     <img id="headerImg" src="<?php echo base_url(); ?>assets/images/logo/logo-favicon-carre-1000.png" alt="logo"/>
                 </a>
-                <a href = "#" class="">CGU</a>
+                <a href = "#" class="active">CGU</a>
 
 
                 <?php
