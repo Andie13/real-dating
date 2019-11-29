@@ -276,7 +276,7 @@ contain-wrap{
 	text-align:center;
 }
 .footer-medias a img{
-	padding:2.5em;
+	margin-right:2rem;
 	max-width:2.5rem;
 	height:auto;
 }
