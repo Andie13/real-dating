@@ -54,6 +54,13 @@ class Welcome extends CI_Controller {
         $this->load->view('layout/footer');
         
     }
+	public function gotoConcept() {
+        
+        $this->load->view('layout/header');
+        $this->load->view('concept_view');
+        $this->load->view('layout/footer');
+        
+    }
 	
 
 }
