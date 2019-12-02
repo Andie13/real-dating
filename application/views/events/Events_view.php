@@ -42,7 +42,7 @@ $mediasModel = new Medias_model();
                 ?>
 
 		    <a href = "<?php echo base_url()?>welcome/gotoConcept"">Le concept</a>
-			 <a href = "<?php echo base_url()?>welcome/" class="active">Accueil</a>
+			 <a href = "<?php echo base_url()?>welcome/" class="">Accueil</a>
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                     <i class="fa fa-bars"></i>
                 </a>
