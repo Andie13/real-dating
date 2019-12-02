@@ -115,7 +115,7 @@ Ensuite l'animatrice invitera, séparemment, les femmes et les hommes pour faire
                         }
                         echo ' ';
                         echo '</div>';
-			<div id="map" style="height:50%;width:50%;margin:auto;"></div>
+			echo '<div id="map" style="height:50%;width:50%;margin:auto;"></div>';
                     }
                     ?>
             </div>
