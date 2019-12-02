@@ -94,7 +94,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="row">   
 			    <div class="col-12 about-members">
 
-                <div class="about col-lg-3 col-xs-10 event">
+                <div class="about col-lg-4 col-xs-10 event">
                     <h2>Alex</h2>
                     <p>
                         Ami depuis l’enfance avec Christophe<br>
@@ -102,7 +102,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         Co-fondateur de Real Date.<br>
                     </p>
                 </div>
-                <div class="about col-lg-3 col-xs-10  event">
+                <div class="about col-lg-4 col-xs-10  event">
                     <h2>Christophe</h2>
                     <p>
                         Ami d’enfance d’Alex et compagnon de Awa.<br>
@@ -112,7 +112,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                     </p>
                 </div>
-                <div class="about col-lg-3 col-xs-10 event">
+                <div class="about col-lg-4 col-xs-10 event">
                     <h2>Awa</h2>
                     <p>
                         Compagne de Christophe<br>
