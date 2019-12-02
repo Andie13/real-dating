@@ -82,6 +82,7 @@ img#about{
     margin-top: 1%;
 
 }
+.
 
 /**************************************
                ERROR MESSAGE
@@ -93,7 +94,13 @@ img#about{
     font-style: italic;
     font-weight: bold;
 }
-
+.about-members{
+	text-align: center;
+	
+}
+.about-members .about{
+	display: inline-block;
+}
 
 /**************************************
               HEADER & NAV
