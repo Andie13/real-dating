@@ -15,7 +15,12 @@ class Events_Controller extends CI_Controller {
 
         $this->load->view('layout/header');
 
-        $ville = $this->input->post('search');
+		if($this->input->get('ville', TRUE){
+		$ville = $this->input->get('ville');
+		}else{
+			$ville = $this->input->post('search');
+		}
+        
         $arrCities = $this->getNearbyCities($ville);
         $datas['events'] = $this->getEventsFromIdCities($arrCities);
 
