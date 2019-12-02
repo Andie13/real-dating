@@ -16,10 +16,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <a id="logo-res" >                   
                     <img id="headerImg" src="<?php echo base_url(); ?>assets/images/logo/logo-favicon-carre-1000.png" alt="logo"/>
                 </a>
-                
-				
-
-
                 <?php
                 if (isset($connected)) {
 		    echo '<a href = "' . base_url() . 'user/login_controller/logout">Déconnexion</a>';
@@ -48,6 +44,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
             <div class="row">
                 <div class="col-lg-10 col-xs-10 event eventDetails">
+								   <div class="retour"> <h3>RETOUR VERS LA LISTE D'EVENTS</h3></div>
                     <div class="col-lg-6 col-xs-10 containerImage" >
                         <?php if ($media != ''){
      echo '<img id="imageEvent" src="'. $media->path_media . '/' . $media->nom_media.'" alt="image event"/>';
