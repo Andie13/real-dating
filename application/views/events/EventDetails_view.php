@@ -157,13 +157,3 @@ Ensuite l'animatrice invitera, séparemment, les femmes et les hommes pour faire
 
 
 
-        <script>
-            function myFunction() {
-                var x = document.getElementById("myTopnav");
-                if (x.className === "topnav") {
-                    x.className += " responsive";
-                } else {
-                    x.className = "topnav";
-                }
-            }
-        </script>
