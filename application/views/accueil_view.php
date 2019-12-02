@@ -74,7 +74,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
              <div class="row">
                 <div class=" col-12 accroche">
-                    <img id="about" src="<?php echo base_url() ?>assets/images/img_about.jpg">
+                   <video controls src="<?php echo base_url()?>assets/images/Bunny.mp4">Ici la description alternative</video>
                     <p><i>"Qui sommes nous?"</i></p>                
                 </div>
             </div>
