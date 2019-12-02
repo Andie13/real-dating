@@ -121,7 +121,7 @@ Ensuite l'animatrice invitera, séparemment, les femmes et les hommes pour faire
             </div>
         </div>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $config->item('google_api_key);?>"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $config->item('google_api_key');?>"></script>
 <script>
 
 
