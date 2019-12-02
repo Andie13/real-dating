@@ -74,8 +74,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
              <div class="row">
                 <div class=" col-12 accroche">
-                   <video controls src="<?php echo base_url()?>assets/images/Bunny.mp4">Ici la description alternative</video>
-                    <p><i>"Qui sommes nous?"</i></p>                
+                   <video controls="controls" width="90%" height="auto" src="<?php echo base_url()?>assets/images/Bunny.mp4">Ici la description alternative</video>
+                 <br>   
+		<p><i>"Qui sommes nous?"</i></p>                
                 </div>
             </div>
            
@@ -91,35 +92,37 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
             <div class="row">   
+			    <div class="col-10">
 
                 <div class="about col-lg-3 col-xs-10 event">
                     <h2>Alex</h2>
-                    <h3>
+                    <p>
                         Ami depuis l’enfance avec Christophe<br>
                         Directeur de projet au sein d’une entreprise.<br>
                         Co-fondateur de Real Date.<br>
-                    </h3>
+                    </p>
                 </div>
                 <div class="about col-lg-3 col-xs-10  event">
                     <h2>Christophe</h2>
-                    <h3>
+                    <p>
                         Ami d’enfance d’Alex et compagnon de Awa.<br>
                         Créateur et dirigeant d’entreprise.<br>
                         Co-fondateur de Real Date.<br>
 
 
-                    </h3>
+                    </p>
                 </div>
                 <div class="about col-lg-3 col-xs-10 event">
                     <h2>Awa</h2>
-                    <h3>
+                    <p>
                         Compagne de Christophe<br>
                         Sophrologue diplômée et psychanalyse<br>
                         Co-fondatrice de Real Date.<br>
 
 
-                    </h3>
+                    </p>
                 </div>
+							   </div>
             </div>
 
         </div>
