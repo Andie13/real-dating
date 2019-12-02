@@ -144,15 +144,15 @@ Ensuite l'animatrice invitera, séparemment, les femmes et les hommes pour faire
 
 
         var infowindow = new google.maps.InfoWindow({
-            content: '<p>Marker Location:' + marker.getPosition() + '</p>'
+            content: "<p>Marker Location:" + marker.getPosition() + "</p>"
         });
 
-        google.maps.event.addListener(marker, 'click', function () {
+        google.maps.event.addListener(marker, "click", function () {
             infowindow.open(map, marker);
         });
     }
 
-    google.maps.event.addDomListener(window, 'load', initialize);
+    google.maps.event.addDomListener(window, "load", initialize);
 </script>
 
 
