@@ -22,7 +22,7 @@
 	    <div class="col-12 ">
 		    <div class="footer-medias">
 			    <a href="https://www.facebook.com/RealDate.fr/"> <img src="<?php echo base_url() ?>assets/images/rd-fb.png" alt="logo instagram"/> </a>
-		     <a href="">  <img src="<?php echo base_url() ?>assets/images/rd-insta.png" alt="logo instagram"/></a>
+		     <a href="https://www.instagram.com/real_date13100/">  <img src="<?php echo base_url() ?>assets/images/rd-insta.png" alt="logo instagram"/></a>
 		  
 		    </div>
 		    
