@@ -387,7 +387,8 @@ input[type=submit]:hover {
 }
 .event h3{
     color: darkblue;
-    font-size: 2em;
+    font-size: 1.5em;
+    font-style: italic;
     font-weight: bold;
     text-align: center;
     margin-top: 1em;
