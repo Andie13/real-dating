@@ -136,7 +136,7 @@ Ensuite l'animatrice invitera, séparemment, les femmes et les hommes pour faire
             zoom: 12,
             center: {lat: lat, lng: lng}
         };
-        map = new google.maps.Map(document.getElementById('map'),
+         map = new google.maps.Map(document.getElementById("map"),
                 mapOptions);
 
         var marker = new google.maps.Marker({
