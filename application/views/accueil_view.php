@@ -92,7 +92,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
             <div class="row">   
-			    <div class="col-10">
+			    <div class="col-12 about-members">
 
                 <div class="about col-lg-3 col-xs-10 event">
                     <h2>Alex</h2>
