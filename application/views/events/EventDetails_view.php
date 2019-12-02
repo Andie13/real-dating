@@ -64,8 +64,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 . ' h ' . date_format(new DateTime($event->heure_event), 'i')
                                 ?> précises</h2>
                             <h2 class="title">Lieux:  <?php echo $ville->nom_commune ?> </h2>
-                            <p>Pour un peu de suspens, le lieux reste secret.<br>
-                                Il vous sera révélé quelques jours avant la soirée...</p>
+		    <h2><?php echo $presta; ?></h2>
 
                             <h2 class="title">Tarif:  <?php echo $event->prix_event ?> €</h2>
                             <?php
