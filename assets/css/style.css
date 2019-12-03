@@ -36,7 +36,9 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
-
+.content{
+	padding-bottom: 4em;
+}
 .title{
     text-align: center;
     font-style: italic;
