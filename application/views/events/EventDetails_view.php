@@ -39,47 +39,46 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-10 col-xs-10 event eventDetails">
-                   
-                    <div class="col-lg-6 col-xs-10 containerImage" > <div class="col-lg-6 col-xs-10 containerImage" >
-                            <?php
-                            if ($media != '') {
-                                echo '<img id="imageEvent" src="' . $media->path_media . '/' . $media->nom_media . '" alt="image event"/>';
-                            } else {
-                                ?>
+               <div class="col-lg-10 col-xs-10 event eventDetails">
+                    <div class="col-lg-6 col-xs-10 containerImage" >
+                        <?php
+                        if ($media != '') {
+                            echo '<img id="imageEvent" src="' . $media->path_media . '/' . $media->nom_media . '" alt="image event"/>';
+                        } else {
+                            ?>
 
-                                <img id="imageEvent" src="<?php echo base_url() ?>assets/images/event.jpg" alt="image event"/>
+                            <img id="imageEvent" src="<?php echo base_url() ?>assets/images/event.jpg" alt="image event"/>
 
-                            <?php } ?>
+                        <?php } ?>
 
-                        </div>
+                    </div>
 
-                        <div class="col-lg-6 col-xs-10 " id="desc">
-                            <h2 class="title">Quand? le <?php echo date_format(new DateTime($event->date_event), "d m Y") ?></h2>
-                            <h2 class="title">À <?php
+                    <div class="col-lg-6 col-xs-10 " id="desc">
+                        <h2 class="title">Quand? le <?php echo date_format(new DateTime($event->date_event), "d m Y") ?></h2>
+                        <h2 class="title">À <?php
                             echo date_format(new DateTime($event->heure_event), "H")
                             . ' h ' . date_format(new DateTime($event->heure_event), 'i')
                             ?> précises</h2>
-                            <h2 class="title">Lieux:  <?php echo $ville->nom_commune ?> </h2>
-                            <h2><?php echo $presta->nom_presta; ?></h2>
-                            <p><?php echo $presta->adresse_presta; ?></p>
+                        <h2 class="title">Lieux:  <?php echo $ville->nom_commune ?> </h2>
+                        <h2><?php echo $presta->nom_presta; ?></h2>
+                        <p><?php echo $presta->adresse_presta; ?></p>
 
 
 
-                            <h2 class="title">Tarif:  <?php echo $event->prix_event ?> €</h2>
-                            <?php
-                            if (isset($connected) && $nombrePlacesRestante > 0) {
-                                echo '<a id="link" href="' . base_url() . 'events/events_controller/toEventReservation?id=' . $event->id_event . '">';
+                        <h2 class="title">Tarif:  <?php echo $event->prix_event ?> €</h2>
+                        <?php
+                        if (isset($connected) && $nombrePlacesRestante > 0) {
+                            echo '<a id="link" href="' . base_url() . 'events/events_controller/toEventReservation?id=' . $event->id_event . '">';
 
-                                echo ' <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/pp-acceptance-small.png" alt="Buy now with PayPal" /> Réserver</a>';
-                                echo '<br>';
-                                echo '<a id="link" href="' . base_url() . 'Stripe_controller">PAY</a>';
-                            } else {
-                                
-                            }
-                            ?>
-                        </div>
+                            echo ' <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/pp-acceptance-small.png" alt="Buy now with PayPal" /> Réserver</a>';
+                            echo '<br>';
+                            echo '<a id="link" href="' . base_url() . 'Stripe_controller">PAY</a>';
+                        } else {
+                            
+                        }
+                        ?>
                     </div>
+                </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-10 col-xs-10 event eventDetails">
