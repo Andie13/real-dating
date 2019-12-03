@@ -65,7 +65,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 ?> précises</h2>
                             <h2 class="title">Lieux:  <?php echo $ville->nom_commune ?> </h2>
 		    <h2><?php echo $presta->nom_presta; ?></h2>
-
+			 <p><?php echo $presta->adress_presta; ?></p>
                             <h2 class="title">Tarif:  <?php echo $event->prix_event ?> €</h2>
                             <?php
                             if (isset($connected) && $nombrePlacesRestante > 0) {
