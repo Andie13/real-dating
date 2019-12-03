@@ -39,6 +39,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </a>
             </div>
         </div>
+					 <div class=" clearfix"></div>
 
         <div class=" col-lg-12 col-xs-12 contain-wrap ">
 
