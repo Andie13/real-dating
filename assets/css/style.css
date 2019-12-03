@@ -275,7 +275,7 @@ footer {
 
     color: white;
     text-decoration: underline;
-    font-size: 3rem;
+    font-size: 2rem;
 
 } 
 .footer-a ul {
@@ -288,7 +288,7 @@ footer {
 }
 .footer-medias{
 	position:relative;
-	height:5em;
+	height:3em;
 	display:flex;
 	margin:auto;
 	text-align:center;
