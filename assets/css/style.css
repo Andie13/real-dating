@@ -294,11 +294,16 @@ footer {
 	text-align:center;
 	background-color:rgba(255,255,255,0.9);
 }
+social-link{
+	  position: absolute;
+  	 top: 50%; 
+  	transform: translateY(-50%);
+}
 .footer-medias a img{
 	margin-right:2rem;
 	max-width:2.5rem;
 	height:auto;
-	verttical-align: middle;
+	
 }
 
 /**************************************
