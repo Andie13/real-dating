@@ -289,15 +289,13 @@ footer {
 .footer-medias{
 	position:relative;
 	height:5em;
-	display:block;
+	display:flex;
 	margin:auto;
 	text-align:center;
 	background-color:rgba(255,255,255,0.9);
 }
-social-link{
-	  position: absolute;
-  	 top: 50%; 
-  	transform: translateY(-50%);
+.social-link{
+	margin:auto;
 }
 .footer-medias a img{
 	margin-right:2rem;
