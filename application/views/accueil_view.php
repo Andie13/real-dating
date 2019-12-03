@@ -80,7 +80,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
             </div>
            
-            <div class="col-10 event about">
+            <div class="col-10 event about" id="accueil-about">
                 <h3>En couple depuis 2016 Christophe et Awa se sont rencontrés grâce à un speed dating.<br>
 
                     Tous les 3 bercés dans les relations humaines, Alex, Christophe et Awa ont eu envie de développer le speed-dating et la mise en relation dans ce monde ou le virtuel prend le dessus sur le réel.<br>
