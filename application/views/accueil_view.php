@@ -74,14 +74,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
              <div class="row">
                 <div class=" col-12 accroche">
-                   <video controls="controls" width="75%" height="auto" src="<?php echo base_url()?>assets/images/Bunny.mp4">Ici la description alternative</video>
+                   <video controls="controls" width="45" height="auto" src="<?php echo base_url()?>assets/images/Bunny.mp4">Ici la description alternative</video>
                  <br>   
 		<p><i>"Qui sommes nous?"</i></p>                
                 </div>
             </div>
            
             <div class="col-10 event about">
-                <h3>En couple depuis trois ans Christophe et Awa se sont rencontrés grâce à un speed dating.<br>
+                <h3>En couple depuis 2016 Christophe et Awa se sont rencontrés grâce à un speed dating.<br>
 
                     Tous les 3 bercés dans les relations humaines, Alex, Christophe et Awa ont eu envie de développer le speed-dating et la mise en relation dans ce monde ou le virtuel prend le dessus sur le réel.<br>
 
@@ -94,34 +94,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="row">   
 			    <div class="col-12 about-members">
 
-                <div class="about col-lg-3 col-xs-10 event">
-                    <h2>Alex</h2>
-                    <p>
-                        Ami depuis l’enfance avec Christophe<br>
-                        Directeur de projet au sein d’une entreprise.<br>
-                        Co-fondateur de Real Date.<br>
-                    </p>
-                </div>
-                <div class="about col-lg-3 col-xs-10  event">
-                    <h2>Christophe</h2>
-                    <p>
-                        Ami d’enfance d’Alex et compagnon de Awa.<br>
-                        Créateur et dirigeant d’entreprise.<br>
-                        Co-fondateur de Real Date.<br>
-
-
-                    </p>
-                </div>
-                <div class="about col-lg-3 col-xs-10 event">
-                    <h2>Awa</h2>
-                    <p>
-                        Compagne de Christophe<br>
-                        Sophrologue diplômée et psychanalyse<br>
-                        Co-fondatrice de Real Date.<br>
-
-
-                    </p>
-                </div>
+                
 							   </div>
             </div>
 
