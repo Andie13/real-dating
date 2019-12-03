@@ -37,6 +37,8 @@
         </div>
         <div class=" clearfix"></div>
         <br>
+   <div class="clearfix"></div>
+        <div class=" col-lg-12 col-xs-12 content">
 
         <div class="col-lg-8 col-xs-12 eventDetails regForm event login">
 
@@ -121,7 +123,7 @@
             </div>
 
         </div>
-
+		 </div>
 
     <script>
         $(document).ready(function () {
