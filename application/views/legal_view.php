@@ -37,7 +37,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
         </div>
 
-        <div class=" col-lg-12 col-xs-12 contain-wrap ">
+          <div class="clearfix"></div>
+        <div class=" col-lg-12 col-xs-12 content">
+
 
             <div class="row">
                 <div class=" col-12 accroche">
