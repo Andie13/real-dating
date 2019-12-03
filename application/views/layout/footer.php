@@ -1,3 +1,4 @@
+<div class="clearfix"></div>
 <div class="row">
     <div class="footer footer-a col-lg-12 ">
         <div class="col-12 top-footer">
