@@ -1,6 +1,6 @@
 <div class="clearfix"></div>
 <div class="row">
-    <div class="footer footer-a col-lg-12 ">
+    <footer class="footer footer-a col-lg-12 ">
         <div class="col-12 top-footer">
             <div class="col-4">   
                 <ul>        
@@ -32,6 +32,6 @@
 
             </div>
     </div>
-</div>
+</footer>
 </div>
 </body>
