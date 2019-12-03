@@ -41,7 +41,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
 					 <div class=" clearfix"></div>
 
-        <div class=" col-lg-12 col-xs-12 ">
+        <div class="content ">
 
 
             <div class="row">     
