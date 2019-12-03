@@ -132,6 +132,7 @@ img#about{
     overflow: hidden;
     margin-right: 0;
     float: right;
+    top:2em;
 }
 .topnav a#logo-res{
     display: none;
@@ -195,7 +196,7 @@ img#about{
     float: none;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 6%;
+    margin-top: 10%;
 
 }
 
@@ -204,6 +205,7 @@ img#about{
     margin: auto;
     float: none;
     height: auto;
+	margin-top: 10%;
 
 }
 #custom-search-input{
@@ -217,7 +219,7 @@ img#about{
 }
 
 #search{
-    background-color: rgba(255,255,255,0.7);
+    background-color: a(255,255,255,0.7);
     color: darkblue;
     line-height: 1em;
     float: left;
@@ -252,11 +254,17 @@ contain-wrap{
     padding-bottom: 4em;
 }
 
+.accroche video{
+	margin-top:5%:
+}
+
 .footer {
     position: absolute;
-    bottom:0;
+    margin-bottom:0;
     width: 100%;
     height: auto;
+	background-color: darkblue;
+	
 
 }
 .footer-a ul li p{
@@ -265,7 +273,7 @@ contain-wrap{
 }
 .footer-a ul li p a{
 
-    color: darkblue;
+    color: white;
     text-decoration: underline;
     font-size: 3rem;
 
@@ -283,6 +291,7 @@ contain-wrap{
 	display:block;
 	margin:auto;
 	text-align:center;
+	background-color:rgba(255,255,255,0.7);
 }
 .footer-medias a img{
 	margin-right:2rem;
