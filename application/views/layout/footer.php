@@ -1,5 +1,5 @@
 <div class="row">
-    <footer class="footer-a col-lg-12 ">
+    <div class="footer footer-a col-lg-12 ">
         <div class="col-12 top-footer">
             <div class="col-4">   
                 <ul>        
@@ -30,7 +30,7 @@
                 </div>
 
             </div>
-    </footer>
+    </div>
 </div>
 </div>
 </body>
