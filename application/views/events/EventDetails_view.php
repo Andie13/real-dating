@@ -40,6 +40,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
             <div class="row">
                <div class="col-lg-10 col-xs-10 event eventDetails">
+				   <div class="retour"><a href=" <?php echo base_url() . 'events/Events_controller?ville=' . $ville->nom_commune ?>"> 
+                            <h3> <<  RETOUR VERS LA LISTE D'ÉVÉNEMENTS  <<
+                            </h3>
+                        </a>
+                    </div>
                     <div class="col-lg-6 col-xs-10 containerImage" >
                         <?php
                         if ($media != '') {
