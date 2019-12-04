@@ -42,7 +42,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
             <div class="row">
                 <div class=" col-12 accroche">
-                    <img id="about" src="<?php echo base_url() ?>assets/images/img_about.jpg">
+                    
                     <p><i>"Mentions Légales : Realdate"</i></p>                
                 </div>
             </div>
