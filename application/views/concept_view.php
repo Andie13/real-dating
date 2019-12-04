@@ -46,7 +46,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class=" col-12 accroche">
      
                     <p><i>"Osez le speed - dating pour faire des vraies rencontres
-Rencontrez des célibataires en tête à tête !
+<br>Rencontrez des célibataires en tête à tête !
 "</i></p>                
                 </div>
             </div>
