@@ -119,7 +119,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             }
                         }
                         echo ' ';
-                        echo '<div id="map" style="height:50%;width:50%;margin:auto;"></div>';
+                        echo '<div id="map" style="height:auto;width:50%;margin:auto;"></div>';
 
                         echo '</div>';
                     }
