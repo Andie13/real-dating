@@ -17,7 +17,7 @@
             </div>
             <div class=" col-4">   
                 <ul>        
-                    <li class="menu"><p><a href="<?php mailto('fody.fady@gmail.com'); ?>">Envoyer un e-mail</a></p></li>                   
+                    <li class="menu"><p><a href="<?php mailto:fody.fady@gmail.com ?>">Envoyer un e-mail</a></p></li>                   
                 </ul>
             </div>
             <div class="col-12 ">
