@@ -17,7 +17,7 @@
             </div>
             <div class=" col-4">   
                 <ul>        
-                    <li class="menu"><p><a href="<?php echo base_url() ?>welcome/gotoAbout">Nous Contacter</a></p></li>                   
+                    <li class="menu"><p><a href="<?php mailto('fody.fady@gmail.com','Demande d\'informations') ?>">Envoyer un e-mail</a></p></li>                   
                 </ul>
             </div>
             <div class="col-12 ">
