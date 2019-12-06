@@ -19,7 +19,9 @@ class Ajax_controller extends CI_Controller {
         $this->db->distinct()
                 ->like('nom_commune', $term,'after')
                 ->or_like('code_postal',$term,'after')
-                ->where('latitude',null,FALSE);
+                ->where('latitude',null,FALSE)
+				->select();
+		
                 
         
         
