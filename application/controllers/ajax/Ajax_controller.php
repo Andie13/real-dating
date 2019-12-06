@@ -1,5 +1,7 @@
 <?php
 
+<?php
+
 class Ajax_controller extends CI_Controller {
 
     public function __construct() {
@@ -15,11 +17,17 @@ class Ajax_controller extends CI_Controller {
 
     public function search() {
 
-        $term = $this->input->get('term');    
-	    $this->db->like('nom_commune', $term,'after');
- 
+        $term = $this->input->get('term');      
+        $this->db->distinct()
+                ->like('nom_commune', $term,'after')
+                ->or_like('code_postal',$term,'after')
+                ->where('latitude',null,FALSE);
+                
+        
+        
         $data = $this->db->get("villes")->result();
-	    var_dump($data);
+
+      
        echo json_encode($data);
     }
 
