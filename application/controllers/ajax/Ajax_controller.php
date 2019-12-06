@@ -1,7 +1,5 @@
 <?php
 
-<?php
-
 class Ajax_controller extends CI_Controller {
 
     public function __construct() {
