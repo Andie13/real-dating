@@ -20,6 +20,7 @@ class Ajax_controller extends CI_Controller {
 		      or code_postal like '$term%' and latitude not like 'NULL'");
 
       $data = $this->$query->get()->result();
+	    var_dump($data);
        echo json_encode($data);
     }
 
