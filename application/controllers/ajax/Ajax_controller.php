@@ -16,12 +16,9 @@ class Ajax_controller extends CI_Controller {
     public function search() {
 
         $term = $this->input->get('term');      
-        $this->db->distinct()
-                ->like('nom_commune', $term,'after')
-                ->or_like('code_postal',$term,'after')
-                ->where('latitude',null,FALSE)
-				->select();
-		
+       	$this->db->where("nom_commune like .term.'%'")
+		->where("code_postal like .term.'%'")
+		->where("latitude not like 'NULL'");
                 
         
         
