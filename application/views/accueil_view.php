@@ -119,6 +119,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             },
                             dataType: "json",
                             success: function (data) {
+					    alert(data);
 
                                 var resp = $.map(data, function (obj) {
                                     return obj.nom_commune;
