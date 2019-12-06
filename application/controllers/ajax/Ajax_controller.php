@@ -16,7 +16,7 @@ class Ajax_controller extends CI_Controller {
     public function search() {
 
         $term = $this->input->get('term');    
-	    $this->db->like('name', $term);
+	    $this->db->like('nom_commune', $term,'after');
  
         $data = $this->db->get("villes")->result();
 	    var_dump($data);
