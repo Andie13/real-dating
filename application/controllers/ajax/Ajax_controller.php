@@ -16,10 +16,9 @@ class Ajax_controller extends CI_Controller {
     public function search() {
 
         $term = $this->input->get('term');    
-	    $query = ("select * from villes where nom_commune like '$term%' 
-		      or code_postal like '$term%' and latitude not like 'NULL'");
-
-      $data = $this->$query->get()->result();
+	    $this->db->like('name', $term);
+ 
+        $data = $this->db->get("villes")->result();
 	    var_dump($data);
        echo json_encode($data);
     }
