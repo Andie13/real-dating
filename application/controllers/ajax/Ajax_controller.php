@@ -15,13 +15,11 @@ class Ajax_controller extends CI_Controller {
 
     public function search() {
 
-        $term = $this->input->get('term');      
-        $this->db->distinct()
-		->where('latitude',null,FALSE)
-                ->where("(nom_commune LIKE '".$term."%' OR code_postal LIKE '".$term."%')", NULL, FALSE)
-                ;
+              $term = $this->input->get('term');      
+
         
-        $data = $this->db->get("villes")->result();
+        $query = $this->db->query("SELECT * FROM villes WHERE nom_commune LIKE '{$term}%'OR code_postal LIKE '{$term}%'HAVING latitude IS NOT NULL");
+        $data = $query->result();
 
       
        echo json_encode($data);
