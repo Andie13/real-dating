@@ -22,7 +22,7 @@
                 <?php
                 if (isset($connected)) {
 		    echo '<a href = "' . base_url() . 'user/login_controller/logout">Déconnexion</a>';
-                    echo '<a href = "' . base_url() . 'user/UserProfile_controller">Mon Profile</a>';
+                    echo '<a href = "' . base_url() . 'user/UserProfile_controller">Mon Profil</a>';
                    
                 } else {
                     echo '<a href = "' . base_url() . 'user/Login_controller">Connexion</a>';
