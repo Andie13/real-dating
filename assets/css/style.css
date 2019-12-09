@@ -271,7 +271,7 @@ footer {
 	bottom: 0;
 	width: 100%;
 	float: none;
-	background-color: darkblue;
+	background-color: rgba(241,218,95,0.4);
 
 }
 .footer-a ul li p{
@@ -280,7 +280,7 @@ footer {
 }
 .footer-a ul li p a{
 
-    color: white;
+    color: darkblue;
     text-decoration: underline;
     font-size: 2rem;
 
