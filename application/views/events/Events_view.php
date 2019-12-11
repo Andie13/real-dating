@@ -72,7 +72,7 @@ $mediasModel = new Medias_model();
 
 
 
-                        echo '<div class=" col-lg-12 col-xs-12 ">';
+                        echo '<div class=" col-lg-12 col-xs-12 no-event">';
                         echo '<h2 class"title">Oups! Il n\'y a pas de soirée prévu dans cette ville pour le moment :-(</h2>';
                         echo '<br>';
                         echo '<br>';
