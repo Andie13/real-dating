@@ -52,7 +52,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <form method="POST" class="search-form" action="<?php echo base_url(); ?>events/events_controller">
                             <div id="custom-search-input">
                                 <div class="input-group">
-                                    <input id="search" name="search" type="text" class="autocomplete_input form-control" placeholder="ville/cp" />
+                                    <p id="erreur-saisie"></p>
+                                    <input id="search" name="search" type="text" class="autocomplete_input form-control" value="" autocomplete="on"placeholder="ville/cp" />
+                                    
                                     <button type="submit" id="search_btn" class="btn btn-round btn-orange"><i class="">Go!</i></button>
                                 </div>
                             </div>
@@ -130,6 +132,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         });
                     },
                     minLength: 3,
+
+                });
+  $('#search_btn').on('click', function () {
+                     
+                    
+                    var valToTest = $('#search').val();
+                    var reg = /([\(\)])/;
+                    var eventsPage = BASE_URL+"welcome"
+                    if (reg.test(valToTest)) {
+                        
+                    }else{
+                        event.preventDefault();
+                        $('#erreur-saisie').css('color', 'red');
+                        $('#erreur-saisie').css('background-color', 'white');
+                        $('#erreur-saisie').css('font-size', '1em');
+                        $('#erreur-saisie').text('Merci de sélestionner une ville dans la liste déroulante!')
+                    }
+                    
+
 
                 });
 
