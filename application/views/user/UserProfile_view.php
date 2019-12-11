@@ -12,9 +12,6 @@
                 <a id="logo-res" >                   
                     <img id="headerImg" src="<?php echo base_url(); ?>assets/images/logo/logo-favicon-carre-1000.png" alt="logo"/>
                 </a>
-                
-				
-
 
                 <?php
                 if (isset($connected)) {
@@ -34,7 +31,7 @@
                 </a>
             </div>
         </div>
-        </div>
+       
         <div class="clearfix"></div>
 
         <div class="row">
@@ -57,9 +54,6 @@
                             <i class="fa fa-calendar"> Mes Soirées</i>
                         </a>
                     </li>
-
-
-
 
                 </ul>
             </div>
@@ -182,7 +176,9 @@
                         <td>' . $eventDetail->nom_event . '</td>
                         <td>' . $eventDetail->date_event . '</td>
                         <td>' . $eventDetail->heure_event . '</td>
-                        <td>' . $event->status_resa . '</td>
+                        <td>' . if($event->status_resa == 2){
+				echo 'Payée';
+			}. '</td>
                         <td>' . $event->ref_resa . '</td>
                         </tr><br>';
                             }
