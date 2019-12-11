@@ -18,7 +18,8 @@ class Events_Controller extends CI_Controller {
 		        if($this->input->get('ville')!=NULL){
             $ville = $this->input->get('ville');
         }else{
-            $ville = $this->input->post('search');
+            
+            $ville = strtok($this->input->post('search'),'(');
         }
         
         $arrCities = $this->getNearbyCities($ville);
