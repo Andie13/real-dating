@@ -172,13 +172,16 @@
 
                                 $eventModel = new Events_model();
                                 $eventDetail = $eventModel->getEventDetailsById($event->id_event);
-                                echo' <tr>
+				     if($event->status_resa == 2){
+				$statut= 'Payée';
+			}else{
+				$statut= 'Annulé';	     
+				     }
+                                echo '<tr>
                         <td>' . $eventDetail->nom_event . '</td>
                         <td>' . $eventDetail->date_event . '</td>
                         <td>' . $eventDetail->heure_event . '</td>
-                        <td>' . if($event->status_resa == 2){
-				echo 'Payée';
-			}. '</td>
+                        <td>' . $statut.'</td>
                         <td>' . $event->ref_resa . '</td>
                         </tr><br>';
                             }
