@@ -147,6 +147,10 @@
                             </div>
                         </fieldset>
                     </form>
+			<?php if($user->cagnotte>0){
+			
+			echo '<p>Vous possédez un avoir de : '.user->cagnotte.'€</p>';
+}?>
 
                 </div>    
 
