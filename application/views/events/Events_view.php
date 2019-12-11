@@ -49,7 +49,7 @@ $mediasModel = new Medias_model();
             </div>
         </div>
         <div class=" clearfix"></div>
-        <div class=" col-lg-12 col-xs-12 contain-wrap ">
+        <div class=" col-lg-12 col-xs-12 ccontent ">
 
             <div class="col-lg-10 col-xs-10 eventDetails">
                 <div class="col-12">
