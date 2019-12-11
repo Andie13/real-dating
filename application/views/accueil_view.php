@@ -124,7 +124,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					
 
                                 var resp = $.map(data, function (obj) {
-                                    return obj.nom_commune;
+                                    return obj.nom_commune + ' (' + obj.code_postal + ')';
                                 });
 
                                 response(resp);
