@@ -682,5 +682,8 @@ p {
 	.wellogo{
 		padding-top:4%;
 	}
+	.no-event{
+		min-height: 80%;	
+	}
 	
 }
