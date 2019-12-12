@@ -83,7 +83,7 @@
 
                 </div>
                 <p class="formButton login-btn">
-                    <button type="submit" id="search_btn" class="btn btn-round btn-orange"><i class="">Connexion</i></button>
+                    <button type="submit" id="search_btn" class="btn btn-round btn-orange "><i class="">Connexion</i></button>
 
                 </p>
                 <br>
