@@ -82,8 +82,8 @@
                     </div>
 
                 </div>
-                <p class="formButton login-btn">
-                    <button type="submit" id="search_btn" class="btn btn-round btn-orange "><i class="">Connexion</i></button>
+                <p class="formButton ">
+                    <button type="submit" id="search_btn" class="btn btn-round btn-orange login-btn "><i class="">Connexion</i></button>
 
                 </p>
                 <br>
