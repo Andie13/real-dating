@@ -77,11 +77,15 @@
                         </div>
                         <div class="col-lg-8">
                             <input type="password" id="lname" name="pass" placeholder="*****" required="">
+				 <p class="formButton login-btn">
+                    <button type="submit" id="search_btn" class="btn btn-round btn-orange"><i class="">Connexion</i></button>
+
+                </p>
                         </div>
                     </div>
 
                 </div>
-                <p class="formButton">
+                <p class="formButton login-btn">
                     <button type="submit" id="search_btn" class="btn btn-round btn-orange"><i class="">Connexion</i></button>
 
                 </p>
