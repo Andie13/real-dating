@@ -394,6 +394,11 @@ input[type=submit]:hover {
     text-decoration: underline;
 }
 
+.login-btn{
+	display: block;
+	margin:auto;
+}
+
 
 
 
