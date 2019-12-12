@@ -103,7 +103,7 @@
 
                     <h2 class="title ">Veuillez saisir votre adresse e-mail pour réinitialiser votre mot de passe.</h2>
 
-                    <div class="col-75">
+                    <div class="col-75 recover-pass">
                         <input  type="email" id="lname" name="email" placeholder="Votre email..." required="">
                     </div>
 
@@ -112,10 +112,10 @@
                     <br>
                     <br>
                     <p class="formButton">
-                        <button type="submit" id="search_btn" class="btn btn-round btn-orange"><i class="">Réinitialiser</i></button>
+                        <button type="submit" id="search_btn" class="btn btn-round btn-orange login-btn"><i class="">Réinitialiser</i></button>
 
                     </p>
-                    <br>
+              
                     <br>
                     <a class="pull-left " id="retour" ><< Retour</a>
 
