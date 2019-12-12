@@ -404,6 +404,10 @@ input[type=submit]:hover {
 	width: 100% !important;
 	padding: 3em;
 }
+div.col-lg-8.col-xs-12.eventDetails.regForm.event{
+
+	min-height:35em;
+}
 
 
 
