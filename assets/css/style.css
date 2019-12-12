@@ -396,7 +396,9 @@ input[type=submit]:hover {
 
 .login-btn{
 	display: block;
-	margin:auto;
+	margin:1em auto 1em auto;
+	float: none !important;
+	
 }
 
 
