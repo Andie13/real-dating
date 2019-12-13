@@ -162,13 +162,33 @@
 				    </tr>
                             </thead>
 				<tbody>
+					 <?php
+                                    foreach ($events as $event) {
+
+                                        $eventModel = new Events_model();
+                                        $eventDetail = $eventModel->getEventDetailsById($event->id_event);
+                                        if ($event->status_resa == 2) {
+                                            $statut = 'Payée';
+                                        } else {
+                                            $statut = 'Annulé';
+                                        }
+                                        ?>
+                                        <tr>
+                                            <td><?php echo $eventDetail->nom_event ?></td>
+                                            <td><?php echo $eventDetail->date_event ?></td>
+                                            <td><?php echo $eventDetail->heure_event ?></td>
+                                            <td><?php echo $statut ?></td>
+                                            <td><?php echo $event->ref_resa ?></td>
+                                        </tr>
+                                    <?php } ?>
+                            <br>
 				</tbody>
 				     </table>
 				      <?php
                         } else {
                             echo '<h2>Vous n\'avez pas encore réservé de soirée...</h2>';
                         }
-                        ?> ?>
+                        ?> 
                             <br>
 			    </div>
 
