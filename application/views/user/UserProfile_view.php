@@ -1,5 +1,5 @@
 <body class=" bg welcome">
-    <div class="container-fluid login-wrapper">
+   
 
 
         <div class="header col-lg-12 col-xs-12 ">
@@ -200,7 +200,7 @@
                 </div>
             </div>
 	</div>
-        </div>
+ 
 
 
 
