@@ -55,6 +55,34 @@
                 </div>
 		    <div class="tab-content ">
 			   <div class="tab-pane fade in active event login" id="id" >
+				    <div class="center">
+
+                        <?php
+                        echo '<h2> ' . $genre . ' ' . $user->nom_user . ' ' . $user->prenom_user . '</h2>';
+                        echo '<br>';
+                        echo $age . ' ans';
+                        ?>
+                    </div>
+				    <?php
+                    if ($this->session->flashdata('err')) {
+                        ?>
+
+                        <div class = "display_error">
+                            <?php echo $this->session->flashdata('err'); ?>
+                        </div>
+
+
+                        <?php
+                    } else if ($this->session->flashdata('success')) {
+                        ?>
+
+                        <div class = "display_error">
+                            <?php echo $this->session->flashdata('success'); ?>
+                        </div>
+
+
+                    <?php }
+                    ?>
 			    </div>
 			     <div class="tab-pane fade in  event" id="resas">
 			    </div>
