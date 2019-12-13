@@ -54,6 +54,11 @@
                     </ul>
                 </div>
 		    <div class="tab-content ">
+			   <div class="tab-pane fade in active event login" id="id" >
+			    </div>
+			     <div class="tab-pane fade in  event" id="resas">
+			    </div>
+
 			    
 		    </div>
             </div>
