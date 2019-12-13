@@ -104,11 +104,12 @@
                             <fieldset>
                                 <legend class="userForm">Mettre à jour votre numéro de téléphone :</legend>
                                 <div class="col-4">
-                                    <label>N° de téléphone : </label>                           
-                                </div>
-                                <button class="btn btn-round btn-orange" id="btnInfo">
+                                    <label>N° de téléphone : </label>
+					<button class="btn btn-round btn-orange" id="btnInfo">
                                     <i class="fa fa-question"></i>
                                 </button>
+                                </div>
+                                
 
                                 <div class="col-7">
                                     <input type="text" id="tel" name="tel" id="phone" name="phone"
