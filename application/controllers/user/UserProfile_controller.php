@@ -47,9 +47,10 @@ class UserProfile_controller extends CI_Controller {
             $datas['age'] = $age;
 
             $this->load->view('user/UserProfile_view', $datas);
-			 $this->load->view('layout/footer');
+	    $this->load->view('layout/footer');
         } else {
             $this->load->view('accueil_view');
+	    $this->load->view('layout/footer');
         }
     }
 
