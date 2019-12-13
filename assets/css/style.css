@@ -515,15 +515,15 @@ p {
 **************************************/
 
 .active{
-    background-color:  rgb(255,208,184);
+    background-color:  white;
 }
 .nav-tabs.primary>li.active>a, .nav-tabs.primary>li.active>a:hover, .nav-tabs.primary>li.active>a:focus {
 	color:darkblue !important;
-	border: 1px solid rgb(255,208,184)!important;
+	border: 1px solid rgb(145,209,223) !important;
 	background-color:white;
 }
 .nav-tabs.primary > li > a{
-	background-color: rgb(255,208,184)!important;
+	background-color: rgb(145,209,223) !important;
 	
 }
 
