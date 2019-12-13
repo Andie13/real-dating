@@ -42,12 +42,12 @@
                     <ul class="nav nav-tabs  ">
                         <li class="active">
                             <a href="#id" data-toggle="tab">
-                                <i class="fa fa-user"></i>Identification
+                                <i class="fa"></i>Identification
                             </a>
                         </li>
                         <li>
                             <a href="#resas" data-toggle="tab">
-                                <i class="fa fa-calendar"> Mes Soirées</i>
+                                <i class="fa"> Mes Soirées</i>
                             </a>
                         </li>
 
