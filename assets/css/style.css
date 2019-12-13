@@ -538,9 +538,9 @@ p {
 
 }
 #tabs .ui-state-active {
-    background: white;
+    background: white !important;
     border: none;
-	color: darkblue;
+    color: darkblue !important;
 	
 }
 .tab-content{
