@@ -33,7 +33,7 @@
         </div>
        
         <div class="clearfix"></div>
-
+	<div class="content">
         <div class="row">
             <div class=" col-12 accroche">
                 <p><i>"Gestion de votre profile:"</i> </p>
@@ -107,6 +107,7 @@
                     </form>
                     <br>
                     <div class="clearfix"></div>
+			
                     <form method="POST" action="<?php echo base_url() ?>user/UserProfile_controller/changeTel">
                         <fieldset>
                             <legend class="userForm">Mettre à jour votre numéro de téléphone :</legend>
@@ -198,7 +199,7 @@
                     </div>
                 </div>
             </div>
-
+	</div>
         </div>
 
 
