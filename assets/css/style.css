@@ -526,16 +526,16 @@ p {
 }
 
 #tabs .ui-state-default{
-    background: rgb(255,208,184) !important;
-    color: chocolate
+    background: rgb(145,209,223) !important;
+    color: darkblue
 
 }
 #tabs .ui-state-active {
-    background: chocolate !important;
+    background: rgb(145,209,223) !important;
     border: none;
 }
 .tab-content{
-    color: brown;
+    color: darkblue;
     background: none;
     border: none;
 
