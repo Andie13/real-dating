@@ -538,8 +538,10 @@ p {
 
 }
 #tabs .ui-state-active {
-    background: rgb(145,209,223) !important;
+    background: white;
     border: none;
+	color: darkblue;
+	
 }
 .tab-content{
     color: darkblue;
