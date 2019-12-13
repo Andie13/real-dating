@@ -518,7 +518,10 @@ p {
 .active{
     background-color:  rgb(255,208,184);
 }
-
+.nav-tabs.primary>li.active>a, .nav-tabs.primary>li.active>a:hover, .nav-tabs.primary>li.active>a:focus {
+	color:darkblue !important;
+	border: 1px solid rgb(255,208,184)!important;
+}
 
 .ui-tabs .ui-tabs-nav
 {
