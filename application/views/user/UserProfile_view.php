@@ -31,6 +31,13 @@
         </div>
 		 <div class="clearfix"></div>
 			<div class="content">
+				 <div class="row">
+            <div class=" col-12 accroche">
+                <p><i>"Gestion de votre profile:"</i> </p>
+                <p><i>Bonjour <?php echo $user->nom_user . ' ' . $user->prenom_user ?></i> </p>
+                <p><i></i></p>
+            </div>
+        </div>
 
 		</div>
 		
