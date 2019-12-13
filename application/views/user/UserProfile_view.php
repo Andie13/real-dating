@@ -100,6 +100,52 @@
                     </form>
                     <br>
                     <div class="clearfix"></div>
+				   <form method="POST" action="<?php echo base_url() ?>user/UserProfile_controller/changeTel">
+                            <fieldset>
+                                <legend class="userForm">Mettre à jour votre numéro de téléphone :</legend>
+                                <div class="col-4">
+                                    <label>N° de téléphone : </label>                           
+                                </div>
+                                <button class="btn btn-round btn-orange" id="btnInfo">
+                                    <i class="fa fa-question"></i>
+                                </button>
+
+                                <div class="col-7">
+                                    <input type="text" id="tel" name="tel" id="phone" name="phone"
+                                           pattern="([0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2})|([0-9]{10})" placeholder="Votre tel..." >
+                                </div>
+                                <div class="col-1">
+                                    <button type="submit" id="search_btn" class="btn btn-round btn-orange"><i class="">Mettre à jour</i></button>
+                                </div>
+                            </fieldset>
+                        </form>
+                        <br>
+                        <div class="clearfix"></div>
+                        <form method="POST" action="<?php echo base_url() ?>user/UserProfile_controller/resetPassword">
+                            <fieldset>
+                                <legend class="userForm">Mettre à jour Votre mot de Passe:</legend>
+                                <div class="col-4">
+                                    <label>Changer de Mot de passe</label>
+                                </div>
+                                <div class="col-7">
+                                    <input  type="password" name="old_pass" placeholder="ancien mot de passe"/><br>
+                                    <br>
+                                    <input type="password" id="pass" name="new_pass" placeholder="nouveau mot de passe"/><br>
+                                    <br>
+                                    <input type="password" id="confPass"  placeholder="confirmer nouveau mot de passe"onchange="checkPasswordMatch()"/><br> 
+                                    <div class="registrationFormAlert" id="divCheckPasswordMatch"></div>
+                                </div>
+                                <div class="col-1">
+                                    <button type="submit" id="search_btn" class="btn btn-round btn-orange"><i class="">Mettre à jour</i></button>
+                                </div>
+                            </fieldset>
+                        </form>
+                        <?php
+                        if ($user->cagnotte > 0) {
+
+                            echo '<p>Vous possédez un avoir de : ' . $user->cagnotte . '€</p>';
+                        }
+                        ?>
 			    </div>
 			     <div class="tab-pane fade in  event" id="resas">
 			    </div>
