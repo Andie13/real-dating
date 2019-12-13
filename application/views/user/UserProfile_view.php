@@ -155,4 +155,59 @@
             </div>
 
         </div>
+	            <script>
+            $(function () {
+                $("#tabs").tabs();
+            });
+
+
+            //affichage du flashdata s'il y en a un.
+            $(".display_error").delay(4000).slideUp(200, function () {
+                $(this).alert('close');
+            });
+
+
+            // Vérification du mot de passe et de la confirmation du mot de passe.
+            function checkPasswordMatch() {
+                var password = $("#pass").val();
+                var confirmPassword = $("#confPass").val();
+
+                if (password != confirmPassword) {
+                    $("#divCheckPasswordMatch").html("Les mots de passe ne correspondent pas.").css("color", "red").css("background-color", "rgba(255,255,255,0.5)");
+
+                } else {
+
+                    //Vérification ensuite de la taille du mot de passe.
+                    if (password.length < 8) {
+                        $("#divCheckPasswordMatch").html("Le mot de passe doit contenir au moins 8 caractères.").css("color", "red").css("background-color", "rgba(255,255,255,0.5)");
+
+                    } else {
+                        $("#divCheckPasswordMatch").html("Mots de Passe identiques").css("color", "green").css("background-color", "rgba(255,255,255,0.5)");
+
+                    }
+                }
+
+            }
+
+            $(document).ready(function () {
+                $("#pass, #confPass").keyup(checkPasswordMatch);
+            });
+
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('.datepick').datepicker({dateFormat: "dd-mm-yy",
+                    showButtonPanel: true,
+                    changeMonth: true,
+                    changeYear: true,
+                    showOtherMonths: true,
+                    selectOtherMonths: true,
+                    yearRange: "1930:2010"
+                });
+
+                $('#btnInfo').click(function () {
+                    alert("Les formats requis sont: " + '\n' + '00-00-00-00-00 ou ' + '\n' + '0000000000');
+                })
+            });
+        </script>
 
