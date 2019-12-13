@@ -83,6 +83,23 @@
 
                     <?php }
                     ?>
+				   <div class="clearfix"></div>
+				    <form method="POST" action="<?php echo base_url() ?>user/UserProfile_controller/changeEmail">
+                        <fieldset>
+                            <legend class="userForm">Mettre à jour Votre adresse de messagerie :</legend>
+                            <div class="col-4">
+                                <label>E-mail</label>                           
+                            </div>
+                            <div class="col-7">
+                                <input type="email" name="email" value="<?php echo $user->email_user ?>"/><br>
+                            </div>
+                            <div class="col-1">
+                                <button type="submit" id="search_btn" class="btn btn-round btn-orange"><i class="">Mettre à jour</i></button>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <br>
+                    <div class="clearfix"></div>
 			    </div>
 			     <div class="tab-pane fade in  event" id="resas">
 			    </div>
