@@ -60,6 +60,10 @@
         <script src="<?php echo base_url() ?>assets/tools/plugins/timepicker/js/bootstrap-timepicker.min.js" type="text/javascript"></script> 
         <script src="<?php echo base_url() ?>assets/tools/plugins/datetimepicker/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script> 
         <script src="<?php echo base_url() ?>assets/tools/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.fr.js" type="text/javascript"></script>
+		 <script src="<?php echo base_url() ?>assets/tools/plugins/datatables/js/jquery.dataTables.min.js" type="text/javascript"></script>
+        <script src="<?php echo base_url() ?>assets/tools/plugins/datatables/extensions/TableTools/js/dataTables.tableTools.min.js" type="text/javascript"></script>
+        <script src="<?php echo base_url() ?>assets/tools/plugins/datatables/extensions/Responsive/js/dataTables.responsive.min.js" type="text/javascript"></script>
+        <script src="<?php echo base_url() ?>assets/tools/plugins/datatables/extensions/Responsive/bootstrap/3/dataTables.bootstrap.js" type="text/javascript"></script><!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END --> 
 
          
         <link href="<?php echo base_url() ?>assets/tools/plugins/datepicker/css/datepicker.css" rel="stylesheet" type="text/css" media="screen"/>
