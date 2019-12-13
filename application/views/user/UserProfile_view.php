@@ -148,6 +148,44 @@
                         ?>
 			    </div>
 			     <div class="tab-pane fade in  event" id="resas">
+				       <?php
+                        if (isset($events)) {
+                            echo '<h2>Vous êtes inscrit à des événements:</h2>';
+                            echo '<table class="table stripped">';
+                            echo '<thead>
+                                
+                            <tr role="row">
+                                <th class="sorting_asc" tabindex="0" aria-controls="example-1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 175px;">Nom de la soirée</th>
+                                <th class="sorting" tabindex="0" aria-controls="example-1" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 256px;">date</th>
+                                <th class="sorting" tabindex="0" aria-controls="example-1" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 130px;">heure</th>
+                                <th class="sorting" tabindex="0" aria-controls="example-1" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 43px;">statut</th>
+                                <th class="sorting" tabindex="0" aria-controls="example-1" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 43px;">ref réservation</th></tr>
+                        </thead>
+                        <br>
+                        <tbody>';
+                            foreach ($events as $event) {
+
+                                $eventModel = new Events_model();
+                                $eventDetail = $eventModel->getEventDetailsById($event->id_event);
+                                if ($event->status_resa == 2) {
+                                    $statut = 'Payée';
+                                } else {
+                                    $statut = 'Annulé';
+                                }
+                                echo '<tr>
+                        <td>' . $eventDetail->nom_event . '</td>
+                        <td>' . $eventDetail->date_event . '</td>
+                        <td>' . $eventDetail->heure_event . '</td>
+                        <td>' . $statut . '</td>
+                        <td>' . $event->ref_resa . '</td>
+                        </tr><br>';
+                            }
+                            echo '</tbody';
+                            echo '</table>';
+                        } else {
+                            echo '<h2>Vous n\'avez pas encore réservé de soirée...</h2>';
+                        }
+                        ?>
 			    </div>
 
 			    
