@@ -39,6 +39,21 @@
             </div>
         </div>
 				 <div id="tabs" class="col-lg-10 col-xs-12 eventDetails   ">
+					  <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+                <ul class="nav nav-tabs  ">
+                    <li class="active">
+                        <a href="#id" data-toggle="tab">
+                            <i class="fa fa-user"></i>Identification
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#resas" data-toggle="tab">
+                            <i class="fa fa-calendar"> Mes Soirées</i>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
 					 </div>
 
 		</div>
