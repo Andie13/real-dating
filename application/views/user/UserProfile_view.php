@@ -39,7 +39,7 @@
             </div>
             <div id="tabs" class="col-lg-10 col-xs-12 eventDetails  event login ">
                 <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
-                    <ul class="nav nav-tabs  ">
+                    <ul class="nav nav-tabs primary ">
                         <li class="active">
                             <a href="#id" data-toggle="tab">
                                 <i class="fa"></i>Identification
@@ -53,7 +53,7 @@
 
                     </ul>
                 </div>
-		    <div class="tab-content ">
+		    <div class="tab-content primary">
 			   <div class="tab-pane fade in active event login" id="id" >
 				    <div class="center">
 
