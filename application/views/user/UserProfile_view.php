@@ -158,11 +158,17 @@
                                     <th class="sorting" tabindex="0" aria-controls="example-1" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 256px;">date</th>
                                     <th class="sorting" tabindex="0" aria-controls="example-1" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 130px;">heure</th>
                                     <th class="sorting" tabindex="0" aria-controls="example-1" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 43px;">statut</th>
-                                    <th class="sorting" tabindex="0" aria-controls="example-1" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 43px;">ref réservation</th></tr>
+                                    <th class="sorting" tabindex="0" aria-controls="example-1" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 43px;">ref réservation</th>
+				    </tr>
                             </thead>
 				<tbody>
 				</tbody>
 				     </table>
+				      <?php
+                        } else {
+                            echo '<h2>Vous n\'avez pas encore réservé de soirée...</h2>';
+                        }
+                        ?> ?>
                             <br>
 			    </div>
 
