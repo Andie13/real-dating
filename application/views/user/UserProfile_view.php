@@ -37,7 +37,7 @@
                     <p><i></i></p>
                 </div>
             </div>
-            <div id="tabs" class="col-lg-10 col-xs-12 eventDetails   ">
+            <div id="tabs" class="col-lg-10 col-xs-12 eventDetails  event login ">
                 <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
                     <ul class="nav nav-tabs  ">
                         <li class="active">
