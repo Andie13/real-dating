@@ -40,7 +40,7 @@
             <div id="tabs" class="col-lg-10 col-xs-12 eventDetails  event login ">
                 <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
                     <ul class="nav nav-tabs primary ">
-                        <li class="active">
+                        <li>
                             <a href="#id" data-toggle="tab">
                                 Identification
                             </a>
