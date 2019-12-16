@@ -39,8 +39,8 @@
             </div>
             <div id="tabs" class="col-lg-10 col-xs-12 eventDetails  event login ">
                 <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
-                    <ul class="nav nav-tabs primary " id="myTab">
-                        <li>
+                    <ul class="nav nav-tabs" id="myTab">
+                        <li class="active">
                             <a href="#id" data-toggle="tab">
                                 Identification
                             </a>
@@ -53,8 +53,8 @@
 
                     </ul>
                 </div>
-		    <div class="tab-content primary">
-			   <div class="tab-pane fade in active event login" id="id" >
+		    <div class="tab-content">
+			   <div class="tab-pane fade in active" id="id" >
 				    <div class="center">
 
                         <?php
@@ -148,7 +148,7 @@
                         }
                         ?>
 			    </div>
-			     <div class="tab-pane fade in event" id="resas">
+			     <div class="tab-pane fade" id="resas">
 				        <?php if (isset($events)) { ?>
                         <h2>Vous êtes inscrit à des événements:</h2>
                         <table class="table stripped">
