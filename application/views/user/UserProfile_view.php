@@ -240,6 +240,9 @@
         </script>
         <script type="text/javascript">
             $(document).ready(function () {
+		    
+		     $('#myTab').tabs("select",0);
+		    
                 $('.datepick').datepicker({dateFormat: "dd-mm-yy",
                     showButtonPanel: true,
                     changeMonth: true,
@@ -252,7 +255,7 @@
                 $('#btnInfo').click(function () {
                     alert("Les formats requis sont: " + '\n' + '00-00-00-00-00 ou ' + '\n' + '0000000000');
                 })
-		    $('#myTab').tabs({selected:0});
+		   
             });
         </script>
 
