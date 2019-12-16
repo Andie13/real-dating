@@ -54,7 +54,7 @@
                     </ul>
                 </div>
 		    <div class="tab-content">
-			   <div class="tab-pane fade in active" id="id" >
+			   <div class="tab-pane fade in active event login" id="id" >
 				    <div class="center">
 
                         <?php
@@ -148,7 +148,7 @@
                         }
                         ?>
 			    </div>
-			     <div class="tab-pane fade" id="resas">
+			     <div class="tab-pane fade in event login" id="resas">
 				        <?php if (isset($events)) { ?>
                         <h2>Vous êtes inscrit à des événements:</h2>
                         <table class="table stripped">
