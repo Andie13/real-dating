@@ -42,12 +42,12 @@
                     <ul class="nav nav-tabs primary ">
                         <li class="active">
                             <a href="#id" data-toggle="tab">
-                                <i class="fa"></i>Identification
+                                Identification
                             </a>
                         </li>
                         <li>
                             <a href="#resas" data-toggle="tab">
-                                <i class="fa"> Mes Soirées</i>
+                                Mes Soirées
                             </a>
                         </li>
 
@@ -148,12 +148,13 @@
                         }
                         ?>
 			    </div>
-			     <div class="tab-pane fade in  event" id="resas">
+			     <div class="tab-pane fade in event" id="resas">
 				        <?php if (isset($events)) { ?>
                         <h2>Vous êtes inscrit à des événements:</h2>
                         <table class="table stripped">
                             <thead>
 
+				    
                                 <tr role="row">
                                     <th class="sorting_asc" tabindex="0" aria-controls="example-1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 175px;">Nom de la soirée</th>
                                     <th class="sorting" tabindex="0" aria-controls="example-1" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 256px;">date</th>
