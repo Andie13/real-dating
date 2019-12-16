@@ -514,31 +514,7 @@ p {
               USER-PROFILE
 **************************************/
 
-.active{
-    background-color:  white;
-}
-.ui-tabs .ui-tabs-nav
-{
-    background: none;
-}
 
-#tabs .ui-state-default{
-    background: rgb(145,209,223) !important;
-    color: darkblue
-
-}
-#tabs .ui-state-active {
-    background: white !important;
-    border: none;
-    color: darkblue !important;
-	
-}
-.tab-content{
-    color: darkblue;
-    background: none;
-    border: none;
-
-}
 .tab-content label{
     font-weight: bold;
     font-size: 1.5em;
