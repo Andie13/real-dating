@@ -518,7 +518,10 @@ p {
 	
 }
 .nav-tabs.primary > li > a {
-	background-color:rgba(241,218,95,0.4)!important;
+	background-color:rgba(145, 209, 223,0.4)!important;
+}
+.nav-tabs.primary > li > a.active {
+	background-color:white!important;
 }
 
 .tab-content label{
