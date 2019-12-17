@@ -39,7 +39,7 @@
             </div>
             <div id="tabs" class="col-lg-10 col-xs-12 eventDetails  event login ">
                 <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
-                   <ul class="nav nav-tabs" id="myTab" role="tablist">
+                   <ul class="nav nav-tabs primary" id="myTab" role="tablist">
                         <li class="nav-item">
                             <a class="nav-link active" id="home-tab" data-toggle="tab" href="#id" >
                                 Identification
