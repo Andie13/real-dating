@@ -514,7 +514,12 @@ p {
               USER-PROFILE
 **************************************/
 
-
+#myTab>li>a.active{
+	backgtound-color:white;	
+}
+#myTab>li>a.active{
+	backgtound-color:rgba(241,218,95,0.4);	
+}
 .tab-content label{
     font-weight: bold;
     font-size: 1.5em;
