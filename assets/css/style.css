@@ -517,12 +517,10 @@ p {
 	border: none;
 	
 }
-#myTab>li>a.active{
-	backgtound-color:white;	
+.nav-tabs.primary > li > a {
+	backgtound-color:rgba(241,218,95,0.4)!important;
 }
-#myTab>li>a{
-	backgtound-color:rgba(241,218,95,0.4);	
-}
+
 .tab-content label{
     font-weight: bold;
     font-size: 1.5em;
