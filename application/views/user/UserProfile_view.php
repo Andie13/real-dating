@@ -39,22 +39,23 @@
             </div>
             <div id="tabs" class="col-lg-10 col-xs-12 eventDetails  event login ">
                 <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
-                    <ul class="nav nav-tabs" id="myTab">
-                        <li class="active">
-                            <a href="#id" data-toggle="tab">
+                   <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#id" >
                                 Identification
                             </a>
                         </li>
-                        <li>
-                            <a href="#resas" data-toggle="tab">
-                                Mes Soirées
+                        <li class="nav-item">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#resas">
+                                 Mes Soirées
                             </a>
                         </li>
 
                     </ul>
+
                 </div>
 		    <div class="tab-content">
-			   <div class="tab-pane fade in active event login" id="id" >
+                    <div class="tab-pane active event login" id="id" role="tabpanel" aria-labelledby="home-tab" >
 				    <div class="center">
 
                         <?php
@@ -148,7 +149,7 @@
                         }
                         ?>
 			    </div>
-			     <div class="tab-pane fade in event login" id="resas">
+                    <div class="tab-pane  event login" id="resas" role="tabpanel" aria-labelledby="profile-tab " >
 				        <?php if (isset($events)) { ?>
                         <h2>Vous êtes inscrit à des événements:</h2>
                         <table class="table stripped">
@@ -199,6 +200,8 @@
             </div>
 
         </div>
+	    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
 	            <script>
             $(function () {
                 $("#tabs").tabs();
