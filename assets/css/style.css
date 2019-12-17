@@ -515,12 +515,12 @@ p {
 **************************************/
 .ui-widget-header{
 	border: none;
-	background-color:gba(241,218,95,0.4);
+	
 }
 #myTab>li>a.active{
 	backgtound-color:white;	
 }
-#myTab>li>a.active{
+#myTab>li>a{
 	backgtound-color:rgba(241,218,95,0.4);	
 }
 .tab-content label{
