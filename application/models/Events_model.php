@@ -57,7 +57,8 @@ class Events_model extends CI_Model {
             self::ID_USER => $idUser,
             self::ID_EVENT => $idEvent,
             self::DATE_RESA => $date,
-            self::REF_RESA => $ref
+            self::REF_RESA => $ref,
+			self::STATUS_RESA =>2
         ];
 
         $this->db->insert(self::TABLE_RESA, $data);
