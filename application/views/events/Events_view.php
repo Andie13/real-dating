@@ -129,6 +129,8 @@ $mediasModel = new Medias_model();
                                     echo '<a id="link" href="' . base_url() . 'events/events_controller/toEventReservation?id=' . $event->id_event . '">';
                                     echo ' <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/pp-acceptance-small.png" alt="Buy now with PayPal" /> Réserver</a>';
                                     echo '<br>';
+				    echo '<a id="link_stripe" href="' . base_url() . 'events/events_controller/toStripeReservation">Stripe</a>';
+
                                 } else {
                                     
                                 }
