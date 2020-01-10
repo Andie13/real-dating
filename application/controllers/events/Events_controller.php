@@ -157,5 +157,14 @@ class Events_Controller extends CI_Controller {
         $this->load->view('events/EventDetails_view', $datas);
         $this->load->view('layout/footer');
     }
+	 public function toStripeReservation() {
+        
+        
+         $this->load->view('layout/header');
+        $this->load->view('stripe/my_stripe');
+        $this->load->view('layout/footer');
+        
+        
+    }
 
 }
