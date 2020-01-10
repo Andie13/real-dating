@@ -77,8 +77,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
              <div class="row">
                 <div class=" col-12 accroche">
-                 <iframe width="45%" height="auto" src="https://www.youtube.com/embed/rNgFkckApVo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>   
-		<p><i>"Qui sommes nous?"</i></p>                
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QTR55XIssio" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>		<p><i>"Qui sommes nous?"</i></p>                
                 </div>
             </div>
            
