@@ -77,8 +77,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
              <div class="row">
                 <div class=" col-12 accroche">
-                   <video controls="controls" width="45%" height="auto" src="<?php echo base_url()?>assets/images/Bunny.mp4">Ici la description alternative</video>
-                 <br>   
+                 <iframe width="45%" height="auto" src="https://www.youtube.com/embed/rNgFkckApVo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>   
 		<p><i>"Qui sommes nous?"</i></p>                
                 </div>
             </div>
