@@ -124,13 +124,16 @@ $mediasModel = new Medias_model();
                                 echo '<a id="link" href="' . base_url() . 'events/events_controller/toEventDetails?id_event=' . $event->id_event . '">détails</a>';
                                 echo '<br>';
                                 if (isset($connected) && $nombrePlacesRestante > 0) {
-                                    echo '<br>';
+                                   echo '<br>';
+                                    echo '<ul>';
+                                    
 
-                                    echo '<a id="link" href="' . base_url() . 'events/events_controller/toEventReservation?id=' . $event->id_event . '">';
-                                    echo ' <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/pp-acceptance-small.png" alt="Buy now with PayPal" /> Réserver</a>';
+                                    echo '<li><a id="link" href="' . base_url() . 'events/events_controller/toEventReservation?id=' . $event->id_event . '">';
+                                    echo ' <img src="'. base_url() .'assets/images/ppal.png" style="width:25%;" alt="Buy now with PayPal" /><p> Réserver avec mon conpte Paypal</p></a></li>';
+                                   echo '<hr>';
+                                    echo '<li><a id="link" href="' . base_url() . 'events/events_controller/toStripeReservation"><img id="cards " src="'. base_url() .'assets/images/logo-stripe.png" style="width:50%; height:auto" alt="cards"/><p>Réservez avec une carte bancaire</p></a></li>';                        echo '</ul>';
+                                    
                                     echo '<br>';
-				    echo '<a id="link_stripe" href="' . base_url() . 'events/events_controller/toStripeReservation">Stripe</a>';
-
                                 } else {
                                     
                                 }
