@@ -157,14 +157,23 @@ class Events_Controller extends CI_Controller {
         $this->load->view('events/EventDetails_view', $datas);
         $this->load->view('layout/footer');
     }
-	 public function toStripeReservation() {
+	public function toStripeReservation() {
+
+         $villeModel = new Villes_model();
+         $eventModel = new Events_model();
+         
+         $event = $eventModel->getEventDetailsById($this->input->get('id'));
+         
+        $data['id_event'] =  $this->input->get('id');
         
-        
-         $this->load->view('layout/header');
-        $this->load->view('stripe/my_stripe');
+         $nomVille = $villeModel->getNomVilleFromId($event->id_ville);
+         $data['ville'] = $nomVille;
+     
+
+        $this->load->view('layout/header');
+        $this->load->view('stripe/my_stripe',$data);
         $this->load->view('layout/footer');
-        
-        
     }
+
 
 }
