@@ -35,18 +35,23 @@ class Stripe_controller extends CI_Controller {
     public function stripePost()
     {
         require_once('application/libraries/stripe-php/init.php');
-    
+        $id_event = $this->input->get('id'); 
+        
+        $ev = new Events_model();
+        $event = $ev->getEventDetailsById($id_event);
+       
         \Stripe\Stripe::setApiKey($this->config->item('stripe_secret'));
      
-        \Stripe\Charge::create ([
-                "amount" => 100 * 100,
-                "currency" => "usd",
+        $resp = \Stripe\Charge::create ([
+                "amount" => $event->prix_event * 100,
+                "currency" => "eur",
                 "source" => $this->input->post('stripeToken'),
-                "description" => "Test payment from itsolutionstuff.com." 
+                "description" => $event->nom_event 
         ]);
+        var_dump($resp);
             
-        $this->session->set_flashdata('success', 'Payment made successfully.');
-             
-        redirect('/my-stripe', 'refresh');
+//        $this->session->set_flashdata('success', 'Payment made successfully.');
+//             
+//        redirect('');
     }
 }
