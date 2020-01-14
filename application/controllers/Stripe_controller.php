@@ -49,11 +49,11 @@ class Stripe_controller extends CI_Controller {
                 "description" => $event->nom_event 
         ]);
         if($resp->status=="succeeded"){
-			  echo 'payment complete';
+		
+			  $this->session->set_flashdata('success', 'Payment made successfully.');
+		var_dump($resp);
 		  }
             
-//        $this->session->set_flashdata('success', 'Payment made successfully.');
-//             
-//        redirect('');
+
     }
 }
