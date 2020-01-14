@@ -51,8 +51,15 @@ class Stripe_controller extends CI_Controller {
         if($resp->status=="succeeded"){
 		
 			  $this->session->set_flashdata('success', 'Payment made successfully.');
-		var_dump($resp);
-		  }
+			redirect('user/UserProfile_controller');
+		  }else{
+		$this->session->set_flashdata('err', 'Le paiement n\'a pas pu être effectué.');
+		$datas[id_event] = $id_event; 
+			  $this->load->view('layout/header');
+        $this->load->view('events/Events_view', $datas);
+        $this->load->view('layout/footer');
+		
+	}
             
 
     }
