@@ -48,7 +48,9 @@ class Stripe_controller extends CI_Controller {
                 "source" => $this->input->post('stripeToken'),
                 "description" => $event->nom_event 
         ]);
-        var_dump($resp);
+        if($resp->status=="succeeded"){
+			  echo 'payment complete';
+		  }
             
 //        $this->session->set_flashdata('success', 'Payment made successfully.');
 //             
