@@ -131,7 +131,7 @@ $mediasModel = new Medias_model();
                                     echo '<li><a id="link" href="' . base_url() . 'events/events_controller/toEventReservation?id=' . $event->id_event . '">';
                                     echo ' <img src="'. base_url() .'assets/images/ppal.png" style="width:25%;" alt="Buy now with PayPal" /><p> Réserver avec mon conpte Paypal</p></a></li>';
                                    echo '<hr>';
-                                    echo '<li><a id="link" href="' . base_url() . 'events/events_controller/toStripeReservation"><img id="cards " src="'. base_url() .'assets/images/logo-stripe.png" style="width:50%; height:auto" alt="cards"/><p>Réservez avec une carte bancaire</p></a></li>';                        echo '</ul>';
+                                    echo '<li><a id="link" href="' . base_url() . 'events/events_controller/toStripeReservation?id=' . $event->id_event .'"><img id="cards " src="'. base_url() .'assets/images/logo-stripe.png" style="width:50%; height:auto" alt="cards"/><p>Réservez avec une carte bancaire</p></a></li>';                        echo '</ul>';
                                     
                                     echo '<br>';
                                 } else {
