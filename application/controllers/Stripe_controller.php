@@ -46,6 +46,9 @@ class Stripe_controller extends CI_Controller {
         $EventModel = new Events_model();
         $isInsertedDb = $EventModel->insertNewReservation($idUser, $event->id_event);
 
+			 //$isInsertedDb returns false if a problem occured
+			 //returns id resa if everything worked properly
+			
         if ($isInsertedDb != false) {
             //if resa is inserted
 
@@ -64,7 +67,7 @@ class Stripe_controller extends CI_Controller {
             } else {
 
                 //paiment not authorized
-                //1 cancel resa for user
+                //1 cancel resa for user 
                 $idResa = $isInsertedDb;
                 $userModel = new Resas_model();
                 $userModel->cancelResa($idResa);
