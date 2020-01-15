@@ -77,7 +77,7 @@
                     } else if ($this->session->flashdata('success')) {
                         ?>
 
-                        <div class = "display_error">
+                        <div class = "display_success">
                             <?php echo $this->session->flashdata('success'); ?>
                         </div>
 
