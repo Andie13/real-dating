@@ -97,6 +97,12 @@ img#about{
     font-style: italic;
     font-weight: bold;
 }
+.display_success{
+    background-color: rgba(255,255,255,0.5);
+    color: green;
+    font-style: italic;
+    font-weight: bold;
+}
 .about-members{
 	text-align: center;
 	
