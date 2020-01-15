@@ -32,48 +32,53 @@ class Stripe_controller extends CI_Controller {
      *
      * @return Response
     */
-    public function stripePost()
-    {
+      public function stripePost() {
         require_once('application/libraries/stripe-php/init.php');
-        $id_event = $this->input->get('id'); 
-        
+        $id_event = $this->input->get('id');
+
         $ev = new Events_model();
         $event = $ev->getEventDetailsById($id_event);
-       
-        \Stripe\Stripe::setApiKey($this->config->item('stripe_secret'));
-     
-        $resp = \Stripe\Charge::create ([
-                "amount" => $event->prix_event * 100,
-                "currency" => "eur",
-                "source" => $this->input->post('stripeToken'),
-                "description" => $event->nom_event 
-        ]);
-        if($resp->status=="succeeded"){
-		
-	    $idUser = $this->session->userId;
-         
-            $EventModel = new Events_model();
-            $isInsertedDb = $EventModel->insertNewReservation($idUser, $event->id_event);
-		
-		if(!$isInsertedDb = false){
-			
-			 $this->session->set_flashdata('success', 'Payment made successfully.');
-			redirect('user/UserProfile_controller');
-			
-		}
-	 
-		  }else{
-		$this->session->set_flashdata('err', 'Le paiement n\'a pas pu être effectué.');
-		$datas[id_event] = $id_event; 
-		
-		
-		
-		$this->load->view('layout/header');
-        	$this->load->view('events/Events_view', $datas);
-        	$this->load->view('layout/footer');
-		
-	}
-            
 
+
+        $idUser = $this->session->userId;
+
+        //insert resa to db
+        $EventModel = new Events_model();
+        $isInsertedDb = $EventModel->insertNewReservation($idUser, $event->id_event);
+
+        if ($isInsertedDb != false) {
+            //if resa is inserted
+
+            \Stripe\Stripe::setApiKey($this->config->item('stripe_secret'));
+
+            $resp = \Stripe\Charge::create([
+                        "amount" => $event->prix_event * 100,
+                        "currency" => "eur",
+                        "source" => $this->input->post('stripeToken'),
+                        "description" => $event->nom_event
+            ]);
+            if ($resp->status == "succeeded") {
+                //if paiement is accepted
+                $this->session->set_flashdata('success', 'Payment made successfully.');
+                redirect('user/UserProfile_controller');
+            } else {
+
+                //paiment not authorized
+                //1 cancel resa for user
+                $idResa = $isInsertedDb;
+                $userModel = new Resas_model();
+                $userModel->cancelResa($idResa);
+                
+                //2 set flash erreur
+                $this->session->set_flashdata('err', 'Le paiement n\'a pas pu être effectué.');
+                  redirect('user/UserProfile_controller');
+            }
+        } else {
+            //db not accessible so no resa recorded no paiment taken
+             $this->session->set_flashdata('err', 'La réservation n\'a pas été effectuée dû à un problème technique. Aucun prélèvement n\'a été effectué.');
+             redirect('user/UserProfile_controller');
+           
+            
+        }
     }
 }
