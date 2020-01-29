@@ -646,10 +646,10 @@ p {
         background-size: 15%;
         background-repeat: no-repeat;
     }
-    .topnav a:first-child, .topnav a:last-child{
+  /**  .topnav a:first-child, .topnav a:last-child{
         background-color: darkblue;
         color: white;
-    }
+    }*/
 
     #myTopnav{
         background-color: transparent;
