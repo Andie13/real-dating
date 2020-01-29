@@ -627,7 +627,7 @@ p {
     logo #headerImg{
         text-align: center;  }
     #headerImg{
-        float: none;
+        display: none;
     }
     
     .wellogo img{
