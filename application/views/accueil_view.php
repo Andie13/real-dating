@@ -77,8 +77,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
              <div class="row">
                 <div class=" col-12 accroche">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7BfHJFICBMk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                </div>
-            </div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ONQdXhmqALM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>           </div>
            
             <div class="col-10 event about" id="accueil-about">
                 <h3>En couple depuis 2017 Christophe et Awa se sont rencontrés grâce à un speed dating.<br>
