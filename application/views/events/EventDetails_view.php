@@ -73,11 +73,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <h2 class="title">Tarif:  <?php echo $event->prix_event ?> €</h2>
                         <?php
                         if (isset($connected) && $nombrePlacesRestante > 0) {
-                            echo '<a id="link" href="' . base_url() . 'events/events_controller/toEventReservation?id=' . $event->id_event . '">';
-
-                            echo ' <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/pp-acceptance-small.png" alt="Buy now with PayPal" /> Réserver</a>';
-                            echo '<br>';
-                            echo '<a id="link" href="' . base_url() . 'Stripe_controller">PAY</a>';
+                            echo '<li><a id="link" href="' . base_url() . 'events/events_controller/toEventReservation?id=' . $event->id_event . '">';
+                                    echo ' <img src="'. base_url() .'assets/images/ppal.png" style="width:25%;" alt="Buy now with PayPal" /><p> Réserver avec mon conpte Paypal</p></a></li>';
+                                   echo '<hr>';
+                                    echo '<li><a id="link" href="' . base_url() . 'events/events_controller/toStripeReservation?id=' . $event->id_event .'"><img id="cards " src="'. base_url() .'assets/images/logo-stripe.png" style="width:50%; height:auto" alt="cards"/><p>Réservez avec une carte bancaire</p></a></li>';                        echo '</ul>';
+                                    
+                                    echo '<br>';
                         } else {
                             
                         }
