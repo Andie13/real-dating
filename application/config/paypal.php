@@ -8,7 +8,7 @@
 $config['sandbox'] = TRUE; // FALSE for live environment
 
 // PayPal business email
-$config['business'] = 'fody.fady@gmail.com';
+$config['business'] = 'sb-epyjv825317@business.example.com';
 
 // What is the default currency?
 $config['paypal_lib_currency_code'] = 'EUR';
