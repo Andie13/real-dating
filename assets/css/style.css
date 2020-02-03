@@ -609,7 +609,7 @@ p {
 
         /* For mobile phones: */
     [class*="col-"] {
-        width: 100%;
+     
     }
      /**************************    NAV    *******************************/
     .topnav a:not(:first-child) {display: none;}
