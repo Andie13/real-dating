@@ -699,3 +699,11 @@ p {
 	}
 	
 }
+@media only screen 
+    and (device-width : 375px) 
+    and (device-height : 667px) 
+    and (-webkit-device-pixel-ratio : 2) {
+	.content{
+		margin-top:3rem;
+	}
+}
