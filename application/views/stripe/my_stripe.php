@@ -85,7 +85,7 @@
                                     type='text'>
                             </div>
                             <br>
-                            <label class='col-xs-12 col-md-12'>Expire le:</h2>
+                            <label class='col-xs-12 col-md-12'>Expire le:</label>
                             <div class='col-xs-12 col-md-4 form-group expiration required'>
                                 <label class='control-label'>Mois</label> <input
                                     class='form-control card-expiry-month' placeholder='MM' size='2'
