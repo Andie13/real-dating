@@ -11,7 +11,7 @@
                     <img id="headerImg" src="<?php echo base_url(); ?>assets/images/logo/loog-carre1000x1000.png" alt="logo"/>
                 </p>
             </div>
-           <div class="topnav col-lg-8 col-xs-12" id="myTopnav">
+           <div class="topnav col-lg-8 col-xs-8" id="myTopnav">
                 <a id="logo-res" >                   
                     <img id="headerImg" src="<?php echo base_url(); ?>assets/images/logo/logo-favicon-carre-1000.png" alt="logo"/>
                 </a>
