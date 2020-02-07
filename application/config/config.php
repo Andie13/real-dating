@@ -539,7 +539,7 @@ $config['google_api_key']= 'AIzaSyDKjDUzhTsS31Y9ph5aPjfzGGQBEqlETeU';
 //$config['stripe_secret'] = 'sk_test_bpM6MCpKCujys4h0s9uhsStK00TOMAFPfS';
 
 //prod
-$config['stripe_key'] = 'public pk_live_KRoivKY4PpCpXb394HDuJ8R900aLV7jtJk';
-$config['stripe_secret'] = 'secrète sk_live_QiGC5MdLkVKSbhQvGtvQQpDW00IxPRxQeo';
+$config['stripe_key'] = 'pk_live_KRoivKY4PpCpXb394HDuJ8R900aLV7jtJk';
+$config['stripe_secret'] = 'sk_live_QiGC5MdLkVKSbhQvGtvQQpDW00IxPRxQeo';
 
 
