@@ -708,6 +708,11 @@ p {
         text-align: left;
         border-radius: 0%;
     }
+	#search_btn{
+		width:100%;
+		border-radius:0%;
+		font-size:2vw;
+	}
 }
 
 
