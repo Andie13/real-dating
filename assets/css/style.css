@@ -712,6 +712,8 @@ p {
 		width:100%;
 		border-radius:0%;
 		font-size:2vw;
+		margin-top:1em;
+		margin-left:0;
 	}
 }
 
