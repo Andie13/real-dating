@@ -118,7 +118,7 @@
       <div class="col-md-3 col-md-offset-1 event">
           <h2>Récapitulatif de la commande:</h2>
           <h3><?php echo $event->nom_event;?></h3>
-          <h3><?php setlocale(LC_TIME, "fr_FR"); echo strftime("1 place pour le %d %B %Y", strtotime( $event->date_event ));;?></h3>
+          <h3><?php setlocale(LC_TIME, "fr_FR"); echo utf8_encode(strftime("1 place pour le %d %B %Y", strtotime( $event->date_event )));?></h3>
           <h3><?php echo 'à '. utf8_encode(date_format(new DateTime($event->heure_event), "H"))
                             . ' h ' . date_format(new DateTime($event->heure_event), 'i')
                             ?></h3>
