@@ -87,7 +87,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     Notre objectif est de favoriser ‘’la vraie rencontre’’ et de mettre en avant ‘’l’humain’’
 
                 </h3>
-            //</div>
+            </div>
 
 
             <div class="row">   
