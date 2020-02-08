@@ -214,6 +214,7 @@ img#about{
     float: none;
     height: auto;
 	margin-top: 7%;
+	display:block;
 
 }
 #custom-search-input{
