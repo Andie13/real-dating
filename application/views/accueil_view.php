@@ -52,7 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <div id="custom-search-input">
                                 <div class="input-group">
                                     <p id="erreur-saisie"></p>
-                                    <input id="search" name="search" type="text" class="autocomplete_input form-control" autocomplete="on"placeholder="Entrez votre ville ou cp." />
+                                    <input id="search" name="search" type="text" class="autocomplete_input form-control" autocomplete="on"placeholder="Entrez votre ville ou cp." autofocus />
 
                                     <button type="submit" id="search_btn" class="btn btn-round btn-orange"><i class="">Rechercher!</i></button>
                                 </div>
