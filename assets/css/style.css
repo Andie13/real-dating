@@ -780,4 +780,10 @@ padding: 3%;
 	}
 	
 }
+@media only screen and (max-width: 1440{
+	td, th{
+		font-size: 1em;
+padding: 3%;
+	}
+}
 
