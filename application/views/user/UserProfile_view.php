@@ -88,13 +88,13 @@
 				    <form method="POST" action="<?php echo base_url() ?>user/UserProfile_controller/changeEmail">
                         <fieldset>
                             <legend class="userForm">Mettre à jour Votre adresse de messagerie :</legend>
-                            <div class="col-4">
+                            <div class="col-lg-4 col-xs-12">
                                 <label>E-mail</label>                           
                             </div>
-                            <div class="col-7">
+                            <div class="col-lg-7 col-xs-12">
                                 <input type="email" name="email" value="<?php echo $user->email_user ?>"/><br>
                             </div>
-                            <div class="col-1">
+                            <div class="col-lg-1 col-xs-12">
                                 <button type="submit" id="search_btn" class="btn btn-round btn-orange"><i class="">Mettre à jour</i></button>
                             </div>
                         </fieldset>
@@ -104,7 +104,7 @@
 				   <form method="POST" action="<?php echo base_url() ?>user/UserProfile_controller/changeTel">
                             <fieldset>
                                 <legend class="userForm">Mettre à jour votre numéro de téléphone :</legend>
-                                <div class="col-4">
+                                <div class="col-lg-4 col-xs-11">
                                     <label>N° de téléphone : </label>
 					<button class="btn btn-round " id="btnInfo">
                                     <i class="fa fa-question"></i>
@@ -112,11 +112,11 @@
                                 </div>
                                 
 
-                                <div class="col-7">
+                                <div class="col-lg-7 col-xs-12">
                                     <input type="text" id="tel" name="tel" id="phone" name="phone"
                                            pattern="([0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2})|([0-9]{10})" placeholder="Votre tel..." >
                                 </div>
-                                <div class="col-1">
+                                <div class="col-lg-1 col-xs-12">
                                     <button type="submit" id="search_btn" class="btn btn-round btn-orange"><i class="">Mettre à jour</i></button>
                                 </div>
                             </fieldset>
@@ -126,10 +126,10 @@
                         <form method="POST" action="<?php echo base_url() ?>user/UserProfile_controller/resetPassword">
                             <fieldset>
                                 <legend class="userForm">Mettre à jour Votre mot de Passe:</legend>
-                                <div class="col-4">
+                                <div class="col-lg-4 col-xs-11">
                                     <label>Changer de Mot de passe</label>
                                 </div>
-                                <div class="col-7">
+                                <div class="col-lg-7 col-xs-12">
                                     <input  type="password" name="old_pass" placeholder="ancien mot de passe"/><br>
                                     <br>
                                     <input type="password" id="pass" name="new_pass" placeholder="nouveau mot de passe"/><br>
@@ -137,7 +137,7 @@
                                     <input type="password" id="confPass"  placeholder="confirmer nouveau mot de passe"onchange="checkPasswordMatch()"/><br> 
                                     <div class="registrationFormAlert" id="divCheckPasswordMatch"></div>
                                 </div>
-                                <div class="col-1">
+                                <div class="col-lg-1 col-xs-12">
                                     <button type="submit" id="search_btn" class="btn btn-round btn-orange"><i class="">Mettre à jour</i></button>
                                 </div>
                             </fieldset>
