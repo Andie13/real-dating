@@ -109,7 +109,7 @@ $mediasModel = new Medias_model();
                                 echo '<img src="' . $mEvent . '" style=" max-height:10em;;" alt=""/><br>';
                                 echo '</p>';
 
-                                echo '<h3>' . $event->date_event . '</h3>';
+                                echo '<h3>' . utf8_encode(strftime(" %d %B %Y", strtotime( $event->date_event ))) . '</h3>';
                                 echo '<br>';
 
                                 echo '<p><strong>' . $event->nom_event . '</p>';
