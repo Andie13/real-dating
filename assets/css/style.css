@@ -749,6 +749,9 @@ p {
 	.eventDetails{
 	width:100%;	
 	}
+	table{
+	margin-left:-2em;	
+	}
 }
 
 
