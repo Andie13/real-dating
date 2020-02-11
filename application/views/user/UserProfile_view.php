@@ -245,6 +245,9 @@
             $(document).ready(function () {
 		    
 		     $('#myTab').tabs("select",0);
+		    $('#myTable').DataTable( {
+    responsive: true
+} );
 		    
                 $('.datepick').datepicker({dateFormat: "dd-mm-yy",
                     showButtonPanel: true,
