@@ -152,7 +152,7 @@
                     <div class="tab-pane  event login" id="resas" role="tabpanel" aria-labelledby="profile-tab " >
 				        <?php if (isset($events)) { ?>
                         <h2>Vous êtes inscrit à des événements:</h2>
-                        <table class="table stripped">
+                        <table class="class="table table-striped dt-responsive display dataTable dtr-inline" cellspacing="0" width="100%" role="grid" aria-describedby="example-1_info" style="width: 100%;d">
                             <thead>
 
 				    
