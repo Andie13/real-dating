@@ -2,6 +2,7 @@
 $this->load->library('session');
 $eventModel = new Events_model();
 $mediasModel = new Medias_model();
+setlocale(LC_TIME, "fr_FR");
 ?>
 <!-- BEGIN BODY -->
 <body class=" bg welcome">
