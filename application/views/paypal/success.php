@@ -49,7 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-12 event about" id="success-paypal">
                     <h4 class="success">Merci, Votre réservation à bien été enregistrée.</h4>
 
                     <p>Item Name : <span><?php echo $item_name; ?></span></p>
