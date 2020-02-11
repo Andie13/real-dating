@@ -36,7 +36,9 @@ class Paypal extends CI_Controller{
         $data['status']         = $paypalInfo["payment_status"];
         
         // Pass the transaction data to view
+		$this->load->view('layout/header'):
         $this->load->view('paypal/success', $data);
+		$this->load->view('layout/footer');
     }
      
      function cancel(){
