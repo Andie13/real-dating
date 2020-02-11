@@ -61,7 +61,7 @@ setlocale(LC_TIME, "fr_FR");
                     </div>
 
                     <div class="col-lg-6 col-xs-10 " id="desc">
-                        <h2 class="title">Quand? le <?php setlocale(LC_TIME, "fr_FR"); echo utf8_encode(strftime("1 place pour le %d %B %Y", strtotime( $event->date_event )));?></h2>
+                        <h2 class="title">Quand? le <?php setlocale(LC_TIME, "fr_FR"); echo utf8_encode(strftime(" %d %B %Y", strtotime( $event->date_event )));?></h2>
                         <h2 class="title">À <?php echo 'à '. utf8_encode(date_format(new DateTime($event->heure_event), "H"))
                             . ' h ' . date_format(new DateTime($event->heure_event), 'i')
                             ?> précises</h2>
