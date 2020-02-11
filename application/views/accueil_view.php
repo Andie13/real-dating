@@ -78,7 +78,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class=" col-12 accroche">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/ONQdXhmqALM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>           </div>
 
-                <div class="col-10 event about" id="accueil-about">
+                <div class="col-lg-10 col-xs-10 event about" id="accueil-about">
                     <h3>
 
                         Alex, Christophe et Awa Tous les 3 bercés dans les relations humaines, ont eu envie de développer le speed-dating et la mise en relation dans ce monde ou le virtuel prend le dessus sur le réel.<br>
