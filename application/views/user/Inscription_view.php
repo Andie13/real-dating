@@ -149,7 +149,7 @@
                 <div class="row">
                     <div class="col-lg-12 ">
                         <div class="col-lg-4">
-                            <label for="country">Confirmez le mot dde passe:</label>
+                            <label for="country">Confirmez le mot de passe:</label>
                         </div>
                         <div class="col-lg-8">
                             <input type="password" id="confPass" placeholder="*****" onchange="checkPasswordMatch()"required>
