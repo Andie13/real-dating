@@ -745,6 +745,10 @@ p {
 	.footer{
 	margin-left:1em;	
 	}
+	
+	.eventDetails{
+	width:100%;	
+	}
 }
 
 
