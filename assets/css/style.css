@@ -752,6 +752,10 @@ p {
 	table{
 	margin-left:-2em;	
 	}
+	td, th{
+		font-size: 0.8em;
+padding: 3%;
+	}
 }
 
 
