@@ -72,6 +72,18 @@ body{
 ::placeholder { /* Most modern browsers support this now. */
    color:    black;
 }
+input[id^="search"]::-webkit-input-placeholder { 
+  color: black;
+}
+input[id^="search"]::-moz-placeholder { 
+  color: black;
+}
+input[id^="search"]:-ms-input-placeholder { 
+  color: black;
+}
+input[id^="search"]:-moz-placeholder { 
+  color: black;
+}
 
 .login{
     color: white;
