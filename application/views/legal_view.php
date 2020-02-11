@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <body class="bg">
 
-    <div class="login-wrapper">
+    <div class="login-wrapper container-fluid">
         <div class="header col-lg-12 col-xs-12 ">
 
             <div class="col-lg-4 col-xs-12 logo">
