@@ -445,7 +445,8 @@ div.col-lg-8.col-xs-12.eventDetails.regForm.event{
 .event{
     background-color: rgba(255,255,255,0.7);
     color: darkblue;
-    width: 90%;
+    width: 100%;
+padding-right: 2em;;
 
 }
 .event h3{
