@@ -32,51 +32,52 @@ class Welcome extends CI_Controller {
         $villesModel = new Villes_model();
         $villesModel->getVilles('Marseille');
     }
-    
+
     public function gotoAbout() {
-        
+
         $this->load->view('layout/header');
         $this->load->view('about_view');
         $this->load->view('layout/footer');
-        
     }
-	public function gotoLegal() {
-        
-		 if ($this->session->connected) {
+
+    public function gotoLegal() {
+
+        if ($this->session->connected) {
 
             $data = array(
                 'userId' => $this->session->userId,
                 'connected' => $this->session->connected,
             );
-        $this->load->view('layout/header');
-        $this->load->view('legal_view',$data);
-        $this->load->view('layout/footer');
-        
+            $this->load->view('layout/header');
+            $this->load->view('legal_view', $data);
+            $this->load->view('layout/footer');
+        }
     }
-	public function gotoCGU() {
-         if ($this->session->connected) {
+
+    public function gotoCGU() {
+        if ($this->session->connected) {
 
             $data = array(
                 'userId' => $this->session->userId,
                 'connected' => $this->session->connected,
             );
-        $this->load->view('layout/header');
-        $this->load->view('cgu_view',$data);
-        $this->load->view('layout/footer');
-        
+            $this->load->view('layout/header');
+            $this->load->view('cgu_view', $data);
+            $this->load->view('layout/footer');
+        }
     }
-	public function gotoConcept() {
-         if ($this->session->connected) {
+
+    public function gotoConcept() {
+        if ($this->session->connected) {
 
             $data = array(
                 'userId' => $this->session->userId,
                 'connected' => $this->session->connected,
             );
-        $this->load->view('layout/header');
-        $this->load->view('concept_view', $data);
-        $this->load->view('layout/footer');
-        
+            $this->load->view('layout/header');
+            $this->load->view('concept_view', $data);
+            $this->load->view('layout/footer');
+        }
     }
-	
-
 }
+    
