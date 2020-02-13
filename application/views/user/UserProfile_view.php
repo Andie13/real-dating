@@ -106,15 +106,14 @@
                                 <legend class="userForm">Mettre à jour votre numéro de téléphone :</legend>
                                 <div class="col-lg-4 col-xs-11">
                                     <label>N° de téléphone : </label>
-					<button class="btn btn-round " id="btnInfo" onclick="infoTel">
-                                    <i class="fa fa-question"></i>
-                                </button>
+					
                                 </div>
                                 
 
                                 <div class="col-lg-7 col-xs-12">
                                     <input type="text" id="tel" name="tel" id="phone"
                                            pattern="([0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2})|([0-9]{10})" placeholder="Votre tel..." >
+					  <p>Les formats requis sont: '00-00-00-00-00 ou  '0000000000'</p>
                                 </div>
                                 <div class="col-lg-1 col-xs-12">
                                     <button type="submit" id="search_btn" class="btn btn-round btn-orange"><i class="">Mettre à jour</i></button>
