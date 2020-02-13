@@ -106,14 +106,14 @@
                                 <legend class="userForm">Mettre à jour votre numéro de téléphone :</legend>
                                 <div class="col-lg-4 col-xs-11">
                                     <label>N° de téléphone : </label>
-					<button class="btn btn-round " id="btnInfo">
+					<button class="btn btn-round " id="btnInfo" onclick="infoTel">
                                     <i class="fa fa-question"></i>
                                 </button>
                                 </div>
                                 
 
                                 <div class="col-lg-7 col-xs-12">
-                                    <input type="text" id="tel" name="tel" id="phone" name="phone"
+                                    <input type="text" id="tel" name="tel" id="phone"
                                            pattern="([0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2})|([0-9]{10})" placeholder="Votre tel..." >
                                 </div>
                                 <div class="col-lg-1 col-xs-12">
@@ -152,7 +152,7 @@
                     <div class="tab-pane  event login" id="resas" role="tabpanel" aria-labelledby="profile-tab " >
 				        <?php if (isset($events)) { ?>
                         <h2>Vous êtes inscrit à des événements:</h2>
-                        <table class="class="table table-striped dt-responsive display dataTable dtr-inline" cellspacing="0" width="100%" role="grid" aria-describedby="example-1_info" style="width: 100%;d">
+                        <table class="table table-striped dt-responsive display dataTable dtr-inline" cellspacing="0" width="100%" role="grid" aria-describedby="example-1_info" style="width: 100%;d">
                             <thead>
 
 				    
@@ -258,9 +258,7 @@
                     yearRange: "1930:2010"
                 });
 
-                $('#btnInfo').click(function () {
-                    alert("Les formats requis sont: " + '\n' + '00-00-00-00-00 ou ' + '\n' + '0000000000');
-                })
+              
 		   
             });
         </script>
@@ -272,6 +270,10 @@ function myFunction() {
   } else {
     x.className = "topnav";
   }
+}
+		    function infoTel(){
+    alert("Les formats requis sont: " + '\n' + '00-00-00-00-00 ou ' + '\n' + '0000000000');
+             
 }
 </script>
 
