@@ -528,8 +528,8 @@ $config['proxy_ips'] = '';
 
 
 //Clés reCaptcha
-$config['google_key'] = '6LehHsUUAAAAANLUnMbnZGOfA_gFacSleBNyFN_a';
-$config['google_secret'] = '6LehHsUUAAAAAMiM6SKuAi0TLBrH4IvF3bLJKtXJ';
+$config['google_key'] = '6Lcm6dgUAAAAAFm5YcTRRStdI2stAXAqO_wLq3Up';
+$config['google_secret'] = '6Lcm6dgUAAAAAILz0U3PkiHqm-TpcryZf2ATtAYu';
 
 
 //Clés Map
