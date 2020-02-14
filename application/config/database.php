@@ -78,15 +78,15 @@ $db['default'] = array(
 	//'hostname' => 'http://realdate.amaris.ovh',
 	
 	/****DEV OLD***/
-	'username' => 'realdate',
-	'password' => 'realdate',
-	'database' => 'realdating_db',
+	//'username' => 'realdate',
+	//'password' => 'realdate',
+	//'database' => 'realdating_db',
 	
 	/****DEV ***/
-	//'hostname' => 'localhost',
-	//'username' => 'admin',
-	//'password' => 'password',
-	//'database' => 'realdate_dev_db ',
+	'hostname' => 'localhost',
+	'username' => 'admin',
+	'password' => 'password',
+	'database' => 'realdate_dev_db',
 	
 	
 	
