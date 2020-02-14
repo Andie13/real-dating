@@ -110,8 +110,8 @@
                     <br>
 			<p class="title ">Suite à la réinitalisation de votre mot de passe, vous allez recevoir un email.
 				Cela peut prendre quelques minutes... </p>
-			<p>Si vous ne recevez pas d'email, </p>
-			<p>Vérifiez vos courriers indésirables.</p>
+			<p>Si vous ne recevez pas d'email, vérifiez vos courriers indésirables.</p>
+			
 
                     <br>
                     <br>
