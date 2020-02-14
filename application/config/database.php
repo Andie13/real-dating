@@ -76,13 +76,26 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
 	//'hostname' => 'http://realdate.amaris.ovh',
-	'hostname' => 'localhost',
+	
+	/****DEV OLD***/
 	//'username' => 'realdate',
 	//'password' => 'realdate',
 	//'database' => 'realdating_db',
-	'username' => 'db_admin',
-	'password' => 'db_admin_pwd_1',
-	'database' => 'realdate_prod_db',
+	
+	/****DEV ***/
+	'hostname' => 'localhost',
+	'username' => 'admin',
+	'password' => 'password',
+	'database' => 'realdate_dev_db ',
+	
+	
+	
+	
+	/****PROD ***/
+	//'hostname' => 'localhost',
+	//'username' => 'db_admin',
+	//'password' => 'db_admin_pwd_1',
+	//'database' => 'realdate_prod_db',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
