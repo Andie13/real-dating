@@ -74,7 +74,7 @@ class Login_controller extends CI_Controller {
             $newPass = $this->generatePassword(8);
 
             //For tests : 
-            $newPass = '12341234';
+            //$newPass = '12341234';
 //            Comme à l'inscription,  on hash le password
             $md5Pass = md5($newPass);
 
@@ -100,19 +100,22 @@ class Login_controller extends CI_Controller {
                     . "\n"
                     . "\n"
                     . $newPass
+		     . "\n"
+                    . "\n"
+                    . 'Nous vous recommandons de  vous connecter au site https://realdate.fr/ et vous rendre dans la rubrique "Mon Profil" pour le modifier. '
                     . "\n"
                     . "\n"
                     . 'Codrialement,'
                     . "\n"
                     . "\n"
-                    . 'l\'équipe Admin');
+                    . 'l\'équipe Realdate');
 
             $this->email->send();
 
 		
 
               
-                $this->session->set_flashdata('err', 'Votre mot de passe à été envoyé avec succès. ');
+                $this->session->set_flashdata('success', 'Votre mot de passe à été envoyé avec succès. ');
                $this->load->view('layout/header');
 		$this->load->view('user/Login_view');
             }
