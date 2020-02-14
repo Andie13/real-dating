@@ -117,9 +117,6 @@ class Inscription_controller extends CI_Controller {
         return true;
     }
 
-}
-
-
     public function index() {
         $this->load->view('layout/header');
         $this->load->view('user/Inscription_view');
