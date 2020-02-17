@@ -92,10 +92,10 @@ setlocale(LC_TIME, "fr_FR");
                         <h2>Déroulement de la soirée:</h2>
                         <h4 style="text-align: justify">
                            A votre arrivée, l'animatrice vous accueille, vous demande votre prénom et le numéro qui vous a été attribué lors de votre réservation et vous remet une fiche que vous conservez jusqu'à la fin de la soirée, vous explique le déroulement de la soirée et l'animation s'il y en a une.
-L'organisatrice vous invite à prendre place à une table.
-Chaque tête à tête dure de 5 à 10 minutes. Le temps écoulé, l'animatrice demande aux hommes de changer de table, les femmes restent à leur place.
-Pendant chaque tête à tête notez le maximum d'informations sur vos interlocuteurs.
-A l'issue de la séance,  chaque participant inscrit sur un papier le prénom des personnes qu'il souhaite revoir et le remet à l'organisatrice. C'est l'agence qui se chargera de mettre en relation, dans les 48 h, les célibataires qui se sont réciproquement plus.
+<br>L'organisatrice vous invite à prendre place à une table.<br>
+Chaque tête à tête dure de 5 à 10 minutes. <br>Le temps écoulé, l'animatrice demande aux hommes de changer de table, les femmes restent à leur place.
+<br>Pendant chaque tête à tête notez le maximum d'informations sur vos interlocuteurs.<br>
+A l'issue de la séance,  chaque participant inscrit sur un papier le prénom des personnes qu'il souhaite revoir et le remet à l'organisatrice. <br>C'est l'agence qui se chargera de mettre en relation, dans les 48 h, les célibataires qui se sont réciproquement plus.
 Ensuite l'animatrice invitera, séparemment, les femmes et les hommes pour faire le bilan de la soirée.
    </h4>
 
