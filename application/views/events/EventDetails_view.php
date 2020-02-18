@@ -64,8 +64,9 @@ setlocale(LC_TIME, "fr_FR");
                         <h2 class="title">Quand? le <?php setlocale(LC_TIME, "fr_FR"); echo utf8_encode(strftime(" %d %B %Y", strtotime( $event->date_event )));?></h2>
                         <h2 class="title">À <?php echo  $event->heure_event ?> précises</h2>
                         <h2 class="title">Lieux:  <?php echo $ville->nom_commune ?> </h2>
-                        <h2><?php echo $presta->nom_presta; ?></h2>
-                        <p><?php echo $presta->adresse_presta; ?></p>
+			    
+                        <h2><?php if($presta != ('null'){echo $presta->nom_presta; }?></h2>
+                        <p><?php if($presta != ('null'){echo $presta->adresse_presta; }?></p>
 
 
 
@@ -105,7 +106,7 @@ Ensuite l'animatrice invitera, séparemment, les femmes et les hommes pour faire
                 </div>
                 <div class="row">
                     <?php
-                    if ($presta != '') {
+                    if ($presta != 'null') {
 
                         echo ' <div class="col-lg-10 col-xs-10 event eventDetails">';
                         echo $presta->nom_presta;
