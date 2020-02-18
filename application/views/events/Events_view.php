@@ -111,7 +111,10 @@ setlocale(LC_TIME, "fr_FR");
                                 echo '</p>';
 
                                 echo '<h3>' . utf8_encode(strftime(" %d %B %Y", strtotime( $event->date_event ))) . '</h3>';
-                                echo '<br>';
+                                echo '<h3>' . $event->heure_event . '</h3>';
+
+				    
+				    echo '<br>';
 
                                 echo '<p><strong>' . $event->nom_event . '</p>';
                                 echo '<p>' . $nomVille->nom_commune . '</strong></p>';
