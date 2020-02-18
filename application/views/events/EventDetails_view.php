@@ -65,8 +65,8 @@ setlocale(LC_TIME, "fr_FR");
                         <h2 class="title">À <?php echo  $event->heure_event ?> précises</h2>
                         <h2 class="title">Lieux:  <?php echo $ville->nom_commune ?> </h2>
 			    
-                        <h2><?php if($presta != ('null'){echo $presta->nom_presta; }?></h2>
-                        <p><?php if($presta != ('null'){echo $presta->adresse_presta; }?></p>
+                        <h2><?php if($presta != 'null'){echo $presta->nom_presta; }?></h2>
+                        <p><?php if($presta != 'null'){echo $presta->adresse_presta; }?></p>
 
 
 
