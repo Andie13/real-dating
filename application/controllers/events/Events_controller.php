@@ -112,7 +112,7 @@ class Events_Controller extends CI_Controller {
 
 
 
-        if ($event->id_presta_event != 5) {
+        if ($event->id_presta_event != 0) {
 
             $mediasPresta = $mediasModel->getAllMediaFromPresta($event->id_presta_event);
 
