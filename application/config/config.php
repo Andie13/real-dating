@@ -533,7 +533,7 @@ $config['google_secret'] = '6Lcm6dgUAAAAAILz0U3PkiHqm-TpcryZf2ATtAYu';
 
 
 //Clés Map
-$config['google_api_key']= 'dc3692a0a9b223e55a61f0727b840b3d635d16f3';
+$config['google_api_key']= 'AIzaSyCs2P6UeKDNGZhCFqkyWAao1bQTFvIEXnM';
 
 //pre-prod
 //$config['stripe_key'] = 'pk_test_k3jnN2qt8fmFRU2kB2k6QxWT00SjBgDMpK';
