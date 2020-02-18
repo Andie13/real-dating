@@ -125,7 +125,7 @@ class Events_Controller extends CI_Controller {
             $presta = $eventModel->getPrestaFromEvent($event->id_presta_event);
         } else {
 
-            $presta = 'Le lieux ne sera dévoilé que dans quelques jours....';
+            $presta = 'null';
         }
 
         if ($event->image_event != NULL) {
