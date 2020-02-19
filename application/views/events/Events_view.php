@@ -122,7 +122,7 @@ setlocale(LC_TIME, "fr_FR");
 
                                 echo '<p>Prix de la soirée : ' . $event->prix_event . '€</p>';
                                 echo '<p>Nombre de places : ' . $event->nb_places_event . '</p>';
-                                echo '<p>Plus que ' . $nombrePlacesRestante . ' places</p>';
+                                if($nombrePlacesRestante<10){echo '<p>Plus que ' . $nombrePlacesRestante . ' places</p>'} ;
                                 echo '<br>';
 
                                 echo '<a id="link" href="' . base_url() . 'events/events_controller/toEventDetails?id_event=' . $event->id_event . '">détails</a>';
