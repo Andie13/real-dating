@@ -24,8 +24,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 //$config['base_url'] = 'http://realdating.vh/';
-//$config['base_url'] = 'https://front.dev.realdate.fr/';
-$config['base_url'] = 'https://realdate.fr/';
+$config['base_url'] = 'https://front.dev.realdate.fr/';
+//$config['base_url'] = 'https://realdate.fr/';
 
 /*
 |--------------------------------------------------------------------------
