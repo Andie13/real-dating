@@ -92,8 +92,8 @@
                                     type='text'>
                             </div>
                             <div class='col-xs-12 col-md-4 form-group expiration required'>
-                                <label class='control-label'>année</label> <input
-                                    class='form-control card-expiry-year' placeholder='YYYY' size='4'
+                                <label class='control-label'>année</label> <input pattern="[0-9][0-9][0-9][0-9]" 
+                                    class='form-control card-expiry-year'  placeholder='AAAA' size='4'
                                     type='text'>
                             </div>
                         </div>
