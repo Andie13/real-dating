@@ -48,6 +48,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
                     <div class="col-lg-6 divSearch col-xs-9">
+															
+															 <?php
+                        if (isset($connected)) {
+                            
+                        } else {
+                            ?>
+
+                            <h3 class="accroche accueil">Afin de réserver, veuillez vous <a href = "<?php echo base_url() ?>user/Inscription_controller">inscrire</a> ou vous <a href = "<?php echo base_url() ?>user/login_controller">connecter.</a></h3>
+
+                        <?php }
+                        ?>
                         <form method="POST" class="search-form" action="<?php echo base_url(); ?>events/events_controller">
                             <div id="custom-search-input">
                                 <div class="input-group">
