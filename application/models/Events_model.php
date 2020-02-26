@@ -86,8 +86,9 @@ class Events_model extends CI_Model {
 
     public function getNbResaByEventId($eventId) {
 
-        $query = $this->db->query("SELECT COUNT(*) AS numrows FROM " . self::TABLE_RESA . "
-               WHERE " . self::ID_EVENT . "='$eventId'");
+   $query = $this->db->query("SELECT COUNT(*) AS numrows FROM " . self::TABLE_RESA . "
+               WHERE " . self::ID_EVENT . "='$eventId' AND ". self::STATUS_RESA."=4");
+
 
         if ($query->num_rows() == 0)
             return '0';
