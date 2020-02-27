@@ -169,7 +169,7 @@
 
                                         $eventModel = new Events_model();
                                         $eventDetail = $eventModel->getEventDetailsById($event->id_event);
-                                        if ($event->status_resa == 2) {
+                                        if ($event->status_resa == 4) {
                                             $statut = 'Payée';
                                         } else {
                                             $statut = 'Annulé';
