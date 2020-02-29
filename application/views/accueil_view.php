@@ -153,7 +153,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             $('#erreur-saisie').css('color', 'red');
                             $('#erreur-saisie').css('background-color', 'white');
                             $('#erreur-saisie').css('font-size', '1em');
-                            $('#erreur-saisie').text('Merci de sélestionner une ville dans la liste déroulante!')
+                            $('#erreur-saisie').text('Merci de sélectionner une ville dans la liste déroulante!')
                         }
 
 
