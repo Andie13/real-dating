@@ -25,7 +25,8 @@ class Events_model extends CI_Model {
     const ID_IMAGE_EVENT = 'id_image_event';
 
     public function getEvents($idVille) {
-        $this->db->where(self::ID_VILLE, $idVille)
+        $this->db->order_by(self::DATE_EVENT, 'ASC')
+		->where(self::ID_VILLE, $idVille)
                 ->where('date_event >= CURRENT_DATE()')
                 ->where('id_statut_event NOT LIKE 2')
                 ->select()
