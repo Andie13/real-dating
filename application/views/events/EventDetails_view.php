@@ -48,7 +48,7 @@ setlocale(LC_TIME, "fr_FR");
                         </a>
                     </div>
                     <div class="col-lg-6 col-xs-10 containerImage" >
-                        <?php
+                        <?php var_dump($event);
                         if ($media != '') {
                             echo '<img id="imageEvent" src="' . $media->path_media . '/' . $media->nom_media . '" alt="image event"/>';
                         } else {
