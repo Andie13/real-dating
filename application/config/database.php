@@ -92,7 +92,7 @@ $db['default'] = array(
 	
 	
 	/****PROD ***/
-	'hostname' => 'localhost',
+	'hostname' => '51.91.137.23',
 	'username' => 'db_admin',
 	'password' => 'db_admin_pwd_1',
 	'database' => 'realdate_prod_db',
