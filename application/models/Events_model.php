@@ -99,8 +99,8 @@ class Events_model extends CI_Model {
     public function getPrestaFromEvent($idPresta) {
 
         $query = $this->db->select()
-                ->from(self::TABLE_EVENT)
-                ->join('prestataires','prestataires.id_presta = events.id_presta_event');
+                ->from(self::TABLE_PRESTA)
+                ->where(self::ID_PRESTA,$idPresta);
 
         $row = $query->get()->row();
         
