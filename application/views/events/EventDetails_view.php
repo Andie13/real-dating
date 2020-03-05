@@ -107,7 +107,7 @@ Ensuite l'animatrice invitera, séparemment, les femmes et les hommes pour faire
                 <div class="row">
                     <?php
                     if ($presta != 'null') {
-var_dump($presta);
+
                         echo ' <div class="col-lg-10 col-xs-10 event eventDetails">';
                         echo $presta->nom_presta;
                         echo '<br> ';
