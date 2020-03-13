@@ -5,11 +5,11 @@
 // ------------------------------------------------------------------------
 
 // PayPal environment, Sandbox or Live
-$config['sandbox'] = FALSE; // FALSE for live environment
+$config['sandbox'] = TRUE; // FALSE for live environment
 
 // PayPal business email
-//$config['business'] = 'sb-epyjv825317@business.example.com';
-$config['business'] = 'realdate.aix@gmail.com';
+$config['business'] = 'sb-epyjv825317@business.example.com';
+//$config['business'] = 'realdate.aix@gmail.com';
 
 // What is the default currency?
 $config['paypal_lib_currency_code'] = 'EUR';
