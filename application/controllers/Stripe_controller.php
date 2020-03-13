@@ -44,7 +44,8 @@ class Stripe_controller extends CI_Controller {
 
         //insert resa to db
         $EventModel = new Events_model();
-        $isInsertedDb = $EventModel->insertNewReservation($idUser, $event->id_event);
+        $isInsertedDb = $EventModel->insertNewReservation($idUser, $event->id_event, 1, 1, $event->prix_event);
+
 
 			 //$isInsertedDb returns false if a problem occured
 			 //returns id resa if everything worked properly
