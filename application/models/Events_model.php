@@ -24,6 +24,9 @@ class Events_model extends CI_Model {
     const ID_PRESTA_EVENT = 'id_presta_event';
     const PRIX_EVENT = 'prix_event';
     const ID_IMAGE_EVENT = 'id_image_event';
+    const ID_TYPE_PAYMT = 'id_type_paymt';
+    const ID_PROMO = 'id_promo';
+    const PRIX_RESA = 'prix';
 
     public function getEvents($idVille) {
         $this->db->order_by(self::DATE_EVENT, 'ASC')
@@ -50,7 +53,7 @@ class Events_model extends CI_Model {
         return $insert ? true : false;
     }
 
-    public function insertNewReservation($idUser, $idEvent) {
+    public function insertNewReservation($idUser, $idEvent, $idTypePay, $idPromo, $prix) {
 
         $date = date('Y-m-d H:i:s');
         $ref = 'RD-' . $date;
@@ -60,7 +63,10 @@ class Events_model extends CI_Model {
             self::ID_EVENT => $idEvent,
             self::DATE_RESA => $date,
             self::REF_RESA => $ref,
-			self::STATUS_RESA =>4
+            self::STATUS_RESA =>2,
+            self::ID_TYPE_PAYMT =>$idTypePay,
+            self::ID_PROMO => $idPromo,
+            self::PRIX_RESA => $prix
         ];
 
         $this->db->insert(self::TABLE_RESA, $data);
