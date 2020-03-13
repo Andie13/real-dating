@@ -15,13 +15,16 @@ class Paypal extends CI_Controller{
         if(isset($this->session->id_event)){
            
             
+            $EventModel = new Events_model();
+
+
             $idEvent = $this->session->id_event;
             $idUser = $this->session->userId;
-         
-            $EventModel = new Events_model();
-            $EventModel->insertNewReservation($idUser, $idEvent);
-            
-            $this->session->unset_userdata['id_event'];
+            $ev = $EventModel->getEventDetailsById($idEvent);
+            $prix = $ev->prix_event;
+
+            $EventModel->insertNewReservation($idUser, $idEvent, 2, 1, $prix);
+
             
         }
         // Get the transaction data
